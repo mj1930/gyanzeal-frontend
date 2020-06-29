@@ -1,1 +1,66 @@
-<p>header works!</p>
+<!-- Preloader -->
+<div class="dom-loader">
+    <div class="v100 d-flex align-items-center justify-content-center">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status"></div>
+            </div>
+            <div class="row justify-content-center">
+                <p class="px-2">Gyanzeal Loading... Please Wait</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top jq-nav navbar-dark elegant-color">
+            <div class="container-fluid">
+                <a [routerLink]="['']" class="navbar-brand img-fluid"><img src="../../assets/svg/logo.svg" alt="Gyan Zeal Logo" height="50px"></a>
+    
+                <button class="navbar-toggler btn-outline-white text-white" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="navbar-collapse collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav text-center ml-auto">
+                        <li class="nav-item"><a [routerLink]="['']" class="nav-link active">Home</a></li>
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">  Classes  </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"> CBSE </a></li>
+                                <li><a class="dropdown-item" href="#"> ICSE &raquo; </a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" href=""> CLass 1</a></li>
+                                        <li><a class="dropdown-item" href=""> CLass 2</a></li>
+                                        <li><a class="dropdown-item" href=""> CLass 3 &raquo; </a>
+                                        <ul class="submenu dropdown-menu">
+                                            <li><a class="dropdown-item" href=""> English</a></li>
+                                            <li><a class="dropdown-item" href=""> Maths</a></li>
+                                        </ul>
+                                        </li>
+                                        <li><a class="dropdown-item" href=""> Class 4</a></li>
+                                        <li><a class="dropdown-item" href=""> Class 5</a></li>
+                                    </ul>
+                                </li>
+                              <li><a class="dropdown-item" href="#"> Delhi Board </a></li>
+                              <li><a class="dropdown-item" href="#"> Haryana Board </a>
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item"><a href="/others" class="nav-link">Others</a></li>
+                        <li class="nav-item"><a href="/demo-classes" class="nav-link">Demo Classes</a></li>
+                        <li class="nav-item"><a href="/about" class="nav-link">About Us</a></li>
+                        <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    <form class="form-inline d-flex justify-content-center">
+                        <a [routerLink]="['/login']" role='button' class="btn btn-white btn-sm rounded">login</a>
+                        <a [routerLink]="['/signup']" role='button' class="btn btn-sm align-middle btn-outline-white rounded">create account</a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>

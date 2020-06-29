@@ -1,0 +1,14 @@
+.hero-image{
+    background-image: url('../../assets/images/hero-image.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.help-image{
+    background-image: url('../../assets/images/gyanzeal-team2.jpg');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
