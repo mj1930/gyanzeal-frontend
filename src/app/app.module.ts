@@ -5,18 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { StudentLoginComponent } from './student-login/student-login.component';
-import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { LoginComponent } from './login/login.component';
+import { TeacherSignupComponent } from './teacher-signup/teacher-signup.component';
+import { StudentSignupComponent } from './student-signup/student-signup.component';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    StudentLoginComponent,
-    TeacherLoginComponent,
-    HomepageComponent
+    HomepageComponent,
+    LoginComponent,
+    TeacherSignupComponent,
+    StudentSignupComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
