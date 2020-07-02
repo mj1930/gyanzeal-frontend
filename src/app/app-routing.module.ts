@@ -10,6 +10,11 @@ import { StudentPasswordResetComponent } from '../app/student-password-reset/stu
 import { TeacherPasswordResetComponent } from '../app/teacher-password-reset/teacher-password-reset.component';
 
 
+
+// 404 Error Page Not Found
+import { ErrorPageNotFoundComponent } from '../app/error-page-not-found/error-page-not-found.component';
+
+
 const routes: Routes = [
   // Home Page
   { path: '', component: HomepageComponent },
@@ -29,7 +34,7 @@ const routes: Routes = [
 
 
   // 404 Error Page
-  { path: '**', component: HomepageComponent },
+  { path: '**', component: ErrorPageNotFoundComponent },
   // No Routes Possible Below This.. :)
 ];
 
