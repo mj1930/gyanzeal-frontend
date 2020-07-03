@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { TeacherSignupComponent } from './teacher-signup/teacher-signup.component';
 import { StudentSignupComponent } from './student-signup/student-signup.component';
 import { SignupComponent } from './signup/signup.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SignupComponent } from './signup/signup.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

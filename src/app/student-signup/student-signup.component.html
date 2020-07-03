@@ -7,48 +7,64 @@
             <form class="p-md-5 text-left" action="#!">
                 <img src="../../assets/svg/student-signup.svg" alt="" class="my-4 my-md-0">
                 <div class="text-center social-btn my-3">
-                    <a href="#" class="btn btn-primary"><i class="fab fa-facebook-f"></i> Sign up with <b>Facebook</b></a>
+                    <a href="#" class="btn btn-primary"><i class="fab fa-facebook-f"></i> Sign up with
+                        <b>Facebook</b></a>
                     <a href="#" class="btn btn-info"><i class="fab fa-twitter"></i> Sign up with <b>Twitter</b></a>
                     <a href="#" class="btn btn-danger"><i class="fab fa-google"></i> Sign up with <b>Google</b></a>
                 </div>
                 <div class="or-seperator my-5"><span>OR</span></div>
                 <!-- Name -->
                 <label for="name">Your Name</label>
-                <input type="text" id="name" class="form-control mb-4" placeholder="Your Name">
+                <input type="text" id="name" class="form-control" [ngClass]="(nameShort && nameSpace && nameLong) ? 'mb-4' : ''" placeholder="Your Name" [(ngModel)]="name"  name="name" (blur)="checkValidations('name', $event.target.value)">
+                <p class="form-text text-danger mb-4 font-small" [ngClass]="nameShort ? 'd-none' : 'd-block'">
+                    At least 3 characters
+                </p>
+                <p class="form-text text-danger mb-4 font-small" [ngClass]="nameSpace ? 'd-none' : 'd-block'">
+                    Can't be left blank
+                </p>
+                <p class="form-text text-danger mb-4 font-small" [ngClass]="nameLong ? 'd-none' : 'd-block'">
+                    At most 30 characters
+                </p>
 
                 <!-- Father's Name -->
                 <label for="fatherName">Father's Name</label>
-                <input type="text" id="fatherName" class="form-control mb-4" placeholder="Father's Name">
+                <input type="text" id="fatherName" class="form-control" [ngClass]="(fnameShort && fnameSpace && fnameLong) ? 'mb-4' : ''" placeholder="Father's Name"
+                    [(ngModel)]="fName" name="fName"  (blur)="checkValidations('fName', $event.target.value)">
+                <p class="form-text text-danger mb-4 font-small" [ngClass]="fnameShort ? 'd-none' : 'd-block'">
+                    At least 3 characters
+                </p>
+                <p class="form-text text-danger mb-4 font-small" [ngClass]="fnameSpace ? 'd-none' : 'd-block'">
+                    Can't be left blank
+                </p>
+                <p class="form-text text-danger mb-4 font-small" [ngClass]="fnameLong ? 'd-none' : 'd-block'">
+                    At most 30 characters
+                </p>
 
-                
                 <!-- Gender -->
                 <label for="gender">Gender</label>
-                <select class="browser-default custom-select mb-4" id="gender">
+                <select class="browser-default custom-select mb-4" id="gender" [(ngModel)]="gender" name="gender" (change)="checkValidations('gender', $event.target.value)">
                     <option value="" disabled="disabled" selected="selected">Choose your Gender</option>
                     <option value="1">Male</option>
                     <option value="2">Female</option>
                     <option value="3">Prefer not to say</option>
                 </select>
+                <p class="form-text text-danger mb-4 font-small" [ngClass]="genderCheck ? 'd-none' : 'd-block'">
+                    Select At least One
+                </p>
 
                 <!-- Mobile Number -->
                 <label for="number">Mobile Number</label>
-                <input type="text" id="number" class="form-control" placeholder="Your mobile number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10">
+                <input type="text" id="number" class="form-control" placeholder="Your mobile number"
+                    oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10" [(ngModel)]="mobile" name="mobile" (blur)="checkValidations('mobile', $event.target.value)">
                 <small class="form-text text-muted mb-4">10 digit mobile number only</small>
 
                 <!-- E-mail -->
                 <label for="email">Student Email</label>
-                <input type="email" id="email" class="form-control mb-4" placeholder="Your email">
-
-                <!-- Password -->
-                <label for="password">Password</label>
-                <input type="password" id="password" class="form-control" placeholder="Password">
-                <small class="form-text text-muted mb-4">
-                    At least 8 characters and 1 digit
-                </small>
+                <input type="email" id="email" class="form-control mb-4" placeholder="Your email" [(ngModel)]="email" name="email">
 
                 <!-- State -->
                 <label for="state">State</label>
-                <select class="browser-default custom-select mb-4" id="state">
+                <select class="browser-default custom-select mb-4" id="state" [(ngModel)]="state" name="state">
                     <option value="" disabled="disabled" selected="selected">Choose State</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -90,8 +106,8 @@
 
                 <!-- City -->
                 <label for="city">City</label>
-                <select class="browser-default custom-select mb-4" id="city">
-                    <option value="" disabled="disabled" selected="selected">Choose State</option>
+                <select class="browser-default custom-select mb-4" id="city" [(ngModel)]="city" name="city">
+                    <option value="" disabled="disabled" selected="selected">Choose City</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -132,7 +148,7 @@
 
                 <!-- Board -->
                 <label for="board">Board of Education</label>
-                <select class="browser-default custom-select mb-4" id="board">
+                <select class="browser-default custom-select mb-4" id="board" [(ngModel)]="board" name="board">
                     <option value="" disabled="disabled" selected="selected">Choose State</option>
                     <option value="CBSE">CBSE</option>
                     <option value="ICSE">ICSE</option>
@@ -147,16 +163,18 @@
                 </div>
 
                 <!-- Sign up button -->
-                <button class="btn-sm btn info-color-dark text-white my-4 mx-0" type="submit">Create Account</button>
+                <button class="btn-sm btn info-color-dark text-white my-4 mx-0" type="submit"
+                    (click)="createAccount()">Create Account</button>
                 <hr>
                 <!-- Terms of service -->
-                <p class="text-justify my-0">By creating account you agree to our <a [routerLink]="['/tos']">Terms of Service</a> and <a [routerLink]="['/privacy-policy']">Privacy Policy</a>.
+                <p class="text-justify my-0">By creating account you agree to our <a [routerLink]="['/tos']">Terms of
+                        Service</a> and <a [routerLink]="['/privacy-policy']">Privacy Policy</a>.
                 <p class="text-justify">Already having student account? <a [routerLink]="['/login']">Login Here</a>.
 
             </form>
             <!-- Default form register -->
-            
+
         </div>
     </div>
-    
+
 </div>
