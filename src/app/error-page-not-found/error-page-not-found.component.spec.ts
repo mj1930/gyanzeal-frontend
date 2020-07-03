@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SignupComponent } from './signup.component';
+import { ErrorPageNotFoundComponent } from './error-page-not-found.component';
 
-describe('SignupComponent', () => {
-  let component: SignupComponent;
-  let fixture: ComponentFixture<SignupComponent>;
+describe('ErrorPageNotFoundComponent', () => {
+  let component: ErrorPageNotFoundComponent;
+  let fixture: ComponentFixture<ErrorPageNotFoundComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SignupComponent ]
+      declarations: [ ErrorPageNotFoundComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SignupComponent);
+    fixture = TestBed.createComponent(ErrorPageNotFoundComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
