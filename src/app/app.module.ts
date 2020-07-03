@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomepageComponent } from './homepage/homepage.component';
-import { LoginComponent } from './login/login.component';
 import { TeacherSignupComponent } from './teacher-signup/teacher-signup.component';
 import { StudentSignupComponent } from './student-signup/student-signup.component';
-import { SignupComponent } from './signup/signup.component';
-import { FormsModule } from '@angular/forms';
+import { StudentLoginComponent } from './student-login/student-login.component';
+import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
+import { TeacherPasswordResetComponent } from './teacher-password-reset/teacher-password-reset.component';
+import { StudentPasswordResetComponent } from './student-password-reset/student-password-reset.component';
+import { ErrorPageNotFoundComponent } from './error-page-not-found/error-page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,13 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     HomepageComponent,
-    LoginComponent,
     TeacherSignupComponent,
     StudentSignupComponent,
-    SignupComponent
+    StudentLoginComponent,
+    TeacherLoginComponent,
+    TeacherPasswordResetComponent,
+    StudentPasswordResetComponent,
+    ErrorPageNotFoundComponent
   ],
   imports: [
     BrowserModule,
