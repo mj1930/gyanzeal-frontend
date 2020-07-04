@@ -1,12 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms'
+import { RegistrationService } from '../services/registration.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-student-signup',
   templateUrl: './student-signup.component.html',
-  styleUrls: ['./student-signup.component.css']
+  styleUrls: ['./student-signup.component.css'],
+  providers: [RegistrationService]
 })
 export class StudentSignupComponent implements OnInit {
 
+  public studentForm: any;
   public name: string;
   public fName: string;
   public gender: string;
@@ -23,59 +28,37 @@ export class StudentSignupComponent implements OnInit {
   public fnameSpace: boolean = true;
   public fnameShort: boolean = true;
   public genderCheck: boolean = true;
-  constructor() { }
+  constructor(
+    private register : RegistrationService,
+    private toaster: ToastrService,
+    private fb: FormBuilder
+  ) { }
 
   ngOnInit() {
+    this.studentForm = this.fb.group({
+      name : new FormControl('', [Validators.required]),
+      fName : new FormControl('', [Validators.required]),
+      gender : new FormControl('', [Validators.required]),
+      mobile : new FormControl('', [Validators.required]),
+      email : new FormControl('', [Validators.required, Validators.email]),
+      password : new FormControl('', [Validators.required]),
+      state : new FormControl('', [Validators.required]),
+      city : new FormControl('', [Validators.required]),
+      board : new FormControl('', [Validators.required]),
+    });
   }
 
   createAccount() {
-    let studentObj = {
-      name: this.name,
-      fName: this.fName,
-      gender: this.gender,
-      mobile: this.mobile,
-      email: this.email,
-      password: this.password,
-      state: this.state,
-      city: this.city,
-      board: this.board
-    };
+    let studentObj = this.studentForm.value;
+    if (this.studentForm.valid) {
+      this.register.signUpStudent(studentObj).subscribe((data: any) => {
+        console.log(data)
+        this.studentForm.reset;
+      });
+    } else {
+      this.toaster.warning('Please fill the complete form')
+    }
   }
 
-  checkValidations(key, value) {
-    if (key == 'name') {
-      if (value.trim() == '') {
-        this.nameSpace = false;
-      } else if (value.length < 3) {
-        this.nameShort = false;
-      } else if (value.length > 30) {
-        this.nameLong = false;
-      } else {
-        this.nameSpace = true;
-        this.nameLong = true;
-        this.nameShort = true;
-      }
-    }
-    if (key == 'fName') {
-      if (value.trim() == '') {
-        this.fnameSpace = false;
-      } else if (value.length < 3) {
-        this.fnameShort = false;
-      } else if (value.length > 30) {
-        this.fnameLong = false;
-      } else {
-        this.fnameSpace = true;
-        this.fnameLong = true;
-        this.fnameShort = true;
-      }
-    }
-    if (key == 'gender') {
-      if (value == 0) {
-        this.genderCheck = false;
-      } else {
-        this.genderCheck = true;
-      }
-    }
-  }
 
 }
