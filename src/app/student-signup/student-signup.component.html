@@ -1,10 +1,16 @@
 <div class="container-fluid cloudy-knoxville-gradient py-5 matop">
     <h1 class="fredoka text-center">Signup as Student</h1>
     <p class="text-center">Welcome to Gyanzeal User Area.</p>
-
+    <div class="toast right-0 position-fixed"
+        [ngClass]="messageClass ? 'success-color-dark text-white' : 'danger-color-dark text-white'"
+        data-autohide="false" [class.show]="showMessage" *ngIf="showMessage">
+        <div class="toast-body">
+            <h4>{{message}}</h4>
+        </div>
+    </div>
     <div class="container my-5">
         <div class="card col-md-8 mx-auto">
-            <form class="p-md-5 text-left"[formGroup]="studentForm" (ngSubmit)="createAccount()" novalidate>
+            <form class="p-md-5 text-left" [formGroup]="studentForm">
                 <img src="../../assets/svg/student-signup.svg" alt="" class="my-4 my-md-0">
                 <div class="text-center social-btn my-3">
                     <a href="#" class="btn btn-primary"><i class="fab fa-facebook-f"></i> Sign up with
@@ -15,8 +21,10 @@
                 <div class="or-seperator my-5"><span>OR</span></div>
                 <!-- Name -->
                 <label for="name">Your Name</label>
-                <input type="text" id="name" class="form-control mb-4" placeholder="Your Name" formControlName="name"  name="name">
-                <p class="form-text text-danger mb-4 font-small" *ngIf="studentForm.get('name').touched && !studentForm.get('name').valid">
+                <input type="text" id="name" class="form-control mb-4" placeholder="Your Name" formControlName="name"
+                    name="name">
+                <p class="form-text text-danger mb-4 font-small"
+                    *ngIf="studentForm.get('name').touched && !studentForm.get('name').valid">
                     Can't be left blank
                 </p>
 
@@ -24,7 +32,8 @@
                 <label for="fatherName">Father's Name</label>
                 <input type="text" id="fatherName" class="form-control mb-4" placeholder="Father's Name"
                     formControlName="fName" name="fName">
-                <p class="form-text text-danger mb-4 font-small" *ngIf="studentForm.get('fName').touched && !studentForm.get('fName').valid">
+                <p class="form-text text-danger mb-4 font-small"
+                    *ngIf="studentForm.get('fName').touched && !studentForm.get('fName').valid">
                     Can't be left blank
                 </p>
 
@@ -36,22 +45,27 @@
                     <option value="2">Female</option>
                     <option value="3">Prefer not to say</option>
                 </select>
-                <p class="form-text text-danger mb-4 font-small"  *ngIf="studentForm.get('gender').touched && !studentForm.get('gender').valid">
+                <p class="form-text text-danger mb-4 font-small"
+                    *ngIf="studentForm.get('gender').touched && !studentForm.get('gender').valid">
                     Select At least One
                 </p>
 
                 <!-- Mobile Number -->
                 <label for="number">Mobile Number</label>
                 <input type="text" id="number" class="form-control" placeholder="Your mobile number"
-                    oninput="this.value = this.value.replace(/[^\d]/,'')" maxlength="10" formControlName="mobile" name="mobile">
+                    oninput="this.value = this.value.replace(/[^\d]/,'')" maxlength="10" formControlName="mobile"
+                    name="mobile">
                 <!-- <small class="form-text text-muted mb-4">10 digit mobile number only</small> -->
-                <p class="form-text text-danger mb-4 font-small"  *ngIf="studentForm.get('mobile').touched && !studentForm.get('mobile').valid">
+                <p class="form-text text-danger mb-4 font-small"
+                    *ngIf="studentForm.get('mobile').touched && !studentForm.get('mobile').valid">
                     Can't be left blank
                 </p>
                 <!-- E-mail -->
                 <label for="email">Student Email</label>
-                <input type="email" id="email" class="form-control mb-4" placeholder="Your email" formControlName="email" name="email">
-                <p class="form-text text-danger mb-4 font-small"  *ngIf="studentForm.get('email').touched && !studentForm.get('email').valid">
+                <input type="email" id="email" class="form-control mb-4" placeholder="Your email"
+                    formControlName="email" name="email">
+                <p class="form-text text-danger mb-4 font-small"
+                    *ngIf="studentForm.get('email').touched && !studentForm.get('email').valid">
                     Can't be left blank
                 </p>
                 <!-- <p class="form-text text-danger mb-4 font-small"  *ngIf="studentForm.get('email').touched && !studentForm.get('email').email">
@@ -99,7 +113,8 @@
                     <option value="Uttarakhand">Uttarakhand</option>
                     <option value="West Bengal">West Bengal</option>
                 </select>
-                <p class="form-text text-danger mb-4 font-small"  *ngIf="studentForm.get('state').touched && !studentForm.get('state').valid">
+                <p class="form-text text-danger mb-4 font-small"
+                    *ngIf="studentForm.get('state').touched && !studentForm.get('state').valid">
                     Can't be left blank
                 </p>
 
@@ -144,7 +159,8 @@
                     <option value="Uttarakhand">Uttarakhand</option>
                     <option value="West Bengal">West Bengal</option>
                 </select>
-                <p class="form-text text-danger mb-4 font-small"  *ngIf="studentForm.get('city').touched && !studentForm.get('city').valid">
+                <p class="form-text text-danger mb-4 font-small"
+                    *ngIf="studentForm.get('city').touched && !studentForm.get('city').valid">
                     Can't be left blank
                 </p>
 
@@ -156,7 +172,8 @@
                     <option value="ICSE">ICSE</option>
                     <option value="SB">State Board</option>
                 </select>
-                <p class="form-text text-danger mb-4 font-small"  *ngIf="studentForm.get('board').touched && !studentForm.get('board').valid">
+                <p class="form-text text-danger mb-4 font-small"
+                    *ngIf="studentForm.get('board').touched && !studentForm.get('board').valid">
                     Can't be left blank
                 </p>
 
@@ -171,7 +188,8 @@
                     (click)="createAccount()">Create Account</button>
                 <hr>
                 <!-- Terms of service -->
-                <p class="text-justify my-0">By creating account you agree to our <a [routerLink]="['/tos']">Terms of Service</a> and <a [routerLink]="['/privacy-policy']">Privacy Policy</a>.
+                <p class="text-justify my-0">By creating account you agree to our <a [routerLink]="['/tos']">Terms of
+                        Service</a> and <a [routerLink]="['/privacy-policy']">Privacy Policy</a>.
                 <p class="text-justify">Already having account? <a [routerLink]="['/login/student']">Login Here</a>.
 
             </form>

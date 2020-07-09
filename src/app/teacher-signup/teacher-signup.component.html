@@ -1,14 +1,21 @@
 <div class="container-fluid cloudy-knoxville-gradient py-5 matop">
     <h1 class="fredoka text-center">Signup as Teacher</h1>
     <p class="text-center">Welcome to Gyanzeal User Area.</p>
-
+    <div class="toast right-0 position-fixed"
+        [ngClass]="messageClass ? 'success-color-dark text-white' : 'danger-color-dark text-white'"
+        data-autohide="false" [class.show]="showMessage" *ngIf="showMessage">
+        <div class="toast-body">
+            <h4>{{message}}</h4>
+        </div>
+    </div>
     <div class="container my-5">
         <div class="card col-md-8 mx-auto">
-            <form class="p-md-5 text-left" action="#!">
+            <form class="p-md-5 text-left" [formGroup]="teacherForm">
                 <img src="../../assets/svg/teacher-signup.svg" alt="" class="my-4 my-md-0">
 
                 <div class="text-center social-btn my-3">
-                    <a href="#" class="btn btn-primary"><i class="fab fa-facebook-f"></i> Sign up with <b>Facebook</b></a>
+                    <a href="#" class="btn btn-primary"><i class="fab fa-facebook-f"></i> Sign up with
+                        <b>Facebook</b></a>
                     <a href="#" class="btn btn-info"><i class="fab fa-twitter"></i> Sign up with <b>Twitter</b></a>
                     <a href="#" class="btn btn-danger"><i class="fab fa-google"></i> Sign up with <b>Google</b></a>
                 </div>
@@ -18,12 +25,13 @@
                 <hr>
                 <!-- Name -->
                 <label for="name">Your Name</label>
-                <input type="text" id="name" class="form-control mb-4" placeholder="Your Name">
+                <input type="text" id="name" class="form-control mb-4" placeholder="Your Name" formControlName="name"
+                    name="name">
 
-                
+
                 <!-- Gender -->
                 <label for="gender">Gender</label>
-                <select class="browser-default custom-select mb-4" id="gender">
+                <select class="browser-default custom-select mb-4" id="gender" formControlName="gender" name="gender">
                     <option value="" disabled="disabled" selected="selected">Choose your Gender</option>
                     <option value="1">Male</option>
                     <option value="2">Female</option>
@@ -32,18 +40,22 @@
 
                 <!-- Mobile Number -->
                 <label for="number">Mobile Number</label>
-                <input type="text" id="number" class="form-control" placeholder="Your mobile number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10">
+                <input type="text" id="number" class="form-control" placeholder="Your mobile number"
+                    oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10" formControlName="mobile"
+                    name="mobile">
                 <small class="form-text text-muted mb-4">10 digit mobile number only</small>
 
                 <!-- E-mail -->
-                <label for="email">Student Email</label>
-                <input type="email" id="email" class="form-control mb-4" placeholder="Your email">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control mb-4" placeholder="Your email"
+                    formControlName="email" name="email">
 
                 <p class="mt-5 text-primary"><i class='fas fa-indent'></i> Experience Details</p>
                 <hr>
                 <!-- Years -->
                 <label for="years">Years</label>
-                <select class="browser-default custom-select mb-4" id="years">
+                <select class="browser-default custom-select mb-4" id="years" formControlName="experienceYear"
+                    name="experienceYear">
                     <option value="" disabled="disabled" selected="selected">Year of experience</option>
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -69,7 +81,8 @@
 
                 <!-- Months -->
                 <label for="month">Months</label>
-                <select class="browser-default custom-select mb-4" id="month">
+                <select class="browser-default custom-select mb-4" id="month" formControlName="experienceMonth"
+                    name="experienceMonth">
                     <option value="" disabled="disabled" selected="selected">Months of experience</option>
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -87,7 +100,7 @@
 
                 <!-- State -->
                 <label for="state">State</label>
-                <select class="browser-default custom-select mb-4" id="state">
+                <select class="browser-default custom-select mb-4" id="state" formControlName="state" name="state">
                     <option value="" disabled="disabled" selected="selected">Choose State</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -129,7 +142,7 @@
 
                 <!-- City -->
                 <label for="city">City</label>
-                <select class="browser-default custom-select mb-4" id="city">
+                <select class="browser-default custom-select mb-4" id="city" formControlName="city" name="city">
                     <option value="" disabled="disabled" selected="selected">Choose State</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -172,22 +185,24 @@
 
                 <!-- School Teacher -->
                 <label for="school-teacher">School in which you teach</label>
-                <select class="browser-default custom-select mb-4" id="school-teacher">
+                <select class="browser-default custom-select mb-4" id="school-teacher"  formControlName="school"
+                name="school">
                     <option value="" disabled="disabled" selected="selected">Select School</option>
                     <optgroup>
                         <option value="0">Not a School Teacher</option>
                     </optgroup>
-                    
+
                     <optgroup>
                         <option value="1">D.A.V Public School</option>
                         <option value="2">Greenfield Public School</option>
                         <option value="3">Holy Angels Public School</option>
-                    </optgroup>                    
+                    </optgroup>
                 </select>
 
                 <!-- Desktop/Laptop At Home -->
                 <label for="pc-at-home">Do you have a desktop/Laptop at home?</label>
-                <select class="browser-default custom-select mb-4" id="pc-at-home">
+                <select class="browser-default custom-select mb-4" id="pc-at-home" formControlName="system"
+                    name="system">
                     <option value="" disabled="disabled" selected="selected">Select Option</option>
                     <option value="1">Yes</option>
                     <option value="0">No</option>
@@ -195,7 +210,8 @@
 
                 <!-- Internet Connection Speed -->
                 <label for="internet-speed">Your internet connection speed</label>
-                <select class="browser-default custom-select mb-4" id="internet-speed">
+                <select class="browser-default custom-select mb-4" id="internet-speed" formControlName="internetSpeed"
+                    name="internetSpeed">
                     <option value="" disabled="disabled" selected="selected">Select Option</option>
                     <option value="0">I don't have internet connection yet</option>
                     <option value="1">Slow (Modem/Dial-up Connection)</option>
@@ -206,7 +222,8 @@
 
                 <!-- Knowledge Of Computer -->
                 <label for="school-teacher">Do you have basic computer Knowledge?</label>
-                <select class="browser-default custom-select mb-4" id="pc-at-home">
+                <select class="browser-default custom-select mb-4" id="pc-at-home" formControlName="compKnow"
+                    name="compKnow">
                     <option value="" disabled="disabled" selected="selected">Select Option</option>
                     <option value="1">Yes</option>
                     <option value="0">No</option>
@@ -214,16 +231,18 @@
 
 
                 <!-- Sign up button -->
-                <button class="btn-sm btn info-color-dark text-white my-4 mx-0" type="submit">Apply Now</button>
+                <button class="btn-sm btn info-color-dark text-white my-4 mx-0" type="button"
+                    (click)="createAccount()">Apply Now</button>
                 <hr>
                 <!-- Terms of service -->
-                <p class="text-justify my-0">By creating account you agree to our <a [routerLink]="['/tos']">Terms of Service</a> and <a [routerLink]="['/privacy-policy']">Privacy Policy</a>.
+                <p class="text-justify my-0">By creating account you agree to our <a [routerLink]="['/tos']">Terms of
+                        Service</a> and <a [routerLink]="['/privacy-policy']">Privacy Policy</a>.
                 <p class="text-justify">Already having account? <a [routerLink]="['/login/teacher']">Login Here</a>.
 
             </form>
             <!-- Default form register -->
-            
+
         </div>
     </div>
-    
+
 </div>

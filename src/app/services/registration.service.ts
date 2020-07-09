@@ -16,6 +16,6 @@ export class RegistrationService {
   }
 
   signUpTeacher(teacherData: any) {
-    return this.http.post(`${environment.url}teacher/studentSignUp`, {teacherData});
+    return this.http.post(`${environment.url}teacher/teacherSignUp`, {teacherData});
   }
 }
