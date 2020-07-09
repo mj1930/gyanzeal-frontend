@@ -12,6 +12,10 @@ export class RegistrationService {
   ) { }
 
   signUpStudent(studentData: any) {
-    return this.http.post(`${environment.url}student\saveStudentData`, studentData);
+    return this.http.post(`${environment.url}student/studentSignUp`, {studentData});
+  }
+
+  signUpTeacher(teacherData: any) {
+    return this.http.post(`${environment.url}teacher/studentSignUp`, {teacherData});
   }
 }

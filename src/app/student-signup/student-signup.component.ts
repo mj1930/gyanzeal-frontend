@@ -30,7 +30,7 @@ export class StudentSignupComponent implements OnInit {
   public genderCheck: boolean = true;
   constructor(
     private register : RegistrationService,
-    private toaster: ToastrService,
+    private toast: ToastrService,
     private fb: FormBuilder
   ) { }
 
@@ -40,8 +40,7 @@ export class StudentSignupComponent implements OnInit {
       fName : new FormControl('', [Validators.required]),
       gender : new FormControl('', [Validators.required]),
       mobile : new FormControl('', [Validators.required]),
-      email : new FormControl('', [Validators.required, Validators.email]),
-      password : new FormControl('', [Validators.required]),
+      email : new FormControl('', [Validators.required]),
       state : new FormControl('', [Validators.required]),
       city : new FormControl('', [Validators.required]),
       board : new FormControl('', [Validators.required]),
@@ -56,7 +55,7 @@ export class StudentSignupComponent implements OnInit {
         this.studentForm.reset;
       });
     } else {
-      this.toaster.warning('Please fill the complete form')
+      this.toast.warning('Please fill the complete form');
     }
   }
 
