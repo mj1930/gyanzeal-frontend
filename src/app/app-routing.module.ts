@@ -8,6 +8,11 @@ import { TeacherLoginComponent } from '../app/teacher-login/teacher-login.compon
 import { StudentLoginComponent } from '../app/student-login/student-login.component';
 import { StudentPasswordResetComponent } from '../app/student-password-reset/student-password-reset.component';
 import { TeacherPasswordResetComponent } from '../app/teacher-password-reset/teacher-password-reset.component';
+import { StudentDashboardComponent } from '../app/student-dashboard/student-dashboard.component';
+import { StudentEnrolledCoursesComponent } from '../app/student-enrolled-courses/student-enrolled-courses.component';
+import { StudentPurchaseHistoryComponent } from '../app/student-purchase-history/student-purchase-history.component';
+import { StudentProfileSettingComponent } from '../app/student-profile-setting/student-profile-setting.component';
+import { ChangePasswordComponent } from '../app/change-password/change-password.component';
 
 
 
@@ -30,6 +35,18 @@ const routes: Routes = [
   { path: 'reset-password/student', component: StudentPasswordResetComponent },
   // Student Reset Password Page
   { path: 'reset-password/teacher', component: TeacherPasswordResetComponent },
+  // Student Enrolled Courses Page
+  { path: 'my-courses', component: StudentEnrolledCoursesComponent },
+  // Student Purchase history Page
+  { path: 'my-purchases', component: StudentPurchaseHistoryComponent },
+  // Student Profile Page
+  { path: 'profile-setting', component: StudentProfileSettingComponent },
+  // Change Password Page
+  { path: 'change-password', component: ChangePasswordComponent },
+
+  
+  // Student Dashboard Page
+  { path: 'student-dashboard', component: StudentDashboardComponent },
 
 
 

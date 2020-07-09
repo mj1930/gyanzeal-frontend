@@ -18,6 +18,12 @@ import { TeacherPasswordResetComponent } from './teacher-password-reset/teacher-
 import { StudentPasswordResetComponent } from './student-password-reset/student-password-reset.component';
 import { ErrorPageNotFoundComponent } from './error-page-not-found/error-page-not-found.component';
 import { RegistrationService } from './services/registration.service';
+import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
+import { StudentEnrolledCoursesComponent } from './student-enrolled-courses/student-enrolled-courses.component';
+import { StudentPurchaseHistoryComponent } from './student-purchase-history/student-purchase-history.component';
+import { StudentProfileSettingComponent } from './student-profile-setting/student-profile-setting.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +36,12 @@ import { RegistrationService } from './services/registration.service';
     TeacherLoginComponent,
     TeacherPasswordResetComponent,
     StudentPasswordResetComponent,
-    ErrorPageNotFoundComponent
+    ErrorPageNotFoundComponent,
+    StudentDashboardComponent,
+    StudentEnrolledCoursesComponent,
+    StudentPurchaseHistoryComponent,
+    StudentProfileSettingComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,
