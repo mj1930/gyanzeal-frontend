@@ -13,6 +13,11 @@ import { TeacherLoginComponent } from './teacher-login/teacher-login.component';
 import { TeacherPasswordResetComponent } from './teacher-password-reset/teacher-password-reset.component';
 import { StudentPasswordResetComponent } from './student-password-reset/student-password-reset.component';
 import { ErrorPageNotFoundComponent } from './error-page-not-found/error-page-not-found.component';
+import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
+import { StudentEnrolledCoursesComponent } from './student-enrolled-courses/student-enrolled-courses.component';
+import { StudentPurchaseHistoryComponent } from './student-purchase-history/student-purchase-history.component';
+import { StudentProfileSettingComponent } from './student-profile-setting/student-profile-setting.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { ErrorPageNotFoundComponent } from './error-page-not-found/error-page-no
     TeacherLoginComponent,
     TeacherPasswordResetComponent,
     StudentPasswordResetComponent,
-    ErrorPageNotFoundComponent
+    ErrorPageNotFoundComponent,
+    StudentDashboardComponent,
+    StudentEnrolledCoursesComponent,
+    StudentPurchaseHistoryComponent,
+    StudentProfileSettingComponent,
+    ChangePasswordComponent
   ],
   imports: [
     BrowserModule,

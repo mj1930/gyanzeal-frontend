@@ -11,7 +11,9 @@
         </div>
     </div>
 </div>
-<div class="container-fluid">
+
+<!-- Header -->
+<!-- <div class="container-fluid">
     <header>
         <nav class="navbar navbar-expand-lg fixed-top jq-nav navbar-dark elegant-color">
             <div class="container-fluid">
@@ -63,4 +65,46 @@
             </div>
         </nav>
     </header>
+</div> -->
+<!-- Header Ends -->
+
+
+<!-- Student Header -->
+<div class="container-fluid">
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top jq-nav navbar-dark default-color-dark">
+            <div class="container-fluid">
+                <a [routerLink]="['']" class="navbar-brand img-fluid"><img src="../../assets/svg/logo.svg" alt="Gyan Zeal Logo" height="50px"></a>
+    
+                <button class="navbar-toggler btn-outline-white text-white" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="navbar-collapse collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav text-center ml-auto">
+                        <li class="nav-item"><a [routerLink]="['/home']" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a [routerLink]="['/my-courses']" class="nav-link">My Courses</a></li>
+                        <li class="nav-item">
+                            <div class="col">
+                                <div class="d-flex align-items-center bg-white px-3 rounded-lg mt-1 dropdown-toggle mya" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/img/figure/admin.jpg" class="rounded-circle mr-2 img-thumbnail" width="30px">
+                                    <p class="font-small my-2">Chandan Kanyal</p>
+                                    <ul class="dropdown-menu mx-3">
+                                        <li><a [routerLink]="['/profile-setting']">Profile Setting</a></li>
+                                        <li><a [routerLink]="['/my-purchases']">Puchase History</a></li>
+                                        <div class="dropdown-divider"></div>
+                                        <li><a href="#">Logout</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="row">
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
 </div>
+<!-- Header Ends -->
