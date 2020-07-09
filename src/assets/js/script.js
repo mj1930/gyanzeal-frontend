@@ -33,3 +33,36 @@ $('.dropdown-menu').on('click', function(){
     //     });
     // }
 });
+
+
+$(document).ready(function(){
+    $('.left-btn').on('click', function(){
+        $('.left-btn').removeClass('primary-color-dark text-white');
+        $('.left-btn').addClass('bg-white');
+        $(this).addClass('primary-color-dark text-white');
+        $(this).removeClass('bg-white');
+
+        var id = $(this).attr('id');
+        if(!$('.default-view').hasClass('d-none')){
+            $('.default-view').addClass('d-none');
+        }
+
+        $('.right-element').addClass('d-none');
+        $('.' + id).removeClass('d-none');
+    });
+
+
+    $('.enroll-new-course').on('click', function(){
+        $('#ec').click();
+    });
+
+    $('#prog').on('click', function(){
+        $('.schedule').addClass('d-none');
+        $('.progess').removeClass('d-none');
+    })
+
+    $('#sch').on('click', function(){
+        $('.progess').addClass('d-none');
+        $('.schedule').removeClass('d-none');
+    })
+});

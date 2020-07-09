@@ -1,0 +1,154 @@
+<div class="container-fluid cloudy-knoxville-gradient py-2 matop">
+    <div class="container-fluid container-lg my-md-5">
+        <div class="row d-flex align-items-center">
+            <div class="col bg-white shadow rounded-lg">
+
+                <form class="text-left py-3" action="#!">
+
+                    <div class="col text-center my-4">
+                        <img src="https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/img/figure/student.png" class="rounded-circle img-thumbnail" width="100px">
+                        <h4 class="my-2">Chandan Kanyal</h4>
+                    </div>
+                    
+                    <h5 class="text-primary"><i class="fas fa-ribbon"></i> Personal Information</h5>
+                    <hr>
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" class="form-control" placeholder="First name">
+                        </div>
+                        <div class="col">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" class="form-control" placeholder="Last name">
+                        </div>
+                    </div>
+
+                    <label for="gender">Gender</label>
+                    <select class="browser-default custom-select mb-4" id="gender">
+                        <option value="0" disabled="disabled" selected="selected">Choose your gender</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Prefer not to say</option>
+                    </select>
+
+
+                    <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Contact Information</h5>
+                    <hr>
+                    <label for="mobile">Contact Number</label>
+                    <input type="text" id="mobile" class="form-control mb-4" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10">
+
+
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <label for="add1">Street Address Line 1</label>
+                            <input type="text" id="add1" class="form-control" placeholder="Street Address Line 1">
+                        </div>
+                        <div class="col">
+                            <label for="add2">Street Address Line 2</label>
+                            <input type="text" id="add2" class="form-control" placeholder="Street Address Line 2">
+                        </div>
+                    </div>
+
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <label for="city">City</label>
+                            <input type="text" id="city" class="form-control" placeholder="City">
+                        </div>
+                        <div class="col">
+                            <label for="state">State</label>
+                            <input type="text" id="state" class="form-control" placeholder="State">
+                        </div>
+                    </div>
+
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" class="form-control" placeholder="Country">
+                        </div>
+                        <div class="col">
+                            <label for="postal">Postal Code</label>
+                            <input type="text" id="postal" class="form-control" placeholder="Postal Code" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="6">
+                        </div>
+                    </div>
+
+                    <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Guardian Information</h5>
+                    <hr>
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <label for="g1type">First Guardian Type</label>
+                            <select class="browser-default custom-select" id="g1type">
+                                <option value="0" disabled="disabled" selected="selected">Guardian Type</option>
+                                <option value="1">Father</option>
+                                <option value="2">Mother</option>
+                                <option value="3">Guardian</option>
+                                <option value="4">Other</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="g1name">First Guardian Name</label>
+                            <input type="text" id="g1name" class="form-control" placeholder="Guardian Name">
+                        </div>
+                    </div>
+
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <label for="g1contact">First Guardian Contact Number</label>
+                            <input type="text" id="g1contact" class="form-control" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10">
+                        </div>
+                        <div class="col">
+                            <label for="g1email">First Guardian Email</label>
+                            <input type="text" id="g1email" class="form-control" placeholder="Guardian Email">
+                        </div>
+                    </div>
+
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <label for="g2type">Second Guardian Type</label>
+                            <select class="browser-default custom-select" id="g2type">
+                                <option value="0" disabled="disabled" selected="selected">Guardian Type</option>
+                                <option value="1">Father</option>
+                                <option value="2">Mother</option>
+                                <option value="3">Guardian</option>
+                                <option value="4">Other</option>
+                            </select>
+                        </div>
+                        <div class="col">
+                            <label for="g2name">Second Guardian Name</label>
+                            <input type="text" id="g2name" class="form-control" placeholder="Guardian Name">
+                        </div>
+                    </div>
+
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <label for="g2contact">Second Guardian Contact Number</label>
+                            <input type="text" id="g2contact" class="form-control" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10">
+                        </div>
+                        <div class="col">
+                            <label for="g2email">Second Guardian Email</label>
+                            <input type="text" id="g2email" class="form-control" placeholder="Guardian Email">
+                        </div>
+                    </div>
+
+
+                    <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Update Security Information</h5>
+                    <hr>
+
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <label for="npass">New Password</label>
+                            <input type="password" id="npass" class="form-control" placeholder="New Password">
+                        </div>
+                        <div class="col">
+                            <label for="rpass">Repeat Password</label>
+                            <input type="password" id="rpass" class="form-control" placeholder="Repeat Password">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-sm mx-0 primary-color-dark text-white">Save Changes</button>
+
+                </form>
+            </div> 
+        </div>
+    </div>
+    
+</div>
