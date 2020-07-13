@@ -65,4 +65,64 @@ $(document).ready(function(){
         $('.progess').addClass('d-none');
         $('.schedule').removeClass('d-none');
     })
+
+
+    var table = $('#purchase-table').DataTable({
+        responsive: true
+    });
+
+    var table = $('#cart-table').DataTable({
+        responsive: true,
+        searching: false, 
+        paging: false, 
+        info: false
+    });
+
+    $('#cc').on('change', function(){
+        let val = $(this).val();
+
+        if(val == 1){
+            $('#school-academics').removeClass('d-none');
+            $('#after-school').addClass('d-none');
+        }else if(val == 2){
+            $('#after-school').removeClass('d-none');
+            $('#school-academics').addClass('d-none');
+            $('.course-list').addClass('d-none');
+        }else{
+            $('#after-school').addClass('d-none');
+            $('#school-academics').addClass('d-none');
+            $('.course-list').addClass('d-none');
+        }
+    });
+
+
+    // If Choose Course name changes in afterschool plans
+    $('#cn').on('change', function(){
+        let val = $(this).val();
+        if(val !== 0){
+            $('#after-school').removeClass('d-none');
+            $('#school-academics').addClass('d-none');
+            $('.course-list').removeClass('d-none');
+        }
+    });
+
+    // If Choose Course name changes in afterschool plans
+    $('#classSubject').on('change', function(){
+        let val = $(this).val();
+        if(val !== 0){
+            $('#school-academics').removeClass('d-none');
+            $('#after-school').addClass('d-none');
+            $('.course-list').removeClass('d-none');
+        }
+    });
+
+
+    // Show Headquater (Wallet Page)
+    $('#ocity').on('change', function(){
+        $('#headquater-list').removeClass('d-none');
+    });
+
+    $('#ostate').on('change', function(){
+        $('#headquater-list').addClass('d-none');
+    });
 });

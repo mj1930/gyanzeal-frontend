@@ -31,11 +31,42 @@
                         <option value="3">Prefer not to say</option>
                     </select>
 
+                    <label for="school">School Name</label>
+                    <input type="text" id="school" class="form-control mb-4" placeholder="School Name">
 
+                    <label for="board">Board Of Education</label>
+                    <select class="browser-default custom-select mb-4" id="board">
+                        <option value="0" disabled="disabled" selected="selected">Education Board</option>
+                        <option value="1">C.B.S.E.</option>
+                        <option value="2">I.C.S.C.</option>
+                        <option value="3">State Board</option>
+                    </select>
+
+                    <label for="classname">Pursuing Class</label>
+                    <select class="browser-default custom-select mb-4" id="classname">
+                        <option value="0" disabled="disabled" selected="selected">Choose Class</option>
+                        <option value="1">Grade 1</option>
+                        <option value="2">Grade 2</option>
+                        <option value="3">Grade 3</option>
+                        <option value="3">Grade 4</option>
+                        <option value="3">Grade 5</option>
+                        <option value="3">Grade 6</option>
+                        <option value="3">Grade 7</option>
+                        <option value="3">Grade 8</option>
+                        <option value="3">Grade 9</option>
+                        <option value="3">Grade 10</option>
+                        <option value="3">Grade 11</option>
+                        <option value="3">Grade 12</option>
+                    </select>
+
+                    <!-- Contact Info -->
                     <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Contact Information</h5>
                     <hr>
-                    <label for="mobile">Contact Number</label>
+                    <label for="mobile">Student Contact Number</label>
                     <input type="text" id="mobile" class="form-control mb-4" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10">
+
+                    <label for="semail">Student Email</label>
+                    <input type="email" id="semail" class="form-control mb-4" placeholder="Email">
 
 
                     <div class="form-row mb-4">
@@ -71,61 +102,23 @@
                         </div>
                     </div>
 
-                    <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Guardian Information</h5>
+                    <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Parent Information</h5>
                     <hr>
                     <div class="form-row mb-4">
                         <div class="col">
-                            <label for="g1type">First Guardian Type</label>
-                            <select class="browser-default custom-select" id="g1type">
-                                <option value="0" disabled="disabled" selected="selected">Guardian Type</option>
-                                <option value="1">Father</option>
-                                <option value="2">Mother</option>
-                                <option value="3">Guardian</option>
-                                <option value="4">Other</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <label for="g1name">First Guardian Name</label>
-                            <input type="text" id="g1name" class="form-control" placeholder="Guardian Name">
+                            <label for="g1name">Parent Name</label>
+                            <input type="text" id="g1name" class="form-control" placeholder="Parent Name">
                         </div>
                     </div>
 
                     <div class="form-row mb-4">
                         <div class="col">
-                            <label for="g1contact">First Guardian Contact Number</label>
+                            <label for="g1contact">Parent Contact Number</label>
                             <input type="text" id="g1contact" class="form-control" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10">
                         </div>
                         <div class="col">
-                            <label for="g1email">First Guardian Email</label>
-                            <input type="text" id="g1email" class="form-control" placeholder="Guardian Email">
-                        </div>
-                    </div>
-
-                    <div class="form-row mb-4">
-                        <div class="col">
-                            <label for="g2type">Second Guardian Type</label>
-                            <select class="browser-default custom-select" id="g2type">
-                                <option value="0" disabled="disabled" selected="selected">Guardian Type</option>
-                                <option value="1">Father</option>
-                                <option value="2">Mother</option>
-                                <option value="3">Guardian</option>
-                                <option value="4">Other</option>
-                            </select>
-                        </div>
-                        <div class="col">
-                            <label for="g2name">Second Guardian Name</label>
-                            <input type="text" id="g2name" class="form-control" placeholder="Guardian Name">
-                        </div>
-                    </div>
-
-                    <div class="form-row mb-4">
-                        <div class="col">
-                            <label for="g2contact">Second Guardian Contact Number</label>
-                            <input type="text" id="g2contact" class="form-control" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10">
-                        </div>
-                        <div class="col">
-                            <label for="g2email">Second Guardian Email</label>
-                            <input type="text" id="g2email" class="form-control" placeholder="Guardian Email">
+                            <label for="g1email">Parent Email</label>
+                            <input type="text" id="g1email" class="form-control" placeholder="Parent Email">
                         </div>
                     </div>
 
