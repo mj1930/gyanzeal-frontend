@@ -13,6 +13,10 @@ import { StudentEnrolledCoursesComponent } from '../app/student-enrolled-courses
 import { StudentPurchaseHistoryComponent } from '../app/student-purchase-history/student-purchase-history.component';
 import { StudentProfileSettingComponent } from '../app/student-profile-setting/student-profile-setting.component';
 import { ChangePasswordComponent } from '../app/change-password/change-password.component';
+import { TeacherDashboardComponent } from '../app/teacher-dashboard/teacher-dashboard.component';
+import { StudentCartComponent } from '../app/student-cart/student-cart.component';
+import { StudentProceedToPayComponent } from '../app/student-proceed-to-pay/student-proceed-to-pay.component';
+import { StudentWalletComponent } from '../app/student-wallet/student-wallet.component';
 
 
 
@@ -43,6 +47,14 @@ const routes: Routes = [
   { path: 'profile-setting', component: StudentProfileSettingComponent },
   // Change Password Page
   { path: 'change-password', component: ChangePasswordComponent },
+  // Change Password Page
+  { path: 'teacher-dashboard', component: TeacherDashboardComponent },
+  // Student Cart Page
+  { path: 'cart', component: StudentCartComponent },
+  // Student Proceed to Pay Page
+  { path: 'securepay', component: StudentProceedToPayComponent },
+  // Student Wallet Page
+  { path: 'mywallet', component: StudentWalletComponent },
 
   
   // Student Dashboard Page

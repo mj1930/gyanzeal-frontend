@@ -82,26 +82,32 @@
     
                 <div class="navbar-collapse collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav text-center ml-auto">
-                        <li class="nav-item"><a [routerLink]="['/home']" class="nav-link active">Home</a></li>
-                        <li class="nav-item"><a [routerLink]="['/my-courses']" class="nav-link">My Courses</a></li>
+                        <li class="nav-item"><a [routerLink]="['/student-dashboard']" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a [routerLink]="['/profile-setting']" class="nav-link active">Profile Setting</a></li>
+                        <li class="nav-item"><a [routerLink]="['/my-purchases']" class="nav-link active">Puchase History</a></li>
+                        <li class="nav-item">
+                            <a [routerLink]="['/cart']" class="nav-link active">
+                                <i class="fas fa-shopping-cart"></i>
+                                <!-- Display Span Tag Only When Items In Cart -->
+                                <span class="bg-danger font-small mx-1 px-1 rounded">10</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a [routerLink]="['/mywallet']" class="nav-link active">
+                                <i class="fas fa-wallet"></i> Wallet
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <div class="col">
-                                <div class="d-flex align-items-center bg-white px-3 rounded-lg mt-1 dropdown-toggle mya" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/img/figure/admin.jpg" class="rounded-circle mr-2 img-thumbnail" width="30px">
+                                <div class="d-flex align-items-center bg-white px-3 rounded-lg mt-1 mya">
                                     <p class="font-small my-2">Chandan Kanyal</p>
-                                    <ul class="dropdown-menu mx-3">
-                                        <li><a [routerLink]="['/profile-setting']">Profile Setting</a></li>
-                                        <li><a [routerLink]="['/my-purchases']">Puchase History</a></li>
-                                        <div class="dropdown-divider"></div>
-                                        <li><a href="#">Logout</a></li>
-                                    </ul>
+                                    <img src="https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/img/figure/admin.jpg" class="rounded-circle ml-2 img-thumbnail" width="30px">
                                 </div>
                             </div>
                         </li>
+                        <li class="nav-item"><a [routerLink]="['/logout']" class="nav-link active">Logout</a></li>
                     </ul>
-                    <div class="row">
-                        
-                    </div>
                 </div>
             </div>
         </nav>

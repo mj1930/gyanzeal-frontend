@@ -400,62 +400,314 @@
             <div class="col-lg-9 rounded-lg ec d-none right-element">
                 <div class="card">
                     <!-- Center Content -->
-                    <div class="card-body px-5">    
+                    <div class="card-body px-3">                         
+                        <form class="text-left pb-3 px-2" action="#!"> 
+                            <h4>Enroll New Courses</h4>  
+                            <hr>     
+                            <label for="cc">Course Category</label>
+                            <select class="browser-default custom-select mb-4" id="cc">
+                                <option value="0" disabled="disabled" selected="selected">Course Category</option>
+                                <option value="1">School Academics</option>
+                                <option value="2">After School Plans</option>
+                            </select>
+                            
+                            <div class="form-row mb-4 d-none" id="school-academics">
+                                <div class="col-md-4 mb-4">
+                                    <label for="board">Board of Education</label>
+                                    <input type="text" class="form-control" id="board" placeholder="C.B.S.E" value="C.B.S.E" readonly disabled>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <label for="grade">Class</label>
+                                    <input type="text" class="form-control" id="grade" placeholder="Grade 10" value="Grade 10" readonly disabled>
+                                </div>
 
-                        <div class="row d-flex justify-content-md-around">
-
-                            <div class="card col-md-5 mb-4">
-                                <div class="card-body px-2">
-                                    <h4 class="card-title"><a>Mathematics</a></h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <div class=" d-flex justify-content-md-around">
-                                        <a href="#" class="btn danger-color-dark text-white btn-sm">View Detail</a>
-                                        <a href="#" class="btn special-color-dark text-white btn-sm">Enroll Now</a>
-                                    </div>
+                                <div class="col-md-4 mb-4">
+                                    <label for="classSubject">Class Subject</label>
+                                    <select class="browser-default custom-select mb-4" id="classSubject">
+                                        <option value="0" disabled="disabled" selected="selected">(Select Subject)</option>
+                                        <option value="1">English</option>
+                                        <option value="2">Hindi</option>
+                                        <option value="2">Mathematics</option>
+                                        <option value="2">EVS</option>
+                                        <option value="2">Science</option>
+                                        <option value="2">Home Science</option>
+                                    </select>
                                 </div>
                             </div>
 
-                            <div class="card col-md-5 mb-4">
-                                <div class="card-body px-2">
-                                    <h4 class="card-title"><a>English</a></h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <div class=" d-flex justify-content-md-around">
-                                        <a href="#" class="btn danger-color-dark text-white btn-sm">View Detail</a>
-                                        <a href="#" class="btn special-color-dark text-white btn-sm">Enroll Now</a>
-                                    </div>
+                            <div class="form-row mb-4 d-none" id="after-school">
+                                <div class="col mb-4">
+                                    <label for="ct">Course Type</label>
+                                    <select class="browser-default custom-select mb-4" id="ct">
+                                        <option value="0" disabled="disabled" selected="selected">Type of Course</option>
+                                        <option value="1">Language</option>
+                                        <option value="2">I.T</option>
+                                        <option value="3">Music</option>
+                                    </select>
+                                </div>
+                                <div class="col mb-4">
+                                    <label for="cn">Course Name</label>
+                                    <select class="browser-default custom-select mb-4" id="cn">
+                                        <option value="0" disabled="disabled" selected="selected">Name of Course</option>
+                                        <option value="1">English</option>
+                                        <option value="2">French</option>
+                                        <option value="2">German</option>
+                                        <option value="2">Spannish</option>
+                                    </select>
                                 </div>
                             </div>
+                        </form>
+                         
+                        <div class="col course-list d-none">
+                            <h4>Available Courses</h4>  
+                            <hr>
+                            <div class="row d-flex justify-content-center justify-content-sm-between">
+                                
+                                <div class="col-md-4 col-sm-5 px-md-2 p-0 my-3">
+                                    <div class="card">
+                                        <div class="card-body px-2">
+                                            <h4 class="card-title text-center">English - 1 Grade</h4>
+                                            <hr>
+                                            <p class="orange-text text-center mb-0">Batch Started</p>
+                                            <p class="text-secondary text-center mb-0"><b>10 Jul 2020 - 16 Aug 2020</b></p>
+                                            <p class="text-center text-secondary mb-2">05:00 PM - 06:00 PM</p>
 
-                            <div class="card col-md-5 mb-4">
-                                <div class="card-body px-2">
-                                    <h4 class="card-title"><a>Hindi</a></h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <div class=" d-flex justify-content-md-around">
-                                        <a href="#" class="btn danger-color-dark text-white btn-sm">View Detail</a>
-                                        <a href="#" class="btn special-color-dark text-white btn-sm">Enroll Now</a>
+                                            <p class="mb-0 text-center mb-0">
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">MO</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TU</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">WE</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TH</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">FR</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">SA</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">SU</span>
+                                            </p>
+                                            <hr>
+                                            <p class="card-text text-justify">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.
+                                            </p>
+                                            <a [routerLink]="['/add-to-cart']" class="btn primary-color-dark text-white btn-sm btn-block mx-0">Add to Cart</a>
+                                            <a [routerLink]="['/my-courses']" class="btn unique-color text-white btn-sm mx-0 btn-block" data-toggle="modal" data-target="#exampleModal">Details</a>
+                                        </div>
+
+                                        <div class="card-footer text-muted text-center text-sm-left">
+                                            <i class="fas fa-rupee-sign"></i> 4500
+                                        </div>                         
                                     </div>
                                 </div>
-                            </div>
+                                
+                                <div class="col-md-4 col-sm-5 px-md-2 p-0 my-3">
+                                    <div class="card">
+                                        <div class="card-body px-2">
+                                            <h4 class="card-title text-center">English - 1 Grade</h4>
+                                            <hr>
+                                            <p class="orange-text text-center mb-0">Batch Started</p>
+                                            <p class="text-secondary text-center mb-0"><b>10 Jul 2020 - 16 Aug 2020</b></p>
+                                            <p class="text-center text-secondary mb-2">05:00 PM - 06:00 PM</p>
 
-                            <div class="card col-md-5 mb-4">
-                                <div class="card-body px-2">
-                                    <h4 class="card-title"><a>Sanskrit</a></h4>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                                        content.</p>
-                                    <div class=" d-flex justify-content-md-around">
-                                        <a href="#" class="btn danger-color-dark text-white btn-sm">View Detail</a>
-                                        <a href="#" class="btn special-color-dark text-white btn-sm">Enroll Now</a>
+                                            <p class="mb-0 text-center mb-0">
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">MO</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TU</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">WE</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TH</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">FR</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">SA</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">SU</span>
+                                            </p>
+                                            <hr>
+                                            <p class="card-text text-justify">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.
+                                            </p>
+                                            <a [routerLink]="['/add-to-cart']" class="btn primary-color-dark text-white btn-sm btn-block mx-0">Add to Cart</a>
+                                            <a [routerLink]="['/my-courses']" class="btn unique-color text-white btn-sm mx-0 btn-block">Details</a>
+                                        </div>
+
+                                        <div class="card-footer text-muted text-center text-sm-left">
+                                            <i class="fas fa-rupee-sign"></i> 4500
+                                        </div>                         
                                     </div>
                                 </div>
-                            </div>
+                                
+                                <div class="col-md-4 col-sm-5 px-md-2 p-0 my-3">
+                                    <div class="card">
+                                        <div class="card-body px-2">
+                                            <h4 class="card-title text-center">English - 1 Grade</h4>
+                                            <hr>
+                                            <p class="orange-text text-center mb-0">Batch Started</p>
+                                            <p class="text-secondary text-center mb-0"><b>10 Jul 2020 - 16 Aug 2020</b></p>
+                                            <p class="text-center text-secondary mb-2">05:00 PM - 06:00 PM</p>
 
+                                            <p class="mb-0 text-center mb-0">
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">MO</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TU</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">WE</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TH</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">FR</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">SA</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">SU</span>
+                                            </p>
+                                            <hr>
+                                            <p class="card-text text-justify">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.
+                                            </p>
+                                            <a [routerLink]="['/add-to-cart']" class="btn primary-color-dark text-white btn-sm btn-block mx-0">Add to Cart</a>
+                                            <a [routerLink]="['/my-courses']" class="btn unique-color text-white btn-sm mx-0 btn-block">Details</a>
+                                        </div>
+
+                                        <div class="card-footer text-muted text-center text-sm-left">
+                                            <i class="fas fa-rupee-sign"></i> 4500
+                                        </div>                         
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4 col-sm-5 px-md-2 p-0 my-3">
+                                    <div class="card">
+                                        <div class="card-body px-2">
+                                            <h4 class="card-title text-center">English - 1 Grade</h4>
+                                            <hr>
+                                            <p class="orange-text text-center mb-0">Batch Started</p>
+                                            <p class="text-secondary text-center mb-0"><b>10 Jul 2020 - 16 Aug 2020</b></p>
+                                            <p class="text-center text-secondary mb-2">05:00 PM - 06:00 PM</p>
+
+                                            <p class="mb-0 text-center mb-0">
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">MO</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TU</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">WE</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TH</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">FR</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">SA</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">SU</span>
+                                            </p>
+                                            <hr>
+                                            <p class="card-text text-justify">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.
+                                            </p>
+                                            <a [routerLink]="['/add-to-cart']" class="btn primary-color-dark text-white btn-sm btn-block mx-0">Add to Cart</a>
+                                            <a [routerLink]="['/my-courses']" class="btn unique-color text-white btn-sm mx-0 btn-block">Details</a>
+                                        </div>
+
+                                        <div class="card-footer text-muted text-center text-sm-left">
+                                            <i class="fas fa-rupee-sign"></i> 4500
+                                        </div>                         
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4 col-sm-5 px-md-2 p-0 my-3">
+                                    <div class="card">
+                                        <div class="card-body px-2">
+                                            <h4 class="card-title text-center">English - 1 Grade</h4>
+                                            <hr>
+                                            <p class="orange-text text-center mb-0">Batch Started</p>
+                                            <p class="text-secondary text-center mb-0"><b>10 Jul 2020 - 16 Aug 2020</b></p>
+                                            <p class="text-center text-secondary mb-2">05:00 PM - 06:00 PM</p>
+
+                                            <p class="mb-0 text-center mb-0">
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">MO</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TU</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">WE</span>
+                                                <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TH</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">FR</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">SA</span>
+                                                <span class="text-danger d-inline-block border p-1 font-small my-2">SU</span>
+                                            </p>
+                                            <hr>
+                                            <p class="card-text text-justify">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it.
+                                            </p>
+                                            <a [routerLink]="['/add-to-cart']" class="btn primary-color-dark text-white btn-sm btn-block mx-0">Add to Cart</a>
+                                            <a [routerLink]="['/my-courses']" class="btn unique-color text-white btn-sm mx-0 btn-block">Details</a>
+                                        </div>
+
+                                        <div class="card-footer text-muted text-center text-sm-left">
+                                            <i class="fas fa-rupee-sign"></i> 4500
+                                        </div>                         
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
                         </div>
-                        
 
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="margin-top: 25%;">
+                <div class="modal-header">
+                    <h5 class="modal-title">Course Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body curiculum-list">
+                    <div class="row">
+                        <div class="col d-flex justify-content-between">
+                            <h5 class="text-left font-small">Curiculum Contents</h5>
+                            <h5 class="text-right font-small">Precentage Completed</h5>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="row border rounded-lg mb-2">
+                            <div class="bg-white col col-md-10 mt-3 pt-3">
+                                <p class="chapter-name">Chapter 1 - Introduction</p>
+                            </div>
+                            <div class="col col-md-2 py-0">
+                                <p class="my-4 py-2 text-danger text-right">50%</p>
+                            </div>
+                        </div>
+
+                        <div class="row border rounded-lg mb-2">
+                            <div class="bg-white col col-md-10 mt-3 pt-3">
+                                <p class="chapter-name">Chapter 1 - Introduction</p>
+                            </div>
+                            <div class="col col-md-2 py-0">
+                                <p class="my-4 py-2 text-danger text-right">50%</p>
+                            </div>
+                        </div> 
+                        
+                        <div class="row border rounded-lg mb-2">
+                            <div class="bg-white col col-md-10 mt-3 pt-3">
+                                <p class="chapter-name">Chapter 1 - Introduction</p>
+                            </div>
+                            <div class="col col-md-2 py-0">
+                                <p class="my-4 py-2 text-danger text-right">50%</p>
+                            </div>
+                        </div>
+
+                        <div class="row border rounded-lg mb-2">
+                            <div class="bg-white col col-md-10 mt-3 pt-3">
+                                <p class="chapter-name">Chapter 1 - Introduction</p>
+                            </div>
+                            <div class="col col-md-2 py-0">
+                                <p class="my-4 py-2 text-danger text-right">50%</p>
+                            </div>
+                        </div> 
+
+                        <div class="row border rounded-lg mb-2">
+                            <div class="bg-white col col-md-10 mt-3 pt-3">
+                                <p class="chapter-name">Chapter 1 - Introduction</p>
+                            </div>
+                            <div class="col col-md-2 py-0">
+                                <p class="my-4 py-2 text-danger text-right">50%</p>
+                            </div>
+                        </div>
+
+                        <div class="row border rounded-lg mb-2">
+                            <div class="bg-white col col-md-10 mt-3 pt-3">
+                                <p class="chapter-name">Chapter 1 - Introduction</p>
+                            </div>
+                            <div class="col col-md-2 py-0">
+                                <p class="my-4 py-2 text-danger text-right">50%</p>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm primary-color-dark text-white" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>

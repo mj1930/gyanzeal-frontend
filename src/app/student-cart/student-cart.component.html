@@ -1,0 +1,74 @@
+<div class="container-fluid cloudy-knoxville-gradient py-2 matop">
+    <div class="container-fluid container-lg my-md-5">
+        <div class="col bg-white py-3">
+            <h2 class="fredoka">Products in Cart</h2>
+            <p>Below are the list of your Products In Cart.</p>
+            <hr>
+            <div class="alert alert-danger" role="alert">
+                <i class="fas fa-exclamation-circle align-middle"></i> You cannot checkout with the list of products, because one or more courses have time-table clash within cart or Enrolled courses.
+            </div>
+            <div class="col">
+                <table id="cart-table" class="table" width="100%">
+                    <thead>
+                        <tr>
+                            <th class="th-sm">Course Name</th>
+                            <th class="th-sm">Date</th>
+                            <th class="th-sm">Days of Week</th>
+                            <th class="th-sm">Time</th>
+                            <th class="th-sm">Amount</th>
+                            <th class="th-sm text-right">Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>English - Grade 1</td>
+                            <td>06 May 2020 - 19 Jun 2020</td>
+                            <td>Mo, We, Su</td>
+                            <td>10:00 AM - 11:00 AM</td>
+                            <td><i class="fas fa-rupee-sign"></i> 1200</td>
+                            <td class="text-md-right text-center pt-1">
+                                <button class="btn mx-0"><i class="far fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="yellow lighten-5">
+                            <td>Hindi - Grade 1</td>
+                            <td>06 May 2020 - 19 Jun 2020</td>
+                            <td>Tu, We, Sa</td>
+                            <td>12:00 PM - 01:00 PM</td>
+                            <td><i class="fas fa-rupee-sign"></i> 1200</td>
+                            <td class="text-md-right text-center pt-1">
+                                <button class="btn mx-0"><i class="far fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>English - Grade 1</td>
+                            <td>06 May 2020 - 19 Jun 2020</td>
+                            <td>Mo, We, Su</td>
+                            <td>10:00 AM - 11:00 AM</td>
+                            <td><i class="fas fa-rupee-sign"></i> 1200</td>
+                            <td class="text-md-right text-center pt-1">
+                                <button class="btn mx-0"><i class="far fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                        <tr class="yellow lighten-5">
+                            <td>Hindi - Grade 1</td>
+                            <td>06 May 2020 - 19 Jun 2020</td>
+                            <td>Tu, We, Sa</td>
+                            <td>12:00 PM - 01:00 PM</td>
+                            <td><i class="fas fa-rupee-sign"></i> 1200</td>
+                            <td class="text-md-right text-center pt-1">
+                                <button class="btn mx-0"><i class="far fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                        
+                </table>
+
+                <div class="col text-right px-0">
+                    <a [routerLink]="['/securepay']" role="button" class="btn mx-0 btn-lg text-white primary-color-dark">Proceed to Pay</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>
