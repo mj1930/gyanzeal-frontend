@@ -18,6 +18,10 @@ import { StudentEnrolledCoursesComponent } from './student-enrolled-courses/stud
 import { StudentPurchaseHistoryComponent } from './student-purchase-history/student-purchase-history.component';
 import { StudentProfileSettingComponent } from './student-profile-setting/student-profile-setting.component';
 import { ChangePasswordComponent } from './change-password/change-password.component';
+import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
+import { StudentCartComponent } from './student-cart/student-cart.component';
+import { StudentProceedToPayComponent } from './student-proceed-to-pay/student-proceed-to-pay.component';
+import { StudentWalletComponent } from './student-wallet/student-wallet.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { ChangePasswordComponent } from './change-password/change-password.compo
     StudentEnrolledCoursesComponent,
     StudentPurchaseHistoryComponent,
     StudentProfileSettingComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    TeacherDashboardComponent,
+    StudentCartComponent,
+    StudentProceedToPayComponent,
+    StudentWalletComponent
   ],
   imports: [
     BrowserModule,
