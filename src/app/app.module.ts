@@ -22,6 +22,8 @@ import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard
 import { StudentCartComponent } from './student-cart/student-cart.component';
 import { StudentProceedToPayComponent } from './student-proceed-to-pay/student-proceed-to-pay.component';
 import { StudentWalletComponent } from './student-wallet/student-wallet.component';
+import { TeacherBatchDetailsComponent } from './teacher-batch-details/teacher-batch-details.component';
+import { TeacherProfileSettingComponent } from './teacher-profile-setting/teacher-profile-setting.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { StudentWalletComponent } from './student-wallet/student-wallet.componen
     TeacherDashboardComponent,
     StudentCartComponent,
     StudentProceedToPayComponent,
-    StudentWalletComponent
+    StudentWalletComponent,
+    TeacherBatchDetailsComponent,
+    TeacherProfileSettingComponent
   ],
   imports: [
     BrowserModule,

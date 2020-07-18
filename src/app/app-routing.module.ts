@@ -17,6 +17,8 @@ import { TeacherDashboardComponent } from '../app/teacher-dashboard/teacher-dash
 import { StudentCartComponent } from '../app/student-cart/student-cart.component';
 import { StudentProceedToPayComponent } from '../app/student-proceed-to-pay/student-proceed-to-pay.component';
 import { StudentWalletComponent } from '../app/student-wallet/student-wallet.component';
+import { TeacherBatchDetailsComponent } from '../app/teacher-batch-details/teacher-batch-details.component';
+import { TeacherProfileSettingComponent } from '../app/teacher-profile-setting/teacher-profile-setting.component';
 
 
 
@@ -47,8 +49,6 @@ const routes: Routes = [
   { path: 'profile-setting', component: StudentProfileSettingComponent },
   // Change Password Page
   { path: 'change-password', component: ChangePasswordComponent },
-  // Change Password Page
-  { path: 'teacher-dashboard', component: TeacherDashboardComponent },
   // Student Cart Page
   { path: 'cart', component: StudentCartComponent },
   // Student Proceed to Pay Page
@@ -56,6 +56,15 @@ const routes: Routes = [
   // Student Wallet Page
   { path: 'mywallet', component: StudentWalletComponent },
 
+  
+  // Teacher Dashboard Page
+  { path: 'teacher-dashboard', component: TeacherDashboardComponent },
+  // Teacher Batch Detail Page
+  { path: 'batch-details', component: TeacherBatchDetailsComponent },
+  // Teacher Profile Setting Page
+  { path: 'teacher-profile-setting', component: TeacherProfileSettingComponent },
+
+  
   
   // Student Dashboard Page
   { path: 'student-dashboard', component: StudentDashboardComponent },

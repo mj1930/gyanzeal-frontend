@@ -70,7 +70,7 @@
 
 
 <!-- Student Header -->
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <header>
         <nav class="navbar navbar-expand-lg fixed-top jq-nav navbar-dark default-color-dark">
             <div class="container-fluid">
@@ -88,7 +88,7 @@
                         <li class="nav-item">
                             <a [routerLink]="['/cart']" class="nav-link active">
                                 <i class="fas fa-shopping-cart"></i>
-                                <!-- Display Span Tag Only When Items In Cart -->
+                                
                                 <span class="bg-danger font-small mx-1 px-1 rounded">10</span>
                             </a>
                         </li>
@@ -98,6 +98,37 @@
                                 <i class="fas fa-wallet"></i> Wallet
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <div class="col">
+                                <div class="d-flex align-items-center bg-white px-3 rounded-lg mt-1 mya">
+                                    <p class="font-small my-2">Chandan Kanyal</p>
+                                    <img src="https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/img/figure/admin.jpg" class="rounded-circle ml-2 img-thumbnail" width="30px">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a [routerLink]="['/logout']" class="nav-link active">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div> -->
+
+<!-- Teacher Header -->
+<div class="container-fluid">
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top jq-nav navbar-dark default-color-dark">
+            <div class="container-fluid">
+                <a [routerLink]="['']" class="navbar-brand img-fluid"><img src="../../assets/svg/logo.svg" alt="Gyan Zeal Logo" height="50px"></a>
+    
+                <button class="navbar-toggler btn-outline-white text-white" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="navbar-collapse collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav text-center ml-auto">
+                        <li class="nav-item"><a [routerLink]="['/teacher-dashboard']" class="nav-link active">Home</a></li>
+                        <li class="nav-item"><a [routerLink]="['/teacher-profile-setting']" class="nav-link active">Profile Setting</a></li>
                         <li class="nav-item">
                             <div class="col">
                                 <div class="d-flex align-items-center bg-white px-3 rounded-lg mt-1 mya">
