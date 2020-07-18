@@ -18,4 +18,12 @@ export class RegistrationService {
   signUpTeacher(teacherData: any) {
     return this.http.post(`${environment.url}teacher/teacherSignUp`, {teacherData});
   }
+
+  loginStudent(loginData) {
+    return this.http.post(`${environment.url}student/login`, {loginData})
+  }
+
+  loginTeacher(loginData) {
+    return this.http.post(`${environment.url}teacher/login`, {loginData})
+  }
 }

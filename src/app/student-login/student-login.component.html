@@ -1,12 +1,21 @@
 <div class="container-fluid cloudy-knoxville-gradient py-2 matop">
     <div class="container-fluid container-lg my-md-5">
         <div class="row d-flex align-items-center">
-            <div class="col-md-8"><img src="../../assets/svg/student-login-page.svg" alt="Student Login Page" class="my-4 my-md-0"></div>
+            <div class="col-md-8"><img src="../../assets/svg/student-login-page.svg" alt="Student Login Page"
+                    class="my-4 my-md-0"></div>
             <div class="col-md-4">
+                <div class="toast right-0 position-fixed"
+                    [ngClass]="messageClass ? 'success-color-dark text-white' : 'danger-color-dark text-white'"
+                    data-autohide="false" [class.show]="showMessage" *ngIf="showMessage">
+                    <div class="toast-body">
+                        <h4>{{message}}</h4>
+                    </div>
+                </div>
                 <h2 class="fredoka">Student Log In</h2>
-                <p>To keep connected with us please login with your personal information by email address and password.</p>
+                <p>To keep connected with us please login with your personal information by email address and password.
+                </p>
 
-                <form class="text-left" action="#!">
+                <form class="text-left" [formGroup]="studentLoginForm">
                     <!-- <hr> -->
                     <div class="text-center social-btn my-3">
                         <a href="#" class="btn btn-primary btn-sm"><i class="fab fa-facebook-f"></i> Facebook Login</a>
@@ -16,11 +25,24 @@
 
                     <!-- Name -->
                     <label for="name">Email</label>
-                    <input type="text" id="name" class="form-control mb-4" placeholder="Username or Email">
-    
+                    <input type="text" id="name" class="form-control mb-4" placeholder="Username or Email"
+                        formControlName="email" name="email">
+                    <!-- <p class="form-text text-danger mb-4 font-small"
+                        *ngIf="studentLoginForm.get('email').touched && !studentLoginForm.get('email').valid">
+                        Can't be left Blank
+                    </p> -->
+                    <p class="form-text text-danger mb-4 font-small"
+                        *ngIf="studentLoginForm.get('email').touched && studentLoginForm.get('email').invalid">
+                        Please enter valid email
+                    </p>
+
                     <label for="password">Password</label>
-                    <input type="password" id="name" class="form-control mb-4" placeholder="Password">
-    
+                    <input type="password" id="password" class="form-control mb-4" placeholder="Password"
+                        formControlName="password" name="password">
+                    <p class="form-text text-danger mb-4 font-small"
+                        *ngIf="studentLoginForm.get('password').touched && !studentLoginForm.get('password').valid">
+                        Can't be left Blank
+                    </p>
                     <div class="d-flex justify-content-between mb-2">
                         <div>
                             <!-- Remember me -->
@@ -34,13 +56,13 @@
                             <a [routerLink]="['/reset-password/student']">Forgot password?</a>
                         </div>
                     </div>
-                    <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+                    <button class="btn btn-info my-4 btn-block" type="submit" (click)="login()">Sign in</button>
                     <p>Not a registered member?
                         <a [routerLink]="['/signup/student']">Register here</a>
                     </p>
                 </form>
-            </div> 
+            </div>
         </div>
     </div>
-    
+
 </div>
