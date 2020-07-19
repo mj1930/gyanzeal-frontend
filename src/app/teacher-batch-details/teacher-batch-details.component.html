@@ -1,0 +1,319 @@
+<div class="container-fluid cloudy-knoxville-gradient py-2 py-lg-5 matop">
+    
+    <div class="container-md">
+        <div class="row">
+            
+            <!-- Default Right -->
+            <div class="col-lg-12 mb-3 rounded-lg">
+                <div class="card">
+                  
+                    <!-- Center Content -->
+                    <div class="card-body">
+                        <div class="enrolled-classes">
+                            <div class="row">
+                                <div class="col-md-9 pt-4">
+                                    <h4 class="Student-name">Grade 1 - Math 2020</h4>
+                                    <h6 class="teacher-name">Gautam Bansal (PH.D English)</h6>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="text-center py-2">
+                                        <h5 class="my-4 text-danger text-right">01 JUL - 12 SEP</h5>
+                                    </div>
+                                    <!-- Only Admin Can De-Enroll students -->
+                                    <!-- <button class="btn btn-block primary-color-dark text-white">De-Enroll</button> -->
+                                </div>
+                            </div>
+                        </div>
+                          
+                        <!-- Homework Modal -->
+                        <div class="modal fade" id="homework" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Homework</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body curiculum-list">                                    
+                                    <div class="col-12">                
+                                        <div class="align-items-baseline border d-flex mb-2 rounded-lg row pt-2">
+                                            <div class="col">
+                                                <p class="student-name">Student Name</p>
+                                            </div>
+                                            <div class="col text-right">
+                                                <button class="btn btn-sm unique-color text-white mx-0"><i class="fas fa-paperclip"></i> Download H/W</button>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="align-items-baseline border d-flex mb-2 rounded-lg row pt-2">
+                                            <div class="col">
+                                                <p class="student-name">Student Name</p>
+                                            </div>
+                                            <div class="col text-right">
+                                                <button class="btn btn-sm unique-color text-white mx-0"><i class="fas fa-paperclip"></i> Download H/W</button>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="align-items-baseline border d-flex mb-2 rounded-lg row pt-2">
+                                            <div class="col">
+                                                <p class="student-name">Student Name</p>
+                                            </div>
+                                            <div class="col text-right">
+                                                <button class="btn btn-sm unique-color text-white mx-0"><i class="fas fa-paperclip"></i> Download H/W</button>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="align-items-baseline border d-flex mb-2 rounded-lg row pt-2">
+                                            <div class="col">
+                                                <p class="student-name">Student Name</p>
+                                            </div>
+                                            <div class="col text-right">
+                                                <button class="btn btn-sm unique-color text-white mx-0"><i class="fas fa-paperclip"></i> Download H/W</button>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="align-items-baseline border d-flex mb-2 rounded-lg row pt-2">
+                                            <div class="col">
+                                                <p class="student-name">Student Name</p>
+                                            </div>
+                                            <div class="col text-right">
+                                                <button class="btn btn-sm unique-color text-white mx-0"><i class="fas fa-paperclip"></i> Download H/W</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer mt-2">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Upload Homework Modal -->
+                        <div class="modal fade" id="uploadHomework" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Homework</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                          <span class="input-group-text" id="inputGroupFileAddon01"><i class="fas fa-paperclip"></i></span>
+                                        </div>
+                                        <div class="custom-file">
+                                          <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                            aria-describedby="inputGroupFileAddon01">
+                                          <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <button class="btn btn-sm unique-color text-white mx-0">Upload File</button>
+                                </div>
+
+                                <div class="col">
+                                    <hr>
+                                    <p>Previously Uploaded Files</p>
+
+                                    <ul>
+                                        <li><p>Filename.png <button class="btn btn-sm danger-color-dark text-white">Delete</button></p></li>
+                                        <li><p>Filename.png <button class="btn btn-sm danger-color-dark text-white">Delete</button></p></li>
+                                        <li><p>Filename.png <button class="btn btn-sm danger-color-dark text-white">Delete</button></p></li>
+                                    </ul>
+                                </div>
+                                <div class="modal-footer mt-2">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- progress Modal -->
+                        <div class="modal fade" id="progress-box" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Progress</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col d-flex justify-content-between">
+                                            <h5 class="text-left font-small">Curiculum Contents</h5>
+                                            <h5 class="text-right font-small">Precentage Completed</h5>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <div class="row border rounded-lg mb-2">
+                                            <div class="bg-white col col-sm-8 mt-3 pt-3">
+                                                <p class="chapter-name">Chapter 1 - Introduction</p>
+                                            </div>
+                                            <div class="col col-sm-4 mt-3 pt-2 col-12 col-12">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <button class="input-group-text px-3 drec">-</button>
+                                                    </div>
+                                                    <input type="text" class="form-control current-value" value="0%">
+                                                    <div class="input-group-append">
+                                                        <button class="input-group-text inc">+</button>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                
+                                        <div class="row border rounded-lg mb-2">
+                                            <div class="bg-white col col-sm-8 mt-3 pt-3">
+                                                <p class="chapter-name">Chapter 1 - Introduction</p>
+                                            </div>
+                                            <div class="col col-sm-4 mt-3 pt-2 col-12 col-12">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <button class="input-group-text px-3 drec">-</button>
+                                                    </div>
+                                                    <input type="text" class="form-control current-value" value="0%">
+                                                    <div class="input-group-append">
+                                                        <button class="input-group-text inc">+</button>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div> 
+                                        
+                                        <div class="row border rounded-lg mb-2">
+                                            <div class="bg-white col col-sm-8 mt-3 pt-3">
+                                                <p class="chapter-name">Chapter 1 - Introduction</p>
+                                            </div>
+                                            <div class="col col-sm-4 mt-3 pt-2 col-12 col-12">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <button class="input-group-text px-3 drec">-</button>
+                                                    </div>
+                                                    <input type="text" class="form-control current-value" value="0%">
+                                                    <div class="input-group-append">
+                                                        <button class="input-group-text inc">+</button>
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="modal-footer mt-2">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="schedule">
+                            <hr>
+                            <!-- All Sessions (5 classess held, 0 for upcoming classes) -->
+                            <h5>All Sessions (5)</h5>
+                            <div class="col-12 my-3">
+
+                                <div class="row border my-3 py-2">
+                                    <div class="col-md-2 py-2">
+                                        <div class="text-center peach-gradient rounded-lg">
+                                            <div class="col text-uppercase text-white py-2 px-0">6 June</div>
+                                            <div class="col bg-white border text-uppercase text-secondary py-2 rounded-bottom">Mon</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 mx-md-0 mx-3 my-3 my-md-0 bg-white py-2">
+                                        <h4 class="Student-name">Topic 1</h4>
+                                        <p><span class="text-danger">Notes:</span> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                                        <div class="row col d-sm-block justify-content-sm-start d-flex justify-content-center">
+                                            <button class="btn stylish-color text-white mx-0 btn-sm mx-2" data-toggle="modal" data-target="#homework">View Homework</button>
+                                            <button class="btn btn-sm unique-color text-white completed-btn" id="notes">Notes</button>
+                                            <button class="btn info-color-dark text-white mx-0 btn-sm px-2 mx-2" data-toggle="modal" data-target="#uploadHomework">Upload Homework</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 text-md-right text-center">
+                                        <div class="py-2">
+                                            <p class="m-0">5:00PM - 6:00PM</p>
+                                        </div>                                       
+                                    </div>
+                                    <div class="col my-3 d-none completed-outer">
+                                        <div class="notes boxes d-none">
+                                            <label for="notes">Class Notes</label>
+                                            <textarea name="notes" id="notes" class="form-control" rows="5" id="notes" placeholder="Enter Your Notes Here..."></textarea>
+                                            <button class="btn btn-sm unique-color-dark text-white mx-0">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row border my-3 py-2">
+                                    <div class="col-md-2 py-2">
+                                        <div class="text-center peach-gradient rounded-lg">
+                                            <div class="col text-uppercase text-white py-2 px-0">8 June</div>
+                                            <div class="col bg-white border text-uppercase text-secondary py-2 rounded-bottom">Mon</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8 mx-md-0 mx-3 my-3 my-md-0 bg-white py-2">
+                                        <label for="topic-name">Topic Name</label>
+                                        <input type="text" class="form-control" id="topic-name" placeholder="Topic Name">
+                                        <div class="row col d-sm-block justify-content-sm-start d-flex justify-content-center">
+                                            <button class="btn stylish-color-dark text-white btn-sm" data-toggle="modal" data-target="#homework">View Homework</button>
+                                            <button class="btn btn-sm unique-color text-white completed-btn" id="notes">Notes</button>
+                                            <button class="btn info-color-dark text-white btn-sm px-2 mx-sm-0" data-toggle="modal" data-target="#uploadHomework">Upload Homework</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 text-md-right text-center">
+                                        <div class="py-2">
+                                            <p class="m-0">5:00PM - 6:00PM</p>
+                                        </div>
+                                        <!-- <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <button class="input-group-text px-3 drec">-</button>
+                                            </div>
+                                            <input type="text" class="form-control current-value" value="0%">
+                                            <div class="input-group-append">
+                                                <button class="input-group-text inc">+</button>
+                                            </div>
+                                        </div> -->
+                                        <div class="py-0">
+                                            
+                                            <button class="btn stylish-color text-white btn-sm mx-sm-0" data-toggle="modal" data-target="#progress-box">Progress</button>
+                                            <!-- <button class="btn btn-dark btn-sm">Update</button> -->
+                                        </div>
+                                        
+                                    </div>
+
+                                    <div class="col my-3 d-none completed-outer">
+                                        <div class="notes boxes d-none">
+                                            <label for="notes">Class Notes</label>
+                                            <textarea name="notes" id="notes" class="form-control" rows="5" id="notes" placeholder="Enter Your Notes Here..."></textarea>
+                                            <button class="btn btn-sm unique-color-dark text-white mx-0">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+
+                                
+                                
+                            </div>
+                        </div>
+
+                     </div>
+                  
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+        
+</div>

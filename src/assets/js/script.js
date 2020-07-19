@@ -125,4 +125,56 @@ $(document).ready(function(){
     $('#ostate').on('change', function(){
         $('#headquater-list').addClass('d-none');
     });
+
+    // Completed Class Notes HW Progess (By Teacher)
+    $('.completed-btn').on('click', function(){
+        let id = $(this).attr('id');
+        $('.completed-outer').removeClass('d-none');
+        $('.boxes').addClass('d-none');
+        $('.'+id).removeClass('d-none');
+    });
+
+
+
+    // Teacher Subject Progress Handler
+    // On Decrement
+    $('.drec').on('click', function(){
+        if($(this).parent().siblings().hasClass('current-value')){
+            $this = $(this).parent().next();
+        }
+        let currentValue = $this.val();
+        $this.val(drecrement(currentValue));
+    });
+
+    // On Increment
+    $('.inc').on('click', function(){
+        if($(this).parent().siblings().hasClass('current-value')){
+            $this = $(this).parent().prev();
+        }
+        let currentValue = $this.val();
+        $this.val(increment(currentValue));
+    });
+
+    function increment(x){
+        let current = x.replace(/\%/g, "");
+        if(current < 90){
+            current = (parseFloat(current) + 10) + '%';
+        }else{
+            current = '100%';
+        }
+        
+        return current;
+    }
+
+    function drecrement(x){
+        let current = x.replace(/\%/g, "");
+        if(current > 10){
+            current = (current - 10) + '%';
+        }else{
+            current = '0%';
+        }
+        
+        return current;
+    }
+    
 });
