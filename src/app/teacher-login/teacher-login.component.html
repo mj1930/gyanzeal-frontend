@@ -6,7 +6,7 @@
                 <h2 class="fredoka">Teacher Log In</h2>
                 <p>This is a secure system you need to provide your username and password to enter.</p>
 
-                <form class="text-left" action="#!">
+                <form class="text-left" [formGroup]="teacherLoginForm">
                     <!-- <hr> -->
                     <div class="text-center social-btn my-3">
                         <a href="#" class="btn btn-primary btn-sm"><i class="fab fa-facebook-f"></i> Facebook Login</a>
@@ -16,11 +16,22 @@
 
                     <!-- Name -->
                     <label for="name">Email</label>
-                    <input type="text" id="name" class="form-control mb-4" placeholder="Username or Email">
+                    <input type="text" id="name" class="form-control mb-4" placeholder="Username or Email" formControlName="email" name="email">
+                    <p class="form-text text-danger mb-4 font-small"
+                        *ngIf="teacherLoginForm.get('email').touched && !teacherLoginForm.get('email').valid">
+                        Can't be left Blank
+                    </p>
+                    <p class="form-text text-danger mb-4 font-small"
+                        *ngIf="teacherLoginForm.get('email').touched && teacherLoginForm.get('email').invalid">
+                        Please enter valid email
+                    </p>
     
                     <label for="password">Password</label>
-                    <input type="password" id="name" class="form-control mb-4" placeholder="Password">
-    
+                    <input type="password" id="name" class="form-control mb-4" placeholder="Password" formControlName="password" name="password">
+                    <p class="form-text text-danger mb-4 font-small"
+                        *ngIf="teacherLoginForm.get('password').touched && !teacherLoginForm.get('password').valid">
+                        Can't be left Blank
+                    </p>
                     <div class="d-flex justify-content-between mb-2">
                         <div>
                             <!-- Remember me -->
@@ -34,7 +45,7 @@
                             <a [routerLink]="['/reset-password/teacher']">Forgot password?</a>
                         </div>
                     </div>
-                    <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
+                    <button class="btn btn-info my-4 btn-block" type="button" (click)="login()">Sign in</button>
                     <p>Not a registered Teacher yet?
                         <a [routerLink]="['/signup/teacher']">Register here</a>
                     </p>

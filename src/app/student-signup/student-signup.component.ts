@@ -15,6 +15,94 @@ export class StudentSignupComponent implements OnInit {
   public message: string;
   public showMessage: boolean = false;
   public messageClass: boolean = false;
+  phoneNumber = "^[0-9]{10}$";
+  public city = [
+    {
+      "state": "Haryana",
+      "city": "Faridabad"
+    },
+    {
+      "state": "Haryana",
+      "city": "Kurushetra"
+    },
+    {
+      "state": "Haryana",
+      "city": "Gurugram"
+    },
+    {
+      "state": "Haryana",
+      "city": "Panipat"
+    },
+    {
+      "state": "Haryana",
+      "city": "Ambala"
+    },
+    {
+          "state": "Haryana",
+          "city": "Yamunanagar"
+    },
+    {
+      "state": "Haryana",
+      "city": "Rohtak"
+    },
+    {
+      "state": "Haryana",
+      "city": "Hisar"
+    },
+    {
+      "state": "Haryana",
+      "city": "Karnal"
+    },
+    {
+      "state": "Haryana",
+      "city": "Sonipat"
+    },
+    {
+      "state": "Haryana",
+      "city": "Panchkula"
+    },
+    {
+      "state": "Haryana",
+      "city": "Bhiwani"
+    },
+    {
+      "state": "Haryana",
+      "city": "Sirsa"
+    },
+    {
+      "state": "Haryana",
+      "city": "Bahadurgarh"
+    },
+    {
+      "state": "Haryana",
+      "city": "Jind"
+    },
+    {
+      "state": "Haryana",
+      "city": "Thanesar"
+    },
+    {
+      "state": "Haryana",
+      "city": "Kaithal"
+    },
+    {
+      "state": "Haryana",
+      "city": "Rewari"
+    },
+    {
+      "state": "Haryana",
+      "city": "Palwal"
+    },
+    {
+      "state": "Haryana",
+      "city": "Pundri"
+    },
+    {
+      "state": "Haryana",
+      "city": "Kosli"
+    }
+  ];
+  public selectedCity = [];
   constructor(
     private register : RegistrationService,
     private fb: FormBuilder,
@@ -26,12 +114,13 @@ export class StudentSignupComponent implements OnInit {
       name : new FormControl('', [Validators.required]),
       fName : new FormControl('', [Validators.required]),
       gender : new FormControl('', [Validators.required]),
-      mobile : new FormControl('', [Validators.required]),
-      email : new FormControl('', [Validators.required]),
-      state : new FormControl('', [Validators.required]),
-      city : new FormControl('', [Validators.required]),
+      mobile : new FormControl('', [Validators.compose([Validators.required, Validators.pattern(this.phoneNumber)])]),
+      email : new FormControl('', [Validators.compose([Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")])]),
+      state : new FormControl('Haryana', [Validators.required]),
+      city : new FormControl('Kurushetra', [Validators.required]),
       board : new FormControl('', [Validators.required]),
     });
+    this.onSelectState('Haryana');
   }
 
   createAccount() {
@@ -62,5 +151,16 @@ export class StudentSignupComponent implements OnInit {
     }
   }
 
+  onSelectState(state) {
+    this.selectedCity = [];
+    this.city.filter(city => {
+      if (city.state == state) {
+        this.selectedCity.push(city.city);
+      }
+    });
+    if (this.selectedCity.length === 0) {
+      this.studentForm.controls.city.setValue('none');
+    }
+  }
 
 }

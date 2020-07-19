@@ -27,10 +27,10 @@
                     <label for="name">Email</label>
                     <input type="text" id="name" class="form-control mb-4" placeholder="Username or Email"
                         formControlName="email" name="email">
-                    <!-- <p class="form-text text-danger mb-4 font-small"
+                    <p class="form-text text-danger mb-4 font-small"
                         *ngIf="studentLoginForm.get('email').touched && !studentLoginForm.get('email').valid">
                         Can't be left Blank
-                    </p> -->
+                    </p>
                     <p class="form-text text-danger mb-4 font-small"
                         *ngIf="studentLoginForm.get('email').touched && studentLoginForm.get('email').invalid">
                         Please enter valid email

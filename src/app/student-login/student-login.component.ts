@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 })
 export class StudentLoginComponent implements OnInit {
 
-  studentLoginForm: any;public message: string;
+  studentLoginForm: any;
+  public message: string;
   public showMessage: boolean = false;
   public messageClass: boolean = false;
   constructor(
