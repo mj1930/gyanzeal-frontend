@@ -1,0 +1,200 @@
+<div class="container-fluid cloudy-knoxville-gradient py-2 py-lg-5 matop">
+    
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col rounded-lg">
+                <div class="card">
+                    <!-- Center Content -->
+                    <div class="card-body px-3">                         
+                        <form class="text-left pb-3 px-2" onsubmit="return false;"> 
+                            <h4>Add Money To Wallet</h4>  
+                            <hr>
+                            <div class="row">
+                                <div class="col-md">
+                                    <label for="student">Student Name</label>
+                                    <input type="text" placeholder="Student Name" class="form-control mb-2">
+                                </div>
+
+                                <div class="col-md">
+                                    <label for="student">Student Mobile No.</label>
+                                    <input type="text" placeholder="Mobile Number" class="form-control mb-2" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10">
+                                </div>
+
+                                <div class="col-md">
+                                    <label for="student">Student Email</label>
+                                    <input type="text" placeholder="Student Email" class="form-control mb-2">
+                                </div>
+                            </div>
+
+                            <button class="btn btn-sm px-2 text-white primary-color-dark m-0 mb-5" data-toggle="modal" data-target="#searchStudentList">Search Student</button>
+
+                            <div class="row">
+                                <div class="col-md">
+                                    <label for="studentID">Student ID</label>
+                                    <input type="text" placeholder="Student Email" class="form-control mb-2 d-none studentIDforWallet" id="studentID" value="S-12457920" readonly disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md">
+                                    <label for="student">Amount To Be Added to Wallet (INR Only)</label>
+                                    <input type="text" placeholder="Amount (INR Only)" class="form-control">
+                                </div>
+                            </div>
+
+                            <button class="btn btn-lg mx-0 rounded text-white success-color-dark my-4">Add Money To Wallet</button>
+
+
+                            <!-- Error Show When There Is An Error -->
+                            <div class="alert alert-danger" role="alert">
+                                Sorry No Matching Student Found. Please try Again.
+                            </div>
+                        </form>                        
+                    </div>
+                </div>
+
+                <div class="card my-4">
+                    <!-- Center Content -->
+                    <div class="card-body px-3">                         
+                        <h4>Transaction History</h4>
+                        <div class="form-row">
+                            <div class="col-md">
+                                <label for="selectboard">Year Of Transaction</label>
+                                <select class="browser-default custom-select mb-4" id="selectboard">
+                                    <option value="0" disabled="disabled" selected="selected">(Select Year)</option>
+                                    <option value="1">2018</option>
+                                    <option value="2">2019</option>
+                                    <option value="2" selected>2020</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md">
+                                <label for="selectboard">Month Of Transaction</label>
+                                <select class="browser-default custom-select mb-4" id="selectboard">
+                                    <option value="0" disabled="disabled" selected="selected">(Select Month)</option>
+                                    <option value='1'>Janaury</option>
+                                    <option value='2'>February</option>
+                                    <option value='3'>March</option>
+                                    <option value='4'>April</option>
+                                    <option value='5'>May</option>
+                                    <option value='6'>June</option>
+                                    <option value='7'>July</option>
+                                    <option value='8'>August</option>
+                                    <option value='9'>September</option>
+                                    <option value='10'>October</option>
+                                    <option value='11'>November</option>
+                                    <option value='12'>December</option>
+                                </select>
+                            </div>
+                        </div>  
+                        <table id="teacher-details-table" class="table" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="th-sm">Student Name</th>
+                                    <th class="th-sm">Email</th>
+                                    <th class="th-sm">Transaction ID</th>
+                                    <th class="th-sm">Date</th>
+                                    <th class="th-sm">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="admin-student-detail">Chandan Kanyal</a></td>
+                                    <td>chandansinghkanyal@gmail.com</td>
+                                    <td>1459875</td>
+                                    <td>22 July 2020</td>
+                                    <td class="text-success">Success</td>
+                                </tr>
+
+
+
+                                <tr>
+                                    <td><a href="admin-student-detail"> Mihir Jain </a></td>
+                                    <td>jainmihir84@gmail.com</td>
+                                    <td>1459876</td>
+                                    <td>28 July 2020</td>
+                                    <td class="text-warning">On Process</td>
+                                </tr>
+
+
+
+                                
+                                <tr>
+                                    <td><a href="admin-student-detail">Chandan Kanyal</a></td>
+                                    <td>chandansinghkanyal@gmail.com</td>
+                                    <td>1459877</td>
+                                    <td>29 July 2020</td>
+                                    <td class="text-danger">Failed</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="modal fade" id="searchStudentList" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Student Details</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <table id="student-search-table" class="table" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="th-sm">Name</th>
+                                                    <th class="th-sm">Email</th>
+                                                    <th class="th-sm">Father's Name</th>
+                                                    <th class="th-sm">Phone</th>
+                                                    <th class="th-sm">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="admin-student-detail" target="_blank">Chandan Kanyal</a></td>
+                                                    <td>chandansinghkanyal@gmail.com</td>
+                                                    <td>B.S. Kanyal</td>
+                                                    <td>2201232020</td>
+                                                    <td><button class="btn btn-sm success-color-dark text-white selectStudent">Select</button></td>
+                                                </tr>
+                
+                
+                
+                                                <tr>
+                                                    <td><a href="admin-student-detail" target="_blank"> Mihir Jain </a></td>
+                                                    <td>jainmihir84@gmail.com</td>
+                                                    <td>Jain Sahab</td>
+                                                    <td>2812342020</td>
+                                                    <td><button class="btn btn-sm success-color-dark text-white selectStudent">Select</button></td>
+                                                </tr>
+                
+                
+                
+                                                
+                                                <tr>
+                                                    <td><a href="admin-student-detail" target="_blank">Chandan Kanyal</a></td>
+                                                    <td>chandansinghkanyal@gmail.com</td>
+                                                    <td>Kanyal Ji</td>
+                                                    <td>29675782020</td>
+                                                    <td><button class="btn btn-sm success-color-dark text-white selectStudent">Select</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-sm text-white unique-color-dark" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn primary-color-dark btn-sm text-white">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+</div>

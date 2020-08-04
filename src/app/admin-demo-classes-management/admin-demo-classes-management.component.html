@@ -1,0 +1,136 @@
+<div class="container-fluid cloudy-knoxville-gradient py-2 py-lg-5 matop">
+    
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-12 rounded-lg">
+                <div class="card">
+                    <!-- Center Content -->
+                    <div class="card-body px-3">                         
+                        <form class="text-left pb-3 px-2" action="#!"> 
+                            <h4>Demo Class Management</h4>  
+                            <hr>     
+                            <label for="cc">Select Course Category</label>
+                            <select class="browser-default custom-select mb-4 course-cc" id="cc">
+                                <option value="0" disabled="disabled" selected="selected">Course Category</option>
+                                <option value="1">School Academics</option>
+                                <option value="2">GZ Specials</option>
+                            </select>
+                            
+                            <div class="form-row mb-4 d-none" id="school-academics">
+                                <div class="col-md-6 mb-4">
+                                    <label for="selectboard">Select Boards</label>
+                                    <select class="browser-default custom-select mb-4" id="selectboard">
+                                        <option value="0" disabled="disabled" selected="selected">(Select Board)</option>
+                                        <option value="1">CBSE</option>
+                                        <option value="2">ICSC</option>
+                                        <option value="2">Haryana Borad</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <label for="selectclass">Select Class</label>
+                                    <select class="browser-default custom-select mb-4" id="selectclass">
+                                        <option value="0" disabled="disabled" selected="selected">(Select Class)</option>
+                                        <option value="1">Class 1</option>
+                                        <option value="2">Class 2</option>
+                                        <option value="2">Class 3</option>
+                                        <option value="2">Class 4</option>
+                                        <option value="2">Class 5</option>
+                                        <option value="2">Class 6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row mb-4 d-none" id="after-school">
+                                <div class="col mb-4">
+                                    <label for="ct">Course Type</label>
+                                    <select class="browser-default custom-select mb-4" id="ct">
+                                        <option value="0" disabled="disabled" selected="selected">Type of Course</option>
+                                        <option value="1">Language</option>
+                                        <option value="2">I.T</option>
+                                        <option value="3">Music</option>
+                                    </select>
+                                </div>
+                                <div class="col mb-4">
+                                    <label for="cn">Course Name</label>
+                                    <select class="browser-default custom-select mb-4 cn">
+                                        <option value="0" disabled="disabled" selected="selected">Name of Course</option>
+                                        <option value="1">English</option>
+                                        <option value="2">French</option>
+                                        <option value="2">German</option>
+                                        <option value="2">Spannish</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                         
+                        <div class="col video-embed d-none">
+                            <label for="demotitile">Video Title</label>
+                            <input type="text" class="form-control mb-4" placeholder="Video Title" id="demotitile">
+                            <label for="videoLink">Youtube Video Link</label>
+                            <input type="text" class="form-control mb-4" placeholder="https://www.youtube.com/watch?v=aWGGCpoX9_U" id="videoLink">
+                            <button class="btn btn-sm success-color-dark text-white mx-0">Save</button>                           
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12 mt-5 rounded-lg previous d-none">
+                <div class="card">
+                    <!-- Center Content -->
+                    <div class="card-body px-4">                         
+                        <h4>Previously Added Videos</h4>  
+                        <hr>
+
+                        <table id="purchase-table" class="table" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="th-sm">Video Caption</th>
+                                    <th class="th-sm">Video URL</th>
+                                    <th class="th-sm">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Learn English Online via Gyanzeal</td>
+                                    <td><a href="https://www.youtube.com/watch?v=rCh-6ZQ7J-0" target="_blank">https://www.youtube.com/watch?v=rCh-6ZQ7J-0</a></td>
+                                    <td class="text-md-right text-center pt-1">
+                                        <button class="btn btn primary-color-dark text-white btn-sm">Delete</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Learn English Online via Gyanzeal</td>
+                                    <td><a href="https://www.youtube.com/watch?v=rCh-6ZQ7J-0" target="_blank">https://www.youtube.com/watch?v=rCh-6ZQ7J-0</a></td>
+                                    <td class="text-md-right text-center pt-1">
+                                        <button class="btn btn primary-color-dark text-white btn-sm">Delete</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Learn English Online via Gyanzeal</td>
+                                    <td><a href="https://www.youtube.com/watch?v=rCh-6ZQ7J-0" target="_blank">https://www.youtube.com/watch?v=rCh-6ZQ7J-0</a></td>
+                                    <td class="text-md-right text-center pt-1">
+                                        <button class="btn btn primary-color-dark text-white btn-sm">Delete</button>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>Learn English Online via Gyanzeal</td>
+                                    <td><a href="https://www.youtube.com/watch?v=rCh-6ZQ7J-0" target="_blank">https://www.youtube.com/watch?v=rCh-6ZQ7J-0</a></td>
+                                    <td class="text-md-right text-center pt-1">
+                                        <button class="btn btn primary-color-dark text-white btn-sm">Delete</button>
+                                    </td>
+                                </tr>
+                                
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        
+</div>

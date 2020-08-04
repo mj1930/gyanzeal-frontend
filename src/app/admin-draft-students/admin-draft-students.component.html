@@ -1,0 +1,183 @@
+<div class="container-fluid cloudy-knoxville-gradient py-2 py-lg-5 matop">
+    
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col rounded-lg">
+                <div class="card">
+                    <!-- Center Content -->
+                    <div class="card-body px-3">                         
+                        <form class="text-left pb-3 px-2" action="#!"> 
+                            <h4>Draft Students Management</h4>  
+                            <hr>
+                            <h4>Filter Students</h4>
+                            <div class="form-row">
+                                <div class="col-md">
+                                    <label for="selectboard">Class</label>
+                                    <select class="browser-default custom-select mb-4" id="selectboard">
+                                        <option value="0" disabled="disabled" selected="selected">(Select Class)</option>
+                                        <option value="1">Class 1</option>
+                                        <option value="2">Class 2</option>
+                                        <option value="2">Class 3</option>
+                                    </select>
+                                </div>
+    
+                                <div class="col-md">
+                                    <label for="selectboard">Visiblity</label>
+                                    <select class="browser-default custom-select mb-4" id="selectboard">
+                                        <option value="0" disabled="disabled" selected="selected">(Select Visiblity)</option>
+                                        <option value="1">Phone</option>
+                                        <option value="2">Email</option>
+                                        <option value="3">Both</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="col-md">
+                                    <label for="selectboard">Status</label>
+                                    <select class="browser-default custom-select mb-4" id="selectboard">
+                                        <option value="0" disabled="disabled" selected="selected">(Select Status)</option>
+                                        <option value="1">Fresh</option>
+                                        <option value="2">Tried Connection Once</option>
+                                        <option value="3">Tried Connection Twice</option>
+                                        <option value="4">Unresponsive Student</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <hr>
+
+                            <table id="teacher-details-table" class="table" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th class="th-sm">Name</th>
+                                        <th class="th-sm">Phone</th>
+                                        <th class="th-sm">Email</th>
+                                        <th class="th-sm">Request Date</th>
+                                        <th class="th-sm">Class</th>
+                                        <th class="th-sm">1<sup>st</sup> Contact</th>
+                                        <th class="th-sm">2<sup>nd</sup> Contact</th>
+                                        <th class="th-sm">3<sup>rd</sup> Contact</th>
+                                        <th class="th-sm">Connect Using</th>
+                                        <th class="th-sm">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Chandan Kanyal</td>
+                                        <td>8909415161</td>
+                                        <td>chandansinghkanyal@gmail.com</td>
+                                        <td>12/07/20</td>
+                                        <td>Class 4</td>
+                                        <td>13 July 2020 (Email)</td>
+                                        <td>NA</td>
+                                        <td>NA</td>
+                                        <td>
+                                            <button class="btn btn-sm text-white success-color-dark p-1">W</button>
+                                            <button class="btn btn-sm text-white success-color-dark p-1">P</button>
+                                        </td>
+                                        <td class="text-warning">1<sup>st</sup> Connection</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>Chandan Kanyal</td>
+                                        <td>8909415161</td>
+                                        <td>chandansinghkanyal@gmail.com</td>
+                                        <td>12/07/20</td>
+                                        <td>Class 4</td>
+                                        <td>13 July 2020 (Email)</td>
+                                        <td>NA</td>
+                                        <td>NA</td>
+                                        <td>
+                                            <button class="btn btn-sm text-white success-color-dark p-1">W</button>
+                                            <button class="btn btn-sm text-white success-color-dark p-1">P</button>
+                                        </td>
+                                        <td class="text-success">2<sup>nd</sup> Connection</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>Chandan Kanyal</td>
+                                        <td>8909415161</td>
+                                        <td>chandansinghkanyal@gmail.com</td>
+                                        <td>12/07/20</td>
+                                        <td>Class 4</td>
+                                        <td>13 July 2020 (Email)</td>
+                                        <td>NA</td>
+                                        <td>NA</td>
+                                        <td>
+                                            <button class="btn btn-sm text-white success-color-dark p-1">W</button>
+                                            <button class="btn btn-sm text-white success-color-dark p-1">P</button>
+                                        </td>
+                                        <td class="text-danger">In Responsive</td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td>Chandan Kanyal</td>
+                                        <td>8909415161</td>
+                                        <td>chandansinghkanyal@gmail.com</td>
+                                        <td>12/07/20</td>
+                                        <td>Class 4</td>
+                                        <td>13 July 2020 (Email)</td>
+                                        <td>NA</td>
+                                        <td>NA</td>
+                                        <td>
+                                            <button class="btn btn-sm text-white success-color-dark p-1">W</button>
+                                            <button class="btn btn-sm text-white success-color-dark p-1">P</button>
+                                        </td>
+                                        <td class="text-primary">Fresh</td>
+                                    </tr>
+
+
+                                    
+
+
+
+                                    
+                                </tbody>
+                            </table>
+                        </form>                        
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="class-subject" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Class & Subject (Teacher Name)</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">                        
+                        <table id="class-subject-table" class="table" width="100%">
+                            <thead>
+                                <tr>
+                                    <th class="th-sm text-left">Class</th>
+                                    <th class="th-sm text-right">Subject</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-left">Class 2</td>
+                                    <td class="text-right">English</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Class 10</td>
+                                    <td class="text-right">Maths</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="modal-footer mt-2">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+</div>

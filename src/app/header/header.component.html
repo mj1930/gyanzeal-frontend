@@ -115,7 +115,7 @@
 </div> -->
 
 <!-- Teacher Header -->
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <header>
         <nav class="navbar navbar-expand-lg fixed-top jq-nav navbar-dark default-color-dark">
             <div class="container-fluid">
@@ -133,6 +133,82 @@
                             <div class="col">
                                 <div class="d-flex align-items-center bg-white px-3 rounded-lg mt-1 mya">
                                     <p class="font-small my-2">Chandan Kanyal</p>
+                                    <img src="https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/img/figure/admin.jpg" class="rounded-circle ml-2 img-thumbnail" width="30px">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a [routerLink]="['/logout']" class="nav-link active">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div> -->
+
+
+<!-- Admin Header -->
+<div class="container-fluid">
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top jq-nav navbar-dark default-color-dark">
+            <div class="container-fluid">
+                <a [routerLink]="['']" class="navbar-brand img-fluid"><img src="../../assets/svg/logo.svg" alt="Gyan Zeal Logo" height="50px"></a>
+    
+                <button class="navbar-toggler btn-outline-white text-white" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="navbar-collapse collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav text-center ml-auto">
+                        <li class="nav-item"><a [routerLink]="['/admin-dashboard']" class="nav-link active">Home</a></li>
+                        
+                        <!-- Batches -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" data-toggle="dropdown">  Courses  </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" [routerLink]="['/curriculum-management']"> Curriculum Management</a></li>
+                                <li><a class="dropdown-item" [routerLink]="['/course-category-management']"> Course Category Management </a></li>
+                                <li><a class="dropdown-item" [routerLink]="['/course-default-fee']"> Set Default Fee </a></li>
+                                <li><a class="dropdown-item" [routerLink]="['/demo-classes-management']"> Demo Classes </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a [routerLink]="['/teacher-management']" class="nav-link active">Teachers</a></li>
+                        <li class="nav-item"><a [routerLink]="['/student-management']" class="nav-link active">Students</a></li>
+                        
+                        <!-- Batches -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" data-toggle="dropdown">  Batches  </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" [routerLink]="['/create-batch']"> Create Batch</a></li>
+                                <li><a class="dropdown-item" [routerLink]="['/view-batch']"> View Batch </a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Marketing -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" data-toggle="dropdown">  Marketing  </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" [routerLink]="['/teacher-management']"> Prospects</a></li>
+                                <li><a class="dropdown-item" [routerLink]="['/draft-students']"> Draft Students </a></li>
+                                <li><a class="dropdown-item" [routerLink]="['/callback-requests']"> Callback Requests </a></li>
+                                <li><a class="dropdown-item" [routerLink]="['/batch-requests']"> Batch Request </a></li>
+                            </ul>
+                        </li>
+
+
+                        <!-- Finance -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" data-toggle="dropdown">  Finance  </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" [routerLink]="['/add-money-to-wallet']"> Add Money to Wallet</a></li>
+                            </ul>
+                        </li>
+
+                        
+                        <li class="nav-item"><a [routerLink]="['/teacher-profile-setting']" class="nav-link active">Profile Setting</a></li>
+                        <li class="nav-item">
+                            <div class="col">
+                                <div class="d-flex align-items-center bg-white px-3 rounded-lg mt-1 mya">
+                                    <p class="font-small my-2">Welcome Admin</p>
                                     <img src="https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/img/figure/admin.jpg" class="rounded-circle ml-2 img-thumbnail" width="30px">
                                 </div>
                             </div>
