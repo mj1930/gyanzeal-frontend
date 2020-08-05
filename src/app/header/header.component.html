@@ -13,7 +13,7 @@
 </div>
 
 <!-- Header -->
-<div class="container-fluid" *ngIf="!isLoggedIn && !isLoggedInTeacher">
+<div class="container-fluid" *ngIf="!isLoggedIn && !isLoggedInTeacher && !adminLoggedIn">
     <header>
         <nav class="navbar navbar-expand-lg fixed-top jq-nav navbar-dark elegant-color">
             <div class="container-fluid">
@@ -147,7 +147,7 @@
 
 
 <!-- Admin Header -->
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="adminLoggedIn">
     <header>
         <nav class="navbar navbar-expand-lg fixed-top jq-nav navbar-dark default-color-dark">
             <div class="container-fluid">

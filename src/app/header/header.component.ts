@@ -10,8 +10,9 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  public isLoggedIn:Boolean = false;
-  public isLoggedInTeacher:Boolean = false
+  public isLoggedIn: Boolean = false;
+  public isLoggedInTeacher: Boolean = false;
+  public adminLoggedIn: boolean = false;
   public studentName: string = '';
   public teacherName: string = '';
   constructor(
