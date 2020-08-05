@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators, FormControl} from '@angular/forms';
 import { RegistrationService } from '../services/registration.service';
 import { Router } from '@angular/router';
+import { ManageService } from '../services/manage.service';
+import { TokenService } from '../services/token.service';
 
 @Component({
   selector: 'app-student-login',
@@ -17,7 +19,9 @@ export class StudentLoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private registration: RegistrationService,
-    private router: Router
+    private router: Router,
+    private tokenService: TokenService,
+    private manageService: ManageService
   ) { }
 
   ngOnInit() {
@@ -35,8 +39,11 @@ export class StudentLoginComponent implements OnInit {
           this.messageClass = false;
           this.showMessage = false;
           this.message = '';
-          if (data.status == 200)
+          if (data.status == 200) {
+            this.tokenService.verifyToken(data.token);
+            this.manageService.setStudentData(data.data);
             this.router.navigate(['/student-dashboard']);
+          }
         }, 2000);
       });
     } else {

@@ -16,7 +16,7 @@
 
                     <!-- Name -->
                     <label for="name">Email</label>
-                    <input type="text" id="name" class="form-control mb-4" placeholder="Username or Email" formControlName="email" name="email">
+                    <input type="text" id="email" class="form-control mb-4" placeholder="Username or Email" formControlName="email" name="email">
                     <p class="form-text text-danger mb-4 font-small"
                         *ngIf="teacherLoginForm.get('email').touched && !teacherLoginForm.get('email').valid">
                         Can't be left Blank
@@ -27,7 +27,7 @@
                     </p>
     
                     <label for="password">Password</label>
-                    <input type="password" id="name" class="form-control mb-4" placeholder="Password" formControlName="password" name="password">
+                    <input type="password" id="password" class="form-control mb-4" placeholder="Password" formControlName="password" name="password">
                     <p class="form-text text-danger mb-4 font-small"
                         *ngIf="teacherLoginForm.get('password').touched && !teacherLoginForm.get('password').valid">
                         Can't be left Blank

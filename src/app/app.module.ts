@@ -28,6 +28,7 @@ import { StudentProceedToPayComponent } from './student-proceed-to-pay/student-p
 import { StudentWalletComponent } from './student-wallet/student-wallet.component';
 import { TeacherBatchDetailsComponent } from './teacher-batch-details/teacher-batch-details.component';
 import { TeacherProfileSettingComponent } from './teacher-profile-setting/teacher-profile-setting.component';
+import { TokenService } from './services/token.service';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,7 @@ import { TeacherProfileSettingComponent } from './teacher-profile-setting/teache
     ReactiveFormsModule,
     BrowserAnimationsModule
   ],
-  providers: [RegistrationService],
+  providers: [RegistrationService, TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
