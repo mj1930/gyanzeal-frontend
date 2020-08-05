@@ -1,0 +1,322 @@
+<div class="container-fluid cloudy-knoxville-gradient py-2 py-lg-5 matop">
+    
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col rounded-lg">
+                <div class="card">
+                    <!-- Center Content -->
+                    <div class="card-body px-3">                         
+                        <form class="text-left pb-3 px-2" onsubmit="return false;"> 
+                            <h4>Callback Requests</h4>  
+                            <hr>
+                            <h4>Filter Students</h4>
+                            <div class="form-row">
+                                
+                                <div class="col-md">
+                                    <label for="selectboard">Status</label>
+                                    <select class="browser-default custom-select mb-4" id="selectboard">
+                                        <option value="0" disabled="disabled" selected="selected">(Select Type)</option>
+                                        <option value="1">New Request</option>
+                                        <option value="2">Open Request</option>
+                                        <option value="3">Closed Request</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md">
+                                    <label for="selectboard">Request Year</label>
+                                    <select class="browser-default custom-select mb-4" id="selectboard">
+                                        <option value="0" disabled="disabled" selected="selected">(Select Year)</option>
+                                        <option value="1">2018</option>
+                                        <option value="2">2019</option>
+                                        <option value="2" selected>2020</option>
+                                    </select>
+                                </div>
+    
+                                <div class="col-md">
+                                    <label for="selectboard">Request Month</label>
+                                    <select class="browser-default custom-select mb-4" id="selectboard">
+                                        <option value="0" disabled="disabled" selected="selected">(Select Month)</option>
+                                        <option value='1'>Janaury</option>
+                                        <option value='2'>February</option>
+                                        <option value='3'>March</option>
+                                        <option value='4'>April</option>
+                                        <option value='5'>May</option>
+                                        <option value='6'>June</option>
+                                        <option value='7'>July</option>
+                                        <option value='8'>August</option>
+                                        <option value='9'>September</option>
+                                        <option value='10'>October</option>
+                                        <option value='11'>November</option>
+                                        <option value='12'>December</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <hr>
+
+                            <table id="teacher-details-table" class="table" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th class="th-sm">Name</th>
+                                        <th class="th-sm">Phone</th>
+                                        <th class="th-sm">Date</th>
+                                        <th class="th-sm">Action</th>
+                                        <th class="th-sm">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="admin-student-detail">Chandan Kanyal</a></td>
+                                        <td>8909415161</td>
+                                        <td>12 July 2020</td>
+                                        <td>
+                                            <button class="btn danger-color-dark text-white btn-sm" data-toggle="modal" data-target="#requestModal">View Request</button>
+                                        </td>
+                                        <td class="text-danger">Open Request</td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td><a href="admin-student-detail"> Mihir Jain </a></td>
+                                        <td>6589745662</td>
+                                        <td>jainmihir84@gmail.com</td>
+                                        <td>
+                                            <button class="btn success-color-dark text-white btn-sm" data-toggle="modal" data-target="#requestModal">View Request</button>
+                                        </td>
+                                        <td class="text-success">Closed Request</td>
+                                    </tr>
+
+
+
+                                    
+                                    <tr>
+                                        <td><a href="admin-student-detail">Chandan Kanyal</a></td>
+                                        <td>8909415161</td>
+                                        <td>chandansinghkanyal@gmail.com</td>
+                                        <td>
+                                            <button class="btn primary-color-dark text-white btn-sm" data-toggle="modal" data-target="#requestModal">Mark Request</button>
+                                        </td>
+                                        <td class="text-primary">New Request</td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td><a href="admin-student-detail"> Mihir Jain </a></td>
+                                        <td>6589745662</td>
+                                        <td>jainmihir84@gmail.com</td>
+                                        <td>
+                                            <button class="btn primary-color-dark text-white btn-sm" data-toggle="modal" data-target="#requestModal">Mark Request</button>
+                                        </td>
+                                        <td class="text-primary">New Request</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                        
+
+                        
+                        <div class="row">
+                            <div class="col">
+                                <form class="text-left pb-3 px-2">
+                                    <hr>
+                                    <h4>Generate Report</h4>
+                                    <div class="form-row">
+                                        <div class="col-md">
+                                            <label for="selectboard">Request Year</label>
+                                            <select class="browser-default custom-select mb-4" id="selectboard">
+                                                <option value="0" disabled="disabled" selected="selected">(Select Year)</option>
+                                                <option value="1">2018</option>
+                                                <option value="2">2019</option>
+                                                <option value="2" selected>2020</option>
+                                            </select>
+                                        </div>
+            
+                                        <div class="col-md">
+                                            <label for="selectboard">Request Month</label>
+                                            <select class="browser-default custom-select mb-4" id="selectboard">
+                                                <option value="0" disabled="disabled" selected="selected">(Select Month)</option>
+                                                <option value='1'>Janaury</option>
+                                                <option value='2'>February</option>
+                                                <option value='3'>March</option>
+                                                <option value='4'>April</option>
+                                                <option value='5'>May</option>
+                                                <option value='6'>June</option>
+                                                <option value='7'>July</option>
+                                                <option value='8'>August</option>
+                                                <option value='9'>September</option>
+                                                <option value='10'>October</option>
+                                                <option value='11'>November</option>
+                                                <option value='12'>December</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input checkallreport" id="allreportGenerate">
+                                        <label class="custom-control-label" for="allreportGenerate">All Request</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input checkreport" id="newRequestReport" checked>
+                                        <label class="custom-control-label" for="newRequestReport">New Request</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input checkreport" id="openRequestReport">
+                                        <label class="custom-control-label" for="openRequestReport">Open Request</label>
+                                    </div>
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input checkreport" id="ClosedRequestReport">
+                                        <label class="custom-control-label" for="ClosedRequestReport">Closed Request</label>
+                                    </div>
+
+                                    <button class="btn mx-0 my-3 success-color-dark text-white btn-lg">Download Report</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Modal Box -->
+                        <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Request Details</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <div class="form-row mb-4">            
+                                            <div class="col-md">
+                                                <label for="requestType">Request ID</label>
+                                                <input type="text" value="R-1479011" readonly disabled class="form-control">
+                                            </div>
+
+                                            <div class="col-md">
+                                                <label for="requestType">Student ID</label>
+                                                <input type="text" value="S-44771245" readonly disabled class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">            
+                                            <div class="col-md">
+                                                <label for="requestType">Mark Request Type</label>
+                                                <select class="browser-default custom-select mb-4 userRequestType" id="requestType">
+                                                    <option value="0" disabled="disabled" selected="selected">(Select Type)</option>
+                                                    <option value="1">General Request</option>
+                                                    <option value="2">Batch Request</option>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="batch-request d-none">
+                                            <div class="form-row">            
+                                                <div class="col-md">
+                                                    <label for="courseType">Select Course Type</label>
+                                                    <select class="browser-default custom-select mb-4 batchCourseType" id="courseType">
+                                                        <option value="0" disabled="disabled" selected="selected">(Course Type)</option>
+                                                        <option value="1">Academics</option>
+                                                        <option value="2">GZ Specials</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+    
+                                            <div class="form-row academicRequest d-none">            
+                                                <div class="col-md">
+                                                    <label for="courseType">Select Class</label>
+                                                    <select class="browser-default custom-select mb-4" id="courseType">
+                                                        <option value="0" disabled="disabled" selected="selected">(Course Class)</option>
+                                                        <option value="1">Class 1</option>
+                                                        <option value="2">Class 2</option>
+                                                    </select>
+                                                </div>
+    
+                                                <div class="col-md">
+                                                    <label for="courseSubject">Select Subject</label>
+                                                    <select class="browser-default custom-select mb-4" id="courseSubject">
+                                                        <option value="0" disabled="disabled" selected="selected">(Class Subject)</option>
+                                                        <option value="1">English</option>
+                                                        <option value="2">Hindi</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row GZRequest d-none">            
+                                                <div class="col-md">
+                                                    <label for="GZCourse">Select Course</label>
+                                                    <select class="browser-default custom-select mb-4 GZCourse" id="GZCourse">
+                                                        <option value="0" disabled="disabled" selected="selected">(Course Name)</option>
+                                                        <option value="1">I.T.</option>
+                                                        <option value="2">Music</option>
+                                                        <option value="00">Others</option>
+                                                    </select>
+                                                </div>
+    
+                                                <div class="col-md">
+                                                    <label for="GZSubject">Select Subject</label>
+                                                    <select class="browser-default custom-select mb-4" id="GZSubject">
+                                                        <option value="0" disabled="disabled" selected="selected">(Course Subject)</option>
+                                                        <option value="1">PHP</option>
+                                                        <option value="2">Python</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row RequestedCourse d-none mb-4">            
+                                                <div class="col-md">
+                                                    <label for="EnterUserRequestedCourseName">Enter Course Name</label>
+                                                    <input type="text" placeholder="Enter Course Name" class="form-control" id="EnterUserRequestedCourseName">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <label for="actionNotes">Notes</label>
+                                        <textarea name="actionNotes" id="actionNotes" rows="3" class="form-control mb-4" placeholder="Action Response Notes..."></textarea>
+
+
+                                        <div class="row mb-4">
+                                            <div class="col">
+                                                <label>Choose Query Status</label>
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" id="ropen" name="reuqest_current_status" checked>
+                                                    <label class="custom-control-label" for="ropen">Leave Open</label>
+                                                </div>
+                                                
+                                                <div class="custom-control custom-radio">
+                                                    <input type="radio" class="custom-control-input" id="rcompleted" name="reuqest_current_status">
+                                                    <label class="custom-control-label" for="rcompleted">Closed</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                        <!-- This Block Only To Be Shown When Request Status Is "Request Closed" -->
+                                        <div class="row">
+                                            <div class="col">
+                                                <label>Query Status</label>
+                                                <input type="text" value="Request Closed" readonly disabled class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-sm text-white unique-color-dark" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn primary-color-dark btn-sm text-white">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+</div>

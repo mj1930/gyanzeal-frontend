@@ -1,0 +1,298 @@
+<div class="container-fluid cloudy-knoxville-gradient py-2 py-lg-5 matop">
+    
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col rounded-lg">
+                <div class="card">
+                    <div class="card-body px-3">                         
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#Studentprofile" role="tab" aria-controls="home"
+                                aria-selected="true">Student Profile</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#batchlist" role="tab" aria-controls="profile"
+                                aria-selected="false">Student Batches</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="Studentprofile" role="tabpanel" aria-labelledby="home-tab">
+                                <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Personal Information</h5>
+                                <hr>
+                                <div class="form-row mb-4">
+                                    <div class="col-md">
+                                        <label for="fname">First Name</label>
+                                        <input type="text" id="fname" class="form-control" placeholder="First name" value="Chandan" readonly disabled>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="lname">Last Name</label>
+                                        <input type="text" id="lname" class="form-control" placeholder="Last name" value="Kanyal" readonly disabled>
+                                    </div>
+
+                                    <div class="col-md">
+                                        <label for="gender">Gender</label>
+                                        <input type="text" id="lname" class="form-control" placeholder="Last name" value="Male" readonly disabled>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row mb-4">
+                                    <div class="col-md">
+                                        <label for="mobile">Contact Number</label>
+                                        <input type="text" id="mobile" class="form-control mb-4" placeholder="Mobile Number" value="8909415161" readonly disabled>    
+                                    </div>
+                                    
+                                    <div class="col-md">
+                                        <label for="semail">Email</label>
+                                        <input type="email" id="semail" class="form-control mb-4" placeholder="Email" value="chandansinghkanyal@gmail.com" readonly disabled>  
+                                    </div>
+                                </div>
+            
+                                <!-- Contact Info -->
+                                <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Contact Information</h5>
+                                <hr>
+                                <div class="form-row mb-4">
+                                    <div class="col-md">
+                                        <label for="add1">Street Address Line 1</label>
+                                        <input type="text" id="add1" class="form-control" value="Street Address Line 1" readonly disabled>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="add2">Street Address Line 2</label>
+                                        <input type="text" id="add2" class="form-control" value="Street Address Line 2" readonly disabled>
+                                    </div>
+
+                                    <div class="col-md">
+                                        <label for="city">City</label>
+                                        <input type="text" id="city" class="form-control" value="City" readonly disabled>
+                                    </div>
+                                </div>
+            
+                                <div class="form-row mb-4">                                    
+                                    <div class="col-md">
+                                        <label for="state">State</label>
+                                        <input type="text" id="state" class="form-control" value="State" readonly disabled>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="country">Country</label>
+                                        <input type="text" id="country" class="form-control" value="Country" readonly disabled>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="postal">Postal Code</label>
+                                        <input type="text" id="postal" class="form-control" value="263139" readonly disabled>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-row mb-4">                                    
+                                    <div class="col-md">
+                                        <label for="state">Date Of Account Creation</label>
+                                        <input type="text" id="state" class="form-control" value="20 July 2020" readonly disabled>
+                                    </div>
+                                    <div class="col-md">
+                                        <label for="country">Status</label>
+                                        <input type="text" id="country" class="form-control" value="Active" readonly disabled>
+                                    </div>
+                                </div>
+            
+                                
+                            </div>
+                        
+                            <div class="tab-pane fade" id="batchlist" role="tabpanel" aria-labelledby="profile-tab">
+
+                                <!-- Only Show When Student Verified But Batches Not Alloted to the Student -->
+                                <div class="alert alert-warning my-3" role="alert">
+                                    Sorry! No Batches Alloted Yet.
+                                </div>
+
+                                <!-- Only Show When Student not Verified -->
+                                <div class="alert alert-danger my-3" role="alert">
+                                    Sorry! Student not verified yet. Please verify the Student and then allot batches to the Student then visit again for more info.
+                                </div>
+
+
+                                <!-- Batches List (Show Only Above two errors does not exist) -->
+                                <div class="ongoing-course">
+                                    <!-- Ongoing Course Starts -->
+                                    <h5 class="mb-0">Ongoing Course</h5>
+                                    <hr>
+                                    <a [routerLink]="['/teacher-batch-details-page']" class="text-decoration-none text-dark">
+                                        <div class="row my-3 mb-5 mb-md-0">
+                                            <div class="col-md-2">
+                                                <div class="text-center default-color-dark rounded-lg">
+                                                    <h4 class="col text-uppercase text-white py-3 px-0">1</h4>
+                                                    <div class="col bg-white border text-uppercase text-secondary py-3 rounded-bottom">Grade</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7 mx-md-0 mx-3 my-3 my-md-0 cloudy-knoxville-gradient rounded py-2">
+                                                <h4 class="chapter-name">Mathematics</h4>
+                                                <h6 class="enrollment-total">Students Enrolled: 52</h6>
+                                                <p class="mb-0">
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">MO</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TU</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">WE</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TH</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">FR</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">SA</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">SU</span>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="text-center py-2">
+                                                    <p>JUL 01 - AUG 12</p>
+                                                    <p>5:00PM - 6:00PM</p>
+                                                    <p class="btn btn-block btn-sm unique-color text-white">Details</p>
+                                                </div>                                    
+                                            </div>
+                                        </div>
+                                    </a>
+        
+        
+                                    <!-- Upcoming Course -->
+                                    <h5 class="mb-0 mt-5">Upcoming Courses</h5>
+                                    <hr>
+                                    <a [routerLink]="['/teacher-batch-details-page']" class="text-decoration-none text-dark">
+                                        <div class="row my-3 mb-5 mb-md-0">
+                                            <div class="col-md-2">
+                                                <div class="text-center default-color-dark rounded-lg">
+                                                    <h4 class="col text-uppercase text-white py-3 px-0">1</h4>
+                                                    <div class="col bg-white border text-uppercase text-secondary py-3 rounded-bottom">Grade</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7 mx-md-0 mx-3 my-3 my-md-0 cloudy-knoxville-gradient rounded py-2">
+                                                <h4 class="chapter-name">Mathematics</h4>
+                                                <h6 class="enrollment-total">Students Enrolled: 52</h6>
+                                                <p class="mb-0">
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">MO</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TU</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">WE</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TH</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">FR</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">SA</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">SU</span>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="text-center py-2">
+                                                    <p>JUL 01 - AUG 12</p>
+                                                    <p>5:00PM - 6:00PM</p>
+                                                    <p class="btn btn-block btn-sm info-color-dark text-white">Details</p>
+                                                </div>                                    
+                                            </div>
+                                        </div>
+                                    </a>
+        
+        
+                                    <a [routerLink]="['/teacher-batch-details-page']" class="text-decoration-none text-dark">
+                                        <div class="row my-3 mb-5 mb-md-0">
+                                            <div class="col-md-2">
+                                                <div class="text-center default-color-dark rounded-lg">
+                                                    <h4 class="col text-uppercase text-white py-3 px-0">1</h4>
+                                                    <div class="col bg-white border text-uppercase text-secondary py-3 rounded-bottom">Grade</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7 mx-md-0 mx-3 my-3 my-md-0 cloudy-knoxville-gradient rounded py-2">
+                                                <h4 class="chapter-name">Mathematics</h4>
+                                                <h6 class="enrollment-total">Students Enrolled: 52</h6>
+                                                <p class="mb-0">
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">MO</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TU</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">WE</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TH</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">FR</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">SA</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">SU</span>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="text-center py-2">
+                                                    <p>JUL 01 - AUG 12</p>
+                                                    <p>5:00PM - 6:00PM</p>
+                                                    <p class="btn btn-block btn-sm info-color-dark text-white">Details</p>
+                                                </div>                                    
+                                            </div>
+                                        </div>
+                                    </a>
+                                    
+        
+                                    <!-- Completed -->
+                                    <h5 class="mb-0 mt-5">Completed Courses</h5>
+                                    <hr>
+        
+                                    <a [routerLink]="['/teacher-batch-details-page']" class="text-decoration-none text-dark">
+                                        <div class="row my-3 mb-5 mb-md-0">
+                                            <div class="col-md-2">
+                                                <div class="text-center default-color-dark rounded-lg">
+                                                    <h4 class="col text-uppercase text-white py-3 px-0">1</h4>
+                                                    <div class="col bg-white border text-uppercase text-secondary py-3 rounded-bottom">Grade</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7 mx-md-0 mx-3 my-3 my-md-0 cloudy-knoxville-gradient rounded py-2">
+                                                <h4 class="chapter-name">Mathematics</h4>
+                                                <h6 class="enrollment-total">Students Enrolled: 52</h6>
+                                                <p class="mb-0">
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">MO</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TU</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">WE</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TH</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">FR</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">SA</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">SU</span>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="text-center py-2">
+                                                    <p>JUL 01 - AUG 12</p>
+                                                    <p>5:00PM - 6:00PM</p>
+                                                    <p class="btn btn-block btn-sm default-color-dark text-white">Details</p>
+                                                </div>                                    
+                                            </div>
+                                        </div>
+                                    </a>
+                                    
+                                    <a [routerLink]="['/teacher-batch-details-page']" class="text-decoration-none text-dark">
+                                        <div class="row my-3">
+                                            <div class="col-md-2 mb-5 mb-md-0">
+                                                <div class="text-center default-color-dark rounded-lg">
+                                                    <h4 class="col text-uppercase text-white py-3 px-0">1</h4>
+                                                    <div class="col bg-white border text-uppercase text-secondary py-3 rounded-bottom">Grade</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-7 mx-md-0 mx-3 my-3 my-md-0 cloudy-knoxville-gradient rounded py-2">
+                                                <h4 class="chapter-name">Mathematics</h4>
+                                                <h6 class="enrollment-total">Students Enrolled: 52</h6>
+                                                <p class="mb-0">
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">MO</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TU</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">WE</span>
+                                                    <span class="text-white default-color-dark d-inline-block border p-1 font-small my-2">TH</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">FR</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">SA</span>
+                                                    <span class="text-danger d-inline-block border p-1 font-small my-2">SU</span>
+                                                </p>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="text-center py-2">
+                                                    <p>JUL 01 - AUG 12</p>
+                                                    <p>5:00PM - 6:00PM</p>
+                                                    <p class="btn btn-block btn-sm default-color-dark text-white">Details</p>
+                                                </div>                                    
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <hr>
+                        <button class="btn btn-sm success-color-dark text-white mx-0">Verify Student</button>
+                        <button class="btn btn-sm danger-color-dark text-white">Suspend Student</button>
+                        <button class="btn btn-sm primary-color-dark text-white">Revoke Suspension</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        
+</div>

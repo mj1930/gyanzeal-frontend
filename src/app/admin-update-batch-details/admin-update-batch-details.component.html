@@ -1,0 +1,202 @@
+<div class="container-fluid cloudy-knoxville-gradient py-2 py-lg-5 matop">
+    
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col rounded-lg">
+                <div class="card">
+                    <!-- Center Content -->
+                    <div class="card-body px-3">                         
+                        <form class="text-left pb-3 px-2" onsubmit="return false;"> 
+                            <h4>Update Batch</h4>  
+                            <hr>
+
+                            <div class="form-row">
+                                <div class="col-md">
+                                    <label>Batch Name</label>
+                                    <input type="text" class="form-control mb-4" placeholder="Batch Name">
+                                </div>
+
+                                <div class="col-md">
+                                    <label>Max Students</label>
+                                    <input type="text" class="form-control mb-4" placeholder="Number of Students" oninput="this.value=this.value.replace(/[^\d]/,'')">
+                                </div>
+
+                                <div class="col-md">
+                                    <label>Student Fee (INR)</label>
+                                    <input type="text" class="form-control mb-4" placeholder="Fee Amount (INR)" oninput="this.value=this.value.replace(/[^\d]/,'')">
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-sm text-white mx-0 primary-color-dark px-2 mb-5" data-toggle="modal" data-target="#searchTeacherList">Change Teacher</button>
+                            
+                            <div class="form-row BatchTeacherDetail d-none mb-md-4">
+                                <div class="col-md">
+                                    <label>Teacher ID</label>
+                                    <input type="text" class="form-control mb-2" placeholder="Teacher ID" disabled readonly value="T-145217">
+                                </div>
+
+                                <div class="col-md">
+                                    <label>Teacher Name</label>
+                                    <input type="text" class="form-control mb-2" placeholder="Teacher ID" disabled readonly value="Chandan Kanyal">
+                                </div>
+
+                                <div class="col-md">
+                                    <label>Teacher Default Commission</label>
+                                    <input type="text" class="form-control mb-2" placeholder="Teacher ID" disabled readonly value="12%">
+                                </div>
+                            </div>
+
+                            <div class="form-row BatchTeacherDetail d-none mb-md-4">
+                                <div class="col-md">
+                                    <label>Actual Teacher Payment Mode</label>
+                                    <select class="browser-default custom-select mb-4">
+                                        <option value="0" disabled="disabled" selected="selected">Payment Mode</option>
+                                        <option value="1">Gyanzeal Commission (%)</option>
+                                        <option value="2">Fixed Payout (INR)</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md">
+                                    <label>Gyanzeal Commission / Fixed Payout (%/INR)</label>
+                                    <input type="text" class="form-control mb-4" placeholder="Current Batch Commission">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col-lg">
+                                    <label>Batch Start Date</label>
+                                    <input type="date" class="form-control mb-4">
+                                </div>
+                                
+                                <div class="col-lg">
+                                    <label>Batch End Date</label>
+                                    <input type="date" class="form-control mb-4">
+                                </div>
+
+                                <div class="col-lg">
+                                    <label>Batch Days</label>
+                                    <select class="browser-default custom-select mb-4" multiple>
+                                        <option value="1">Monday</option>
+                                        <option value="2">Tuesday</option>
+                                        <option value="3">Wednesday</option>
+                                        <option value="4">Thursday</option>
+                                        <option value="5">Friday</option>
+                                        <option value="6">Saturday</option>
+                                        <option value="7">Sunday</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="col-lg">
+                                    <label>Batch Start Time</label>
+                                    <input type="time" class="form-control mb-4">
+                                </div>
+                                
+                                <div class="col-lg">
+                                    <label>Batch End Date</label>
+                                    <input type="time" class="form-control mb-4">
+                                </div>
+                            </div>
+
+                            <div class="form-row mb-4">
+                                <div class="col-md">
+                                    <label>Choose Curriculum</label>
+                                    <select class="browser-default custom-select mb-4 batch-curriculum-type">
+                                        <option value="0" disabled="disabled" selected="selected">Curriculum</option>
+                                        <option value="1">Default Curriculum</option>
+                                        <option value="2">New Curriculum</option>
+                                        <option value="3">Update Default Curriculum (Only For Current Batch)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="course-list new_curriculum d-none">
+                                <label>New Curriculum</label>
+                                <textarea class="form-control" rows="15" placeholder='Enter Lesson Names in new lines (Each Line with new lesson Name)'></textarea>
+                            </div>
+
+                            <div class="course-list update_curriculum d-none">
+                                <label>Update Curriculum</label>
+                                <textarea class="form-control" rows="8" placeholder='Enter Lesson Names in new lines (Each Line with new lesson Name)'>Lesson 1&#13;&#10;Lesson 2&#13;&#10;Lesson 3&#13;&#10;Lesson 4</textarea>
+                            </div>
+
+                            <div class="course-list default_curriculum d-none">
+                                <label>Update Curriculum</label>
+                                <textarea class="form-control" rows="8" placeholder='Enter Lesson Names in new lines (Each Line with new lesson Name)' readonly>Lesson 1&#13;&#10;Lesson 2&#13;&#10;Lesson 3&#13;&#10;Lesson 4</textarea>
+                            </div>
+
+
+                            <button class="btn btn-lg text-white mx-0 my-4 danger-color-dark mr-2">Delete Batch</button>
+                            <button class="btn btn-lg text-white mx-0 my-4 unique-color">Pause Enrollment</button>
+                            <button class="btn btn-lg text-white mx-0 my-4 success-color-dark">Resume Enrollment</button>
+                            <button class="btn btn-lg text-white mx-0 my-4 ml-2 primary-color-dark">Update</button>
+
+
+                        </form>
+                        <!-- Modal Box -->
+                        <div class="modal fade" id="searchTeacherList" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Request Details</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <table id="teacher-search-table-for-batch" class="table" width="100%">
+                                            <thead>
+                                                <tr>
+                                                    <th class="th-sm">Name</th>
+                                                    <th class="th-sm">Email</th>
+                                                    <th class="th-sm">Phone</th>
+                                                    <th class="th-sm">Subject</th>
+                                                    <th class="th-sm">Commision</th>
+                                                    <th class="th-sm">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><a href="admin-teacher-details-page" target="_blank">Chandan Kanyal</a></td>
+                                                    <td>chandansinghkanyal@gmail.com</td>
+                                                    <td>8909415161</td>
+                                                    <td>PHP</td>
+                                                    <td>10%</td>
+                                                    <td><button class="btn btn-sm success-color-dark text-white selectTeacher">Select</button></td>
+                                                </tr>
+                
+                                                <tr>
+                                                    <td><a href="admin-teacher-details-page" target="_blank"> Mihir Jain </a></td>
+                                                    <td>Jainmihir84@gmail.com</td>
+                                                    <td>875055155</td>
+                                                    <td>Mean Stack</td>
+                                                    <td>12%</td>
+                                                    <td><button class="btn btn-sm success-color-dark text-white selectTeacher">Select</button></td>
+                                                </tr>                
+                                                
+                                                <tr>
+                                                    <td><a href="admin-teacher-details-page" target="_blank">Chandan Kanyal</a></td>
+                                                    <td>sudohub@gmail.com</td>
+                                                    <td>7017926535</td>
+                                                    <td>English</td>
+                                                    <td>18%</td>
+                                                    <td><button class="btn btn-sm success-color-dark text-white selectTeacher">Select</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+</div>

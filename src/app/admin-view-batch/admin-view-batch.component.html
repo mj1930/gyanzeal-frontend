@@ -1,0 +1,191 @@
+<div class="container-fluid cloudy-knoxville-gradient py-2 py-lg-5 matop">
+    
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col rounded-lg">
+                <div class="card mb-4">
+                    <!-- Center Content -->
+                    <div class="card-body px-3">                         
+                        <form class="text-left pb-3 px-2" action="#!"> 
+                            <h4>Batch Management (Academics)</h4>  
+                            <hr>
+                            <h4>Filter Batches</h4>
+                            <div class="form-row">
+                                <div class="col-md">
+                                    <label for="selectclass">Class</label>
+                                    <select class="browser-default custom-select mb-4" id="selectclass">
+                                        <option value="0" disabled="disabled" selected="selected">(Select Class)</option>
+                                        <option value="1">Class 1</option>
+                                        <option value="2">Class 2</option>
+                                        <option value="2">Class 3</option>
+                                    </select>
+                                </div>
+    
+                                <div class="col-md">
+                                    <label for="selectsubject">Subject</label>
+                                    <select class="browser-default custom-select mb-4" id="selectsubject">
+                                        <option value="0" disabled="disabled" selected="selected">(Select Subject)</option>
+                                        <option value="1">Physics</option>
+                                        <option value="2">Chemistry</option>
+                                        <option value="3">Maths</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md">
+                                    <label for="batchstatus">Status</label>
+                                    <select class="browser-default custom-select mb-4" id="batchstatus">
+                                        <option value="0" disabled="disabled" selected="selected">(Current Status)</option>
+                                        <option value="1">Active</option>
+                                        <option value="2">Upcomming</option>
+                                        <option value="3">Completed</option>
+                                        <option value="4">Paused</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <hr>
+
+                            <table id="academics-batch-details-table" class="table" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th class="th-sm">Name</th>
+                                        <th class="th-sm">Time</th>
+                                        <th class="th-sm">Teacher</th>
+                                        <th class="th-sm">Batch Size</th>
+                                        <th class="th-sm">Creation Date</th>
+                                        <th class="th-sm">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="update-batch-details">Batch 1</a></td>
+                                        <td>10:00 AM - 11:00 AM</td>
+                                        <td>Chandan Kanyal</td>
+                                        <td>12/20</td>
+                                        <td>12 July 2020 10:58 AM</td>
+                                        <td class="text-success">Ongoing</td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td><a href="update-batch-details">Batch 1</a></td>
+                                        <td>10:00 AM - 11:00 AM</td>
+                                        <td>Chandan Kanyal</td>
+                                        <td>12/20</td>
+                                        <td>12 July 2020 10:58 AM</td>
+                                        <td class="text-danger">Upcomming</td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td><a href="update-batch-details">Batch 1</a></td>
+                                        <td>10:00 AM - 11:00 AM</td>
+                                        <td>Chandan Kanyal</td>
+                                        <td>12/20</td>
+                                        <td>12 July 2020 10:58 AM</td>
+                                        <td class="text-primary">Completed</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>                        
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <!-- Center Content -->
+                    <div class="card-body px-3">                         
+                        <form class="text-left pb-3 px-2" action="#!"> 
+                            <h4>Batch Management (GZ Specials)</h4>  
+                            <hr>
+                            <h4>Filter Batch</h4>
+                            <div class="form-row">
+                                <div class="col-md">
+                                    <label for="selectboard">Course Category</label>
+                                    <select class="browser-default custom-select mb-4">
+                                        <option value="0" disabled="disabled" selected="selected">(Select Category)</option>
+                                        <option value="1">Programming</option>
+                                        <option value="2">Music</option>
+                                        <option value="2">Dance</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md">
+                                    <label for="selectboard">Course Name</label>
+                                    <select class="browser-default custom-select mb-4">
+                                        <option value="0" disabled="disabled" selected="selected">(Select Course Name)</option>
+                                        <option value="1">C++</option>
+                                        <option value="2">C#</option>
+                                        <option value="2">Python</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md">
+                                    <label for="batchstatus">Status</label>
+                                    <select class="browser-default custom-select mb-4" id="batchstatus">
+                                        <option value="0" disabled="disabled" selected="selected">(Current Status)</option>
+                                        <option value="1">Active</option>
+                                        <option value="2">Upcomming</option>
+                                        <option value="3">Completed</option>
+                                        <option value="4">Paused</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <hr>
+
+                            <table id="GZ-batch-details-table" class="table" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th class="th-sm">Name</th>
+                                        <th class="th-sm">Time</th>
+                                        <th class="th-sm">Teacher</th>
+                                        <th class="th-sm">Batch Size</th>
+                                        <th class="th-sm">Creation Date</th>
+                                        <th class="th-sm">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><a href="update-batch-details">Batch 1</a></td>
+                                        <td>10:00 AM - 11:00 AM</td>
+                                        <td>Chandan Kanyal</td>
+                                        <td>12/20</td>
+                                        <td>12 July 2020 10:58 AM</td>
+                                        <td class="text-success">Ongoing</td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td><a href="update-batch-details">Batch 1</a></td>
+                                        <td>10:00 AM - 11:00 AM</td>
+                                        <td>Chandan Kanyal</td>
+                                        <td>12/20</td>
+                                        <td>12 July 2020 10:58 AM</td>
+                                        <td class="text-danger">Upcomming</td>
+                                    </tr>
+
+
+
+                                    <tr>
+                                        <td><a href="update-batch-details">Batch 1</a></td>
+                                        <td>10:00 AM - 11:00 AM</td>
+                                        <td>Chandan Kanyal</td>
+                                        <td>12/20</td>
+                                        <td>12 July 2020 10:58 AM</td>
+                                        <td class="text-primary">Completed</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+</div>

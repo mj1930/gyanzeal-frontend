@@ -1,0 +1,336 @@
+<div class="container-fluid cloudy-knoxville-gradient py-2 py-lg-5 matop">
+    
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col rounded-lg">
+                <div class="card">
+                    <div class="card-body px-3">                         
+                        <form class="text-left pb-3 px-2" action="#!"> 
+                            <h4>School Academics Management</h4>  
+                            <hr>
+                            
+                            
+                            <div class="addnew">
+                                <h4>Add Board Of Education</h4>
+                                <label for="addboard">Add New Board of Education</label>
+                                <input type="text" placeholder="Board of Education" class="form-control">
+                                <button class="btn btn-sm success-color-dark text-white mx-0 my-3">Add Board</button>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="addnew my-5">
+                                <h4>Add Class</h4>
+                                <label for="selectboard">Select Boards</label>
+                                <select class="browser-default custom-select mb-4" id="selectboard">
+                                    <option value="0" disabled="disabled" selected="selected">(Select Board)</option>
+                                    <option value="1">CBSE</option>
+                                    <option value="2">ICSC</option>
+                                    <option value="2">Haryana Borad</option>
+                                </select>
+
+                                <label for="addboard">Add Class</label>
+                                <input type="text" placeholder="Class Name" class="form-control">
+                                <button class="btn btn-sm success-color-dark text-white mx-0 my-3">Add Class</button>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="addnew my-5">
+                                <h4>Add Subject</h4>
+                                <label for="selectboard">Select Boards</label>
+                                <select class="browser-default custom-select mb-4" id="selectboard">
+                                    <option value="0" disabled="disabled" selected="selected">(Select Board)</option>
+                                    <option value="1">CBSE</option>
+                                    <option value="2">ICSC</option>
+                                    <option value="2">Haryana Borad</option>
+                                </select>
+
+                                <label for="selectclass">Select Class</label>
+                                <select class="browser-default custom-select mb-4" id="selectclass">
+                                    <option value="0" disabled="disabled" selected="selected">(Select Class)</option>
+                                    <option value="1">Class 1</option>
+                                    <option value="2">Class 2</option>
+                                    <option value="2">Class 3</option>
+                                    <option value="2">Class 4</option>
+                                    <option value="2">Class 5</option>
+                                    <option value="2">Class 6</option>
+                                </select>
+
+                                <label for="subjectName">Subject Name</label>
+                                <input type="text" placeholder="Subject Name" class="form-control">
+                                <button class="btn btn-sm success-color-dark text-white mx-0 my-3">Add Subject</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+
+
+
+                <div class="card my-5">
+                    <div class="card-body px-3">                         
+                        <form class="text-left pb-3 px-2" action="#!"> 
+                            <h4>Other Category Management</h4>  
+                            <hr>
+                            
+                            <h4>Add Category</h4>
+                            <div class="addnew">
+                                <label for="addcc">Add New Course Category</label>
+                                <input type="text" placeholder="Course Category Name" class="form-control">
+                                <button class="btn btn-sm success-color-dark text-white mx-0 my-3">Add Category</button>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="addnew my-5">
+                                <h4>Add Course Type</h4>
+                                <label for="cc">Select Course Category</label>
+                                <select class="browser-default custom-select mb-4">
+                                    <option value="0" disabled="disabled" selected="selected">Course Category</option>
+                                    <option value="1">GZ Specials</option>
+                                </select>
+
+                                <label for="addboard">Course Type</label>
+                                <input type="text" placeholder="Course Type" class="form-control">
+                                <button class="btn btn-sm success-color-dark text-white mx-0 my-3">Add Course Type</button>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="addnew my-5">
+                                <h4>Add Course</h4>
+                                <label for="cc">Select Course Category</label>
+                                <select class="browser-default custom-select mb-4">
+                                    <option value="0" disabled="disabled" selected="selected">Course Category</option>
+                                    <option value="1">GZ Specials</option>
+                                </select>
+
+                                <label for="ct">Course Type</label>
+                                <select class="browser-default custom-select mb-4" id="ct">
+                                    <option value="0" disabled="disabled" selected="selected">Type of Course</option>
+                                    <option value="1">Language</option>
+                                    <option value="2">I.T</option>
+                                    <option value="3">Music</option>
+                                </select>
+
+                                <label for="subjectName">Course Name</label>
+                                <input type="text" placeholder="Course Name" class="form-control">
+                                <button class="btn btn-sm success-color-dark text-white mx-0 my-3">Add Course</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+
+
+
+                <!-- Edit Details -->
+                <div class="card">
+                    <div class="card-body px-3">                         
+                        <form class="text-left pb-3 px-2" action="#!"> 
+                            <h4>Edit School Academics</h4>  
+                            <hr>
+                            
+                            
+                            <div class="addnew">
+                                <h4>Edit Board Of Education</h4>
+                                <label for="selectboard">Select Boards</label>
+                                <select class="browser-default custom-select mb-4" id="selectboard">
+                                    <option value="0" disabled="disabled" selected="selected">(Select Board)</option>
+                                    <option value="1">CBSE</option>
+                                    <option value="2">ICSC</option>
+                                    <option value="2">Haryana Borad</option>
+                                </select>
+
+                                <label for="addboard">Board of Education</label>
+                                <input type="text" placeholder="Board of Education" class="form-control">
+                                <button class="btn btn-sm default-color-dark text-white mx-0 my-3">Update</button>
+                                <button class="btn btn-sm unique-color-dark text-white my-3">Detele</button>
+                            </div>
+
+
+                            <div class="addnew my-5">
+                                <h4>Edit Class</h4>
+                                <label for="selectboard">Select Boards</label>
+                                <select class="browser-default custom-select mb-4" id="selectboard">
+                                    <option value="0" disabled="disabled" selected="selected">(Select Board)</option>
+                                    <option value="1">CBSE</option>
+                                    <option value="2">ICSC</option>
+                                    <option value="2">Haryana Borad</option>
+                                </select>
+
+
+                                <label for="selectclass">Select Class</label>
+                                <select class="browser-default custom-select mb-4" id="selectclass">
+                                    <option value="0" disabled="disabled" selected="selected">(Select Class)</option>
+                                    <option value="1">Class 1</option>
+                                    <option value="2">Class 2</option>
+                                    <option value="2">Class 3</option>
+                                    <option value="2">Class 4</option>
+                                    <option value="2">Class 5</option>
+                                    <option value="2">Class 6</option>
+                                </select>
+                                <label for="addboard">Class</label>
+                                <input type="text" placeholder="Class Name" class="form-control">
+                                <button class="btn btn-sm default-color-dark text-white mx-0 my-3">Update</button>
+                                <button class="btn btn-sm unique-color-dark text-white my-3">Detele</button>
+                            </div>
+
+
+                            <div class="addnew my-5">
+                                <h4>Edit Subject</h4>
+                                <label for="selectboard">Select Boards</label>
+                                <select class="browser-default custom-select mb-4" id="selectboard">
+                                    <option value="0" disabled="disabled" selected="selected">(Select Board)</option>
+                                    <option value="1">CBSE</option>
+                                    <option value="2">ICSC</option>
+                                    <option value="2">Haryana Borad</option>
+                                </select>
+
+                                <label for="selectclass">Select Class</label>
+                                <select class="browser-default custom-select mb-4" id="selectclass">
+                                    <option value="0" disabled="disabled" selected="selected">(Select Class)</option>
+                                    <option value="1">Class 1</option>
+                                    <option value="2">Class 2</option>
+                                    <option value="2">Class 3</option>
+                                    <option value="2">Class 4</option>
+                                    <option value="2">Class 5</option>
+                                    <option value="2">Class 6</option>
+                                </select>
+
+
+                                <label for="classSubject">Class Subject</label>
+                                <select class="browser-default custom-select mb-4" id="classSubject">
+                                    <option value="0" disabled="disabled" selected="selected">(Select Subject)</option>
+                                    <option value="1">English</option>
+                                    <option value="2">Hindi</option>
+                                    <option value="2">Mathematics</option>
+                                    <option value="2">EVS</option>
+                                    <option value="2">Science</option>
+                                    <option value="2">Home Science</option>
+                                </select>
+
+                                <label for="subjectName">Subject Name</label>
+                                <input type="text" placeholder="Subject Name" class="form-control">
+                                <button class="btn btn-sm default-color-dark text-white mx-0 my-3">Update</button>
+                                <button class="btn btn-sm unique-color-dark text-white my-3">Detele</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+
+
+
+                <div class="card my-5">
+                    <div class="card-body px-3">                         
+                        <form class="text-left pb-3 px-2" action="#!"> 
+                            <h4>Edit Other Category</h4>  
+                            <hr>
+                            
+                            <h4>Edit Category</h4>
+                            <div class="addnew">
+                                <label for="cc">Select Course Category</label>
+                                <select class="browser-default custom-select mb-4">
+                                    <option value="0" disabled="disabled" selected="selected">Course Category</option>
+                                    <option value="1">GZ Specials</option>
+                                </select>
+
+                                <label for="addcc">Course Category</label>
+                                <input type="text" placeholder="Course Category Name" class="form-control">
+                                <button class="btn btn-sm default-color-dark text-white mx-0 my-3">Update</button>
+                                <button class="btn btn-sm unique-color-dark text-white my-3">Detele</button>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="addnew my-5">
+                                <h4>Edit Course Type</h4>
+                                <label for="cc">Select Course Category</label>
+                                <select class="browser-default custom-select mb-4">
+                                    <option value="0" disabled="disabled" selected="selected">Course Category</option>
+                                    <option value="1">GZ Specials</option>
+                                </select>
+
+                                <label for="ct">Course Type</label>
+                                <select class="browser-default custom-select mb-4" id="ct">
+                                    <option value="0" disabled="disabled" selected="selected">Type of Course</option>
+                                    <option value="1">Language</option>
+                                    <option value="2">I.T</option>
+                                    <option value="3">Music</option>
+                                </select>
+
+                                <label for="addboard">Course Type</label>
+                                <input type="text" placeholder="Course Type" class="form-control">
+                                <button class="btn btn-sm default-color-dark text-white mx-0 my-3">Update</button>
+                                <button class="btn btn-sm unique-color-dark text-white my-3">Detele</button>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="addnew my-5">
+                                <h4>Edit Course</h4>
+                                <label for="cc">Select Course Category</label>
+                                <select class="browser-default custom-select mb-4">
+                                    <option value="0" disabled="disabled" selected="selected">Course Category</option>
+                                    <option value="1">GZ Specials</option>
+                                </select>
+
+                                <label for="ct">Course Type</label>
+                                <select class="browser-default custom-select mb-4" id="ct">
+                                    <option value="0" disabled="disabled" selected="selected">Type of Course</option>
+                                    <option value="1">Language</option>
+                                    <option value="2">I.T</option>
+                                    <option value="3">Music</option>
+                                </select>
+
+                                <label for="cn">Course Name</label>
+                                <select class="browser-default custom-select mb-4" id="cn">
+                                    <option value="0" disabled="disabled" selected="selected">Name of Course</option>
+                                    <option value="1">English</option>
+                                    <option value="2">French</option>
+                                    <option value="2">German</option>
+                                    <option value="2">Spannish</option>
+                                </select>
+
+                                <label for="subjectName">Course Name</label>
+                                <input type="text" placeholder="Course Name" class="form-control">
+                                <button class="btn btn-sm default-color-dark text-white mx-0 my-3">Update</button>
+                                <button class="btn btn-sm unique-color-dark text-white my-3">Detele</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        
+</div>
