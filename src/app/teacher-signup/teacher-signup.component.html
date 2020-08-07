@@ -47,8 +47,8 @@
 
                 <!-- Mobile Number -->
                 <label for="number">Mobile Number</label>
-                <input type="text" id="number" class="form-control mb-4" placeholder="Your mobile number" minlength=10
-                    maxlength=10 formControlName="mobile" name="mobile">
+                <input type="text" id="number" class="form-control mb-4" placeholder="Your mobile number"
+                oninput="this.value = this.value.replace(/[^\d]/,'')" maxlength="10" formControlName="mobile" name="mobile">
                 <p class="form-text text-danger mb-4 font-small"
                     *ngIf="teacherForm.get('mobile').touched && teacherForm.get('mobile').invalid">
                     Can't be left blank

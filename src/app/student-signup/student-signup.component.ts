@@ -23,7 +23,7 @@ export class StudentSignupComponent implements OnInit {
     },
     {
       "state": "Haryana",
-      "city": "Kurushetra"
+      "city": "Kurukshetra"
     },
     {
       "state": "Haryana",
