@@ -115,7 +115,7 @@ const routes: Routes = [
   // Admin Teacher Management Page
   { path: 'teacher-management', component: AdminTeacherManagementComponent },
   // Admin Teacher Details Page
-  { path: 'admin-teacher-details-page', component: AdminTeacherDetailsPageComponent },
+  { path: 'admin-teacher-details-page/:id', component: AdminTeacherDetailsPageComponent },
   // Admin Based Teacher Batch Details Page
   { path: 'teacher-batch-details-page', component: AdminBasedTeacherBatchDetailsComponent },
   // Admin Draft Students Details Page

@@ -3,7 +3,7 @@
         <div class="row d-flex align-items-center">
             <div class="col bg-white shadow rounded-lg">
 
-                <form class="text-left py-3" action="#!">
+                <form class="text-left py-3" [formGroup]="teacherForm">
 
                     <div class="col text-center my-4">
                         <img src="https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/img/figure/student.png" class="rounded-circle img-thumbnail" width="100px">
@@ -15,7 +15,7 @@
                     <div class="form-row mb-4">
                         <div class="col">
                             <label for="fname">First Name</label>
-                            <input type="text" id="fname" class="form-control" placeholder="First name">
+                            <input type="text" id="fname" class="form-control" placeholder="First name" formControlName="name">
                         </div>
                         <div class="col">
                             <label for="lname">Last Name</label>
@@ -24,7 +24,7 @@
                     </div>
 
                     <label for="gender">Gender</label>
-                    <select class="browser-default custom-select mb-4" id="gender">
+                    <select class="browser-default custom-select mb-4" id="gender" formControlName="gender">
                         <option value="0" disabled="disabled" selected="selected">Choose your gender</option>
                         <option value="1">Male</option>
                         <option value="2">Female</option>
@@ -32,10 +32,10 @@
                     </select>
 
                     <label for="mobile">Contact Number</label>
-                    <input type="text" id="mobile" class="form-control mb-4" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10">
+                    <input type="text" id="mobile" class="form-control mb-4" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10"  formControlName="mobile">
 
                     <label for="semail">Email</label>
-                    <input type="email" id="semail" class="form-control mb-4" placeholder="Email">
+                    <input type="email" id="semail" class="form-control mb-4" placeholder="Email" formControlName="email">
                     
                     
                     <!-- <label for="school">School Name</label>
@@ -73,15 +73,15 @@
                     <div class="form-row mb-4">
                         <div class="col">
                             <label for="years">Years</label>
-                            <input type="text" id="years" class="form-control" placeholder="Years of experience" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10">
+                            <input type="text" id="years" class="form-control" placeholder="Years of experience" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="2" formControlName="experienceYear">
                         </div>
                         <div class="col">
                             <label for="months">Months</label>
-                            <input type="text" id="months" class="form-control" placeholder="Months of experience" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10">
+                            <input type="text" id="months" class="form-control" placeholder="Months of experience" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="2" formControlName="experienceMonth">
                         </div>
                     </div>
                     <label for="school">School Name (If any)</label>
-                    <input type="text" id="school" class="form-control mb-4" placeholder="School Name">
+                    <input type="text" id="school" class="form-control mb-4" placeholder="School Name" formControlName="school">
 
                     
 
@@ -91,33 +91,33 @@
                     <div class="form-row mb-4">
                         <div class="col">
                             <label for="add1">Street Address Line 1</label>
-                            <input type="text" id="add1" class="form-control" placeholder="Street Address Line 1">
+                            <input type="text" id="add1" class="form-control" placeholder="Street Address Line 1" formControlName="address1">
                         </div>
                         <div class="col">
                             <label for="add2">Street Address Line 2</label>
-                            <input type="text" id="add2" class="form-control" placeholder="Street Address Line 2">
+                            <input type="text" id="add2" class="form-control" placeholder="Street Address Line 2" formControlName="address2">
                         </div>
                     </div>
 
                     <div class="form-row mb-4">
                         <div class="col">
                             <label for="city">City</label>
-                            <input type="text" id="city" class="form-control" placeholder="City">
+                            <input type="text" id="city" class="form-control" placeholder="City" formControlName="city">
                         </div>
                         <div class="col">
                             <label for="state">State</label>
-                            <input type="text" id="state" class="form-control" placeholder="State">
+                            <input type="text" id="state" class="form-control" placeholder="State" formControlName="state">
                         </div>
                     </div>
 
                     <div class="form-row mb-4">
                         <div class="col">
                             <label for="country">Country</label>
-                            <input type="text" id="country" class="form-control" placeholder="Country">
+                            <input type="text" id="country" class="form-control" placeholder="Country" formControlName="country">
                         </div>
                         <div class="col">
                             <label for="postal">Postal Code</label>
-                            <input type="text" id="postal" class="form-control" placeholder="Postal Code" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="6">
+                            <input type="text" id="postal" class="form-control" placeholder="Postal Code" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="6" formControlName="pinCode">
                         </div>
                     </div>
 
@@ -127,11 +127,11 @@
                     <div class="form-row mb-4">
                         <div class="col">
                             <label for="pan">PAN Number</label>
-                            <input type="text" id="pan" class="form-control" placeholder="Pan Number">
+                            <input type="text" id="pan" class="form-control" placeholder="Pan Number" formControlName="pan" maxlength="11">
                         </div>
                         <div class="col">
                             <label for="adhar">Aadhar Number</label>
-                            <input type="text" id="adhar" class="form-control" placeholder="Aadhar Number">
+                            <input type="text" id="adhar" class="form-control" placeholder="Aadhar Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="12" formControlName="aadhar">
                         </div>
                     </div>
 
@@ -139,27 +139,27 @@
                     <div class="form-row mb-4">
                         <div class="col">
                             <label for="fullname">Full Name (As registered with bank)</label>
-                            <input type="text" id="fullname" class="form-control" placeholder="Full Name">
+                            <input type="text" id="fullname" class="form-control" placeholder="Full Name" formControlName="name">
                         </div>
                         <div class="col">
                             <label for="bnkname">Bank Name</label>
-                            <input type="text" id="bnkname" class="form-control" placeholder="Bank Name">
+                            <input type="text" id="bnkname" class="form-control" placeholder="Bank Name" formControlName="bankName">
                         </div>
                     </div>
 
                     <div class="form-row mb-4">
                         <div class="col">
                             <label for="acnum">Account Number</label>
-                            <input type="text" id="acnum" class="form-control" placeholder="Account Number">
+                            <input type="text" id="acnum" class="form-control" placeholder="Account Number" formControlName="accountNumber" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="16">
                         </div>
                         <div class="col">
                             <label for="ifsc">IFSC Code</label>
-                            <input type="text" id="ifsc" class="form-control" placeholder="IFSC Code">
+                            <input type="text" id="ifsc" class="form-control" placeholder="IFSC Code" formControlName="ifscCode" maxlength="11">
                         </div>
                     </div>
 
                     <label for="upi">UPI ID (If any)</label>
-                    <input type="text" id="upi" class="form-control mb-4" placeholder="name@upi">
+                    <input type="text" id="upi" class="form-control mb-4" placeholder="name@upi" formControlName="upi">
                     
 
                     <!-- Password -->

@@ -117,7 +117,7 @@ export class StudentSignupComponent implements OnInit {
       mobile : new FormControl('', [Validators.compose([Validators.required, Validators.pattern(this.phoneNumber)])]),
       email : new FormControl('', [Validators.compose([Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")])]),
       state : new FormControl('Haryana', [Validators.required]),
-      city : new FormControl('Kurushetra', [Validators.required]),
+      city : new FormControl('Kurukshetra', [Validators.required]),
       board : new FormControl('', [Validators.required]),
     });
     this.onSelectState('Haryana');

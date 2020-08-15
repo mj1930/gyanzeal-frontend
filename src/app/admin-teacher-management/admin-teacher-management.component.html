@@ -143,9 +143,7 @@
                                     </select>
                                 </div> -->
                             </div>
-                            
                             <hr>
-
                             <table id="teacher-details-table" class="table" width="100%">
                                 <thead>
                                     <tr>
@@ -160,54 +158,21 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td><a href="admin-teacher-details-page">Chandan Kanyal</a></td>
-                                        <td>8909415161</td>
-                                        <td>chandansinghkanyal@gmail.com</td>
-                                        <td>4 Years</td>
-                                        <td><span data-toggle="modal" data-target="#class-subject" style="cursor: pointer;">View</span></td>
-                                        <td>5</td>
-                                        <td>8</td>
-                                        <td class="text-success">Active</td>
-                                    </tr>
-
-
-
-                                    <tr>
-                                        <td><a href="admin-teacher-details-page">Mihir Jain</a></td>
-                                        <td>6589745662</td>
-                                        <td>jainmihir84@gmail.com</td>
-                                        <td>4 Years</td>
-                                        <td><span data-toggle="modal" data-target="#class-subject" style="cursor: pointer;">View</span></td>
-                                        <td>NA</td>
-                                        <td>NA</td>
-                                        <td class="text-danger">Not Verified</td>
-                                    </tr>
-
-
-
-                                    <tr>
-                                        <td><a href="admin-teacher-details-page">Gautam bansal</a></td>
-                                        <td>98568713245</td>
-                                        <td>iamgautam@gmail.com</td>
-                                        <td>4 Years</td>
-                                        <td><span data-toggle="modal" data-target="#class-subject" style="cursor: pointer;">View</span></td>
-                                        <td>0</td>
-                                        <td>18</td>
-                                        <td class="text-primary">Inactive</td>
-                                    </tr>
-
-
-                                    <tr>
-                                        <td><a href="admin-teacher-details-page">Shakshi Gautam Bansal</a></td>
-                                        <td>98568745123</td>
-                                        <td>iamshakshi@gmail.com</td>
-                                        <td>4 Years</td>
-                                        <td><span data-toggle="modal" data-target="#class-subject" style="cursor: pointer;">View</span></td>
-                                        <td>5</td>
-                                        <td>8</td>
-                                        <td class="text-danger">Suspended</td>
-                                    </tr>
+                                    <ng-container *ngFor="let teacher of teacherLists;">
+                                        <tr>
+                                            <td>
+                                                <a routerLink="admin-teacher-details-page/{{teacher._id}}">{{teacher.name}}</a>
+                                            </td>
+                                            <td>{{teacher.mobile}}</td>
+                                            <td>{{teacher.email}}</td>
+                                            <td>{{teacher.experienceYear}} Years {{teacher.experienceMonth}} Months</td>
+                                            <td>
+                                                <span data-toggle="modal" data-target="#class-subject" style="cursor: pointer;">View</span></td>
+                                            <td>5</td>
+                                            <td>8</td>
+                                            <td class="text-success">{{teacher.status}}</td>
+                                        </tr>
+                                    </ng-container>
                                 </tbody>
                             </table>
                         </form>                        
@@ -357,54 +322,21 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td><a href="admin-teacher-details-page">Chandan Kanyal</a></td>
-                                        <td>8909415161</td>
-                                        <td>chandansinghkanyal@gmail.com</td>
-                                        <td>4 Years</td>
-                                        <td><span data-toggle="modal" data-target="#subject-only" style="cursor: pointer;">View</span></td>
-                                        <td>5</td>
-                                        <td>8</td>
-                                        <td class="text-success">Active</td>
-                                    </tr>
-
-
-
-                                    <tr>
-                                        <td><a href="admin-teacher-details-page">Mihir Jain</a></td>
-                                        <td>6589745662</td>
-                                        <td>jainmihir84@gmail.com</td>
-                                        <td>4 Years</td>
-                                        <td><span data-toggle="modal" data-target="#subject-only" style="cursor: pointer;">View</span></td>
-                                        <td>NA</td>
-                                        <td>NA</td>
-                                        <td class="text-danger">Not Verified</td>
-                                    </tr>
-
-
-
-                                    <tr>
-                                        <td><a href="admin-teacher-details-page">Gautam bansal</a></td>
-                                        <td>98568713245</td>
-                                        <td>iamgautam@gmail.com</td>
-                                        <td>4 Years</td>
-                                        <td><span data-toggle="modal" data-target="#subject-only" style="cursor: pointer;">View</span></td>
-                                        <td>0</td>
-                                        <td>18</td>
-                                        <td class="text-primary">Inactive</td>
-                                    </tr>
-
-
-                                    <tr>
-                                        <td><a href="admin-teacher-details-page">Shakshi Gautam Bansal</a></td>
-                                        <td>98568745123</td>
-                                        <td>iamshakshi@gmail.com</td>
-                                        <td>4 Years</td>
-                                        <td><span data-toggle="modal" data-target="#subject-only" style="cursor: pointer;">View</span></td>
-                                        <td>5</td>
-                                        <td>8</td>
-                                        <td class="text-danger">Suspended</td>
-                                    </tr>
+                                    <ng-container *ngFor="let gzTeacher of gzSpecialTeacher">
+                                        <tr>
+                                            <td>
+                                                <a routerLink="admin-teacher-details-page/{{gzTeacher._id}}">{{gzTeacher.name}}</a></td>
+                                            <td>{{gzTeacher.mobile}}</td>
+                                            <td>{{gzTeacher.email}}</td>
+                                            <td>{{gzTeacher.experienceYear}} Years and {{gzTeacher.experienceMonth}} Months</td>
+                                            <td>
+                                                <span data-toggle="modal" data-target="#subject-only" style="cursor: pointer;">View</span>
+                                            </td>
+                                            <td>5</td>
+                                            <td>8</td>
+                                            <td class="text-success">{{gzTeacher.status}}</td>
+                                        </tr>
+                                    </ng-container>
                                 </tbody>
                             </table>
                         </form>                        

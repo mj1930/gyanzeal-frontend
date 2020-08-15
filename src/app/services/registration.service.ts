@@ -12,11 +12,11 @@ export class RegistrationService {
   ) { }
 
   signUpStudent(studentData: any) {
-    return this.http.post(`${environment.url}student/studentSignUp`, {studentData});
+    return this.http.post(`${environment.url}student/student-signUp`, {studentData});
   }
 
   signUpTeacher(teacherData: any) {
-    return this.http.post(`${environment.url}teacher/teacherSignUp`, {teacherData});
+    return this.http.post(`${environment.url}teacher/teacher-signup`, {teacherData});
   }
 
   loginStudent(loginData) {
@@ -25,5 +25,13 @@ export class RegistrationService {
 
   loginTeacher(loginData) {
     return this.http.post(`${environment.url}teacher/login`, {loginData})
+  }
+
+  getTeacherProfile(email) {
+    return this.http.get(`${environment.url}teacher/fetch-profile?email=${email}`);
+  }
+
+  updateTeacherProfile(profileData) {
+    return this.http.post(`${environment.url}teacher/update-profile`, {profileData});
   }
 }

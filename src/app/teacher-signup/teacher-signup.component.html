@@ -48,7 +48,8 @@
                 <!-- Mobile Number -->
                 <label for="number">Mobile Number</label>
                 <input type="text" id="number" class="form-control mb-4" placeholder="Your mobile number"
-                oninput="this.value = this.value.replace(/[^\d]/,'')" maxlength="10" formControlName="mobile" name="mobile">
+                    oninput="this.value = this.value.replace(/[^\d]/,'')" maxlength="10" formControlName="mobile"
+                    name="mobile">
                 <p class="form-text text-danger mb-4 font-small"
                     *ngIf="teacherForm.get('mobile').touched && teacherForm.get('mobile').invalid">
                     Can't be left blank
@@ -188,11 +189,11 @@
                     <optgroup>
                         <option value="0">Not a School Teacher</option>
                     </optgroup>
-
                     <optgroup>
-                        <option value="1">D.A.V Public School</option>
-                        <option value="2">Greenfield Public School</option>
-                        <option value="3">Holy Angels Public School</option>
+                        <ng-container *ngFor="let data of schoolsList">
+                            <pre>{{data | json}}</pre>
+                            <option [value]="data.school">{{data.school}}</option>
+                        </ng-container>
                     </optgroup>
                 </select>
                 <p class="form-text text-danger mb-4 font-small"
@@ -240,8 +241,8 @@
                 </p>
 
                 <!-- Sign up button -->
-                <button class="btn-sm btn info-color-dark text-white my-4 mx-0" type="button"
-                    (click)="createAccount()">Apply Now</button>
+                <!-- <button class="btn-sm btn info-color-dark text-white my-4 mx-0" type="button"
+                    (click)="createAccount()">Apply Now</button> -->
 
                 <!-- Select Subject And Class -->
                 <p class="mt-5 text-primary"><i class='fas fa-indent'></i> Class And Subject Information</p>
@@ -250,27 +251,38 @@
                     <div class="form-row">
                         <div class="col-md">
                             <label for="school-teacher">Select Class</label>
-                            <select class="browser-default custom-select mb-4" id="teacher-select-class-scholastic">
-                                <option value="0" disabled="disabled" selected="selected">Select Class</option>
+                            <select class="browser-default custom-select mb-4" id="teacher-select-class-scholastic"
+                                formControlName="classes" name="classes">
+                                <option value="0" disabled="disabled" selected>Select Class</option>
                                 <option value="Class 1">Class 1</option>
                                 <option value="Class 2">Class 2</option>
-                                <option value="Class 3">CLass 3</option>                   
+                                <option value="Class 3">CLass 3</option>
                             </select>
+                            <p class="form-text text-danger mb-4 font-small"
+                                *ngIf="teacherForm.get('classes').touched && !teacherForm.get('classes').valid">
+                                Can't be left blank
+                            </p>
                         </div>
 
                         <div class="col-md">
                             <label for="school-teacher">Select Subject</label>
-                            <select class="browser-default custom-select mb-4" id="teacher-select-subject-scholastic" multiple>
-                                <option value="0" disabled="disabled" selected="selected">Select Class</option>
+                            <select class="browser-default custom-select mb-4" id="teacher-select-subject-scholastic"
+                                formControlName="courses" name="courses" multiple >
+                                <option value="0" disabled="disabled" selected>Select Subject</option>
                                 <option value="English">English</option>
                                 <option value="Maths">Maths</option>
-                                <option value="Science">Science</option>                   
+                                <option value="Science">Science</option>
                             </select>
+                            <p class="form-text text-danger mb-4 font-small"
+                                *ngIf="teacherForm.get('courses').touched && !teacherForm.get('courses').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                     </div>
                     <div class="row mb-4">
                         <div class="col-md text-right">
-                            <button class="btn-sm btn p-1 success-color-dark text-white add-subject-to-list">Add Subject to list</button>
+                            <button class="btn-sm btn p-1 success-color-dark text-white add-subject-to-list" (click)="addSubject()">Add Subject
+                                to list</button>
                         </div>
                     </div>
                 </div>
@@ -279,46 +291,46 @@
                     <div class="form-row">
                         <div class="col-md">
                             <label for="school-teacher">Select GZ Special Course</label>
-                            <select class="browser-default custom-select mb-4" id="gz-special-course-name">
+                            <select class="browser-default custom-select mb-4" id="gz-special-course-name"
+                                formControlName="gzclasses" name="gzclasses">
                                 <option value="" disabled="disabled" selected="selected">Select Course</option>
                                 <option value="I.T.">I.T.</option>
                                 <option value="Music">Music</option>
-                                <option value="Language Learning">Language Learning</option>                   
+                                <option value="Language Learning">Language Learning</option>
                             </select>
                         </div>
 
                         <div class="col-md">
                             <label for="school-teacher">Select Subject</label>
-                            <select class="browser-default custom-select mb-4" id="gz-subject-name" multiple>
+                            <select class="browser-default custom-select mb-4" id="gz-subject-name" 
+                                formControlName="gzcourses" name="gzcourses" multiple >
                                 <option value="" disabled="disabled" selected="selected">Select Subject</option>
                                 <option value="English">English</option>
                                 <option value="French">French</option>
-                                <option value="German">German</option>                   
+                                <option value="German">German</option>
                             </select>
                         </div>
                     </div>
                     <div class="row mb-4">
                         <div class="col-md text-right">
-                            <button class="btn-sm btn p-1 success-color-dark text-white add-course-to-list">Add Course to list</button>
+                            <button class="btn-sm btn p-1 success-color-dark text-white add-course-to-list" (click)="addGZSpecialSubject()">Add Course
+                                to list</button>
                         </div>
                     </div>
                 </div>
-                
-                
-
-
                 <label for="selected-subjects">Selected Subjects to be taught by teacher</label>
                 <div class="col-md bg-secondary rounded py-2 text-white teacher-subject-list">
                     <span class="no-subject">No Subject Selected Yet!</span>
                 </div>
 
                 <div class="alert alert-warning my-2" role="alert">
-                    <b>Note:</b> If your'e unable to see your desired subject you can <a [routerLink]="['/support/contact']">Contact Us Here</a>
+                    <b>Note:</b> If your'e unable to see your desired subject you can <a
+                        [routerLink]="['/support/contact']">Contact Us Here</a>
                 </div>
 
 
                 <!-- Sign up button -->
-                <button class="btn-sm btn info-color-dark text-white mx-0" type="submit">Apply Now</button>
+                <button class="btn-sm btn info-color-dark text-white mx-0" type="submit" (click)="createAccount()">Apply Now</button>
                 <hr>
                 <!-- Terms of service -->
                 <p class="text-justify my-0">By creating account you agree to our <a [routerLink]="['/tos']">Terms of
