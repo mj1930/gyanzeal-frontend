@@ -35,7 +35,7 @@
                     <input type="text" id="mobile" class="form-control mb-4" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10"  formControlName="mobile">
 
                     <label for="semail">Email</label>
-                    <input type="email" id="semail" class="form-control mb-4" placeholder="Email" formControlName="email">
+                    <input type="email" id="semail" class="form-control mb-4" oninput="this.value=this.value.replace('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$','')" placeholder="Email" formControlName="email">
                     
                     
                     <!-- <label for="school">School Name</label>
@@ -177,7 +177,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-sm mx-0 primary-color-dark text-white">Save Changes</button>
+                    <button class="btn btn-sm mx-0 primary-color-dark text-white" (click)="updateProfile()">Save Changes</button>
 
                 </form>
             </div> 

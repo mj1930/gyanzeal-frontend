@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+// To create forms (Copy Paste)
 import { FormControl, Validators, FormBuilder } from '@angular/forms';
+// To manage user data (Student or Teacher) (Copy Paste)
 import { RegistrationService } from '../services/registration.service';
+import { ManageService } from '../services/manage.service';
+import { TokenService } from '../services/token.service';
 
 @Component({
   selector: 'app-teacher-profile-setting',
@@ -12,23 +16,34 @@ export class TeacherProfileSettingComponent implements OnInit {
   public teacherForm: any;
   constructor(
     private fb: FormBuilder,
-    private registration: RegistrationService
+    private registration: RegistrationService,
+    private manageService: ManageService,
+    private tokenService: TokenService
   ) { }
 
+  // Run on intialization
   ngOnInit() {
+    // To set header (Copy Paste)
+    let tokenData = this.tokenService.getToken();
+    this.manageService.setHeaderValue({
+      teacher: tokenData.teacher,
+      student: tokenData.student
+    });
+
+    // To create form
     this.teacherForm = this.fb.group({
       name : new FormControl('', [Validators.required]),
       gender : new FormControl('', [Validators.required]),
       mobile : new FormControl('', [Validators.compose([Validators.required])]),
-      email : new FormControl('', [Validators.compose([Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")])]),
+      email : new FormControl('', [Validators.required]),
       experienceYear: new FormControl('', [Validators.required]),
       experienceMonth: new FormControl('', [Validators.required]),
       address1: new FormControl('', [Validators.required]),
       address2: new FormControl('', [Validators.required]),
       state : new FormControl('Haryana', [Validators.required]),
       city : new FormControl('Kurukshetra', [Validators.required]),
-      country: new FormControl('Kurukshetra', [Validators.required]),
-      pinCode: new FormControl('Kurukshetra', [Validators.required]),
+      country: new FormControl('', [Validators.required]),
+      pinCode: new FormControl('', [Validators.required]),
       school : new FormControl('', [Validators.required]),
       pan: new FormControl('', [Validators.required]),
       aadhar: new FormControl('', [Validators.required]),
@@ -70,11 +85,15 @@ export class TeacherProfileSettingComponent implements OnInit {
   }
   
   updateProfile() {
-    let data = this.teacherForm.values;
-    this.registration.updateTeacherProfile(data).subscribe((data:any) => {
-      if (data.status === 200) {
-        this.setFormValues(data.data);
-      }
-    })
+    let data = this.teacherForm.value;
+    if (this.teacherForm.valid) {
+      this.registration.updateTeacherProfile(data).subscribe((data:any) => {
+        if (data.status === 200) {
+          this.setFormValues(data.data);
+        }
+      });
+    } else {
+      alert('Please fill the form');
+    }
   }
 }

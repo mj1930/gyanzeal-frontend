@@ -19,7 +19,7 @@ export class TeacherDashboardComponent implements OnInit {
     this.manageService.setHeaderValue({
       teacher: tokenData.teacher,
       student: tokenData.student
-    })
+    });
   }
 
 }
