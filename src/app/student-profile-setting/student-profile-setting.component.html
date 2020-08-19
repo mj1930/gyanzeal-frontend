@@ -1,9 +1,9 @@
-<div class="container-fluid cloudy-knoxville-gradient py-2 matop">
+<div class="container-fluid cloudy-knoxville-gradient py-2">
     <div class="container-fluid container-lg my-md-5">
         <div class="row d-flex align-items-center">
             <div class="col bg-white shadow rounded-lg">
 
-                <form class="text-left py-3" action="#!">
+                <form class="text-left py-3" [formGroup]="studentForm">
 
                     <div class="col text-center my-4">
                         <img src="https://www.radiustheme.com/demo/html/psdboss/akkhor/akkhor/img/figure/student.png" class="rounded-circle img-thumbnail" width="100px">
@@ -12,38 +12,49 @@
                     
                     <h5 class="text-primary"><i class="fas fa-ribbon"></i> Personal Information</h5>
                     <hr>
-                    <div class="form-row mb-4">
-                        <div class="col">
-                            <label for="fname">First Name</label>
-                            <input type="text" id="fname" class="form-control" placeholder="First name">
-                        </div>
-                        <div class="col">
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" class="form-control" placeholder="Last name">
+                    <div class="form-row">
+                        <div class="col-sm">
+                            <label for="fname">Name</label>
+                            <input type="text" id="fname" class="form-control" placeholder="Name" formControlName="name">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('name').touched && !studentForm.get('name').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                     </div>
 
-                    <label for="gender">Gender</label>
-                    <select class="browser-default custom-select mb-4" id="gender">
+                    <label for="gender" class="mt-4">Gender</label>
+                    <select class="browser-default custom-select" id="gender" formControlName="gender">
                         <option value="0" disabled="disabled" selected="selected">Choose your gender</option>
                         <option value="1">Male</option>
                         <option value="2">Female</option>
                         <option value="3">Prefer not to say</option>
                     </select>
+                    <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('gender').touched && !studentForm.get('gender').valid">
+                        Select At Least One
+                    </p>
 
-                    <label for="school">School Name</label>
-                    <input type="text" id="school" class="form-control mb-4" placeholder="School Name">
+                    <label for="school" class="mt-4">School Name</label>
+                    <input type="text" id="school" class="form-control" placeholder="School Name" formControlName="schoolName">
+                    <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('schoolName').touched && !studentForm.get('schoolName').valid">
+                        Can't be left blank
+                    </p>
 
-                    <label for="board">Board Of Education</label>
-                    <select class="browser-default custom-select mb-4" id="board">
+
+                    <label for="board" class="mt-4">Board Of Education</label>
+                    <select class="browser-default custom-select" id="board" formControlName="schoolBoard">
                         <option value="0" disabled="disabled" selected="selected">Education Board</option>
                         <option value="1">C.B.S.E.</option>
                         <option value="2">I.C.S.C.</option>
                         <option value="3">State Board</option>
                     </select>
+                    <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('schoolBoard').touched && !studentForm.get('schoolBoard').valid">
+                        Select At Least One
+                    </p>
 
-                    <label for="classname">Pursuing Class</label>
-                    <select class="browser-default custom-select mb-4" id="classname">
+
+
+                    <label for="classname" class="mt-4">Pursuing Class</label>
+                    <select class="browser-default custom-select" id="classname" formControlName="className">
                         <option value="0" disabled="disabled" selected="selected">Choose Class</option>
                         <option value="1">Grade 1</option>
                         <option value="2">Grade 2</option>
@@ -58,87 +69,133 @@
                         <option value="3">Grade 11</option>
                         <option value="3">Grade 12</option>
                     </select>
+                    <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('className').touched && !studentForm.get('className').valid">
+                        Select At Least One
+                    </p>
+
+
 
                     <!-- Contact Info -->
-                    <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Contact Information</h5>
+                    <h5 class="text-primary mt-5"><i class="fas fa-ribbon"></i> Contact Information</h5>
                     <hr>
-                    <label for="mobile">Student Contact Number</label>
-                    <input type="text" id="mobile" class="form-control mb-4" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10">
+                    <label for="mobile" class="mt-4">Student Contact Number</label>
+                    <input type="text" id="mobile" class="form-control" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10" formControlName="contactNumber">
+                    <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('contactNumber').touched && !studentForm.get('contactNumber').valid">
+                        Can't be left blank
+                    </p>
 
-                    <label for="semail">Student Email</label>
-                    <input type="email" id="semail" class="form-control mb-4" placeholder="Email">
 
 
-                    <div class="form-row mb-4">
-                        <div class="col">
-                            <label for="add1">Street Address Line 1</label>
-                            <input type="text" id="add1" class="form-control" placeholder="Street Address Line 1">
-                        </div>
-                        <div class="col">
-                            <label for="add2">Street Address Line 2</label>
-                            <input type="text" id="add2" class="form-control" placeholder="Street Address Line 2">
-                        </div>
-                    </div>
+                    <label for="semail" class="mt-4">Student Email</label>
+                    <input type="email" id="semail" class="form-control" placeholder="Email" formControlName="studentEmail">
+                    <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('studentEmail').touched && !studentForm.get('studentEmail').valid">
+                        Can't be left blank
+                    </p>
 
-                    <div class="form-row mb-4">
-                        <div class="col">
-                            <label for="city">City</label>
-                            <input type="text" id="city" class="form-control" placeholder="City">
-                        </div>
-                        <div class="col">
-                            <label for="state">State</label>
-                            <input type="text" id="state" class="form-control" placeholder="State">
-                        </div>
-                    </div>
 
-                    <div class="form-row mb-4">
-                        <div class="col">
-                            <label for="country">Country</label>
-                            <input type="text" id="country" class="form-control" placeholder="Country">
+
+                    <div class="form-row">
+                        <div class="col-sm">
+                            <label for="add1" class="mt-4">Street Address Line 1</label>
+                            <input type="text" id="add1" class="form-control" placeholder="Street Address Line 1" formControlName="addressLine1">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('addressLine1').touched && !studentForm.get('addressLine1').valid">
+                                Can't be left blank
+                            </p>
                         </div>
-                        <div class="col">
-                            <label for="postal">Postal Code</label>
-                            <input type="text" id="postal" class="form-control" placeholder="Postal Code" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="6">
+                        <div class="col-sm">
+                            <label for="add2" class="mt-4">Street Address Line 2</label>
+                            <input type="text" id="add2" class="form-control" placeholder="Street Address Line 2" formControlName="addressLine2">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('addressLine2').touched && !studentForm.get('addressLine2').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                     </div>
 
-                    <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Parent Information</h5>
+                    <div class="form-row">
+                        <div class="col-sm">
+                            <label for="city" class="mt-4">City</label>
+                            <input type="text" id="city" class="form-control" placeholder="City" formControlName="city">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('city').touched && !studentForm.get('city').valid">
+                                Can't be left blank
+                            </p>
+                        </div>
+                        <div class="col-sm">
+                            <label for="state" class="mt-4">State</label>
+                            <input type="text" id="state" class="form-control" placeholder="State" formControlName="state">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('state').touched && !studentForm.get('state').valid">
+                                Can't be left blank
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="col-sm">
+                            <label for="country" class="mt-4">Country</label>
+                            <input type="text" id="country" class="form-control" placeholder="Country" formControlName="country">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('country').touched && !studentForm.get('country').valid">
+                                Can't be left blank
+                            </p>
+                        </div>
+                        <div class="col-sm">
+                            <label for="postal" class="mt-4">Postal Code</label>
+                            <input type="text" id="postal" class="form-control" placeholder="Postal Code" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="6" formControlName="pinCode">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('pinCode').touched && !studentForm.get('pinCode').valid">
+                                Can't be left blank
+                            </p>
+                        </div>
+                    </div>
+
+                    <h5 class="text-primary mt-5"><i class="fas fa-ribbon"></i> Parent Information</h5>
                     <hr>
-                    <div class="form-row mb-4">
-                        <div class="col">
-                            <label for="g1name">Parent Name</label>
-                            <input type="text" id="g1name" class="form-control" placeholder="Parent Name">
+                    <div class="form-row">
+                        <div class="col-sm">
+                            <label for="g1name" class="mt-4">Parent Name</label>
+                            <input type="text" id="g1name" class="form-control" placeholder="Parent Name" formControlName="parentName">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('parentName').touched && !studentForm.get('parentName').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                     </div>
 
-                    <div class="form-row mb-4">
-                        <div class="col">
-                            <label for="g1contact">Parent Contact Number</label>
-                            <input type="text" id="g1contact" class="form-control" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10">
+                    <div class="form-row">
+                        <div class="col-sm">
+                            <label for="g1contact" class="mt-4">Parent Contact Number</label>
+                            <input type="text" id="g1contact" class="form-control" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10" formControlName="parentNumber">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('parentNumber').touched && !studentForm.get('parentNumber').valid">
+                                Can't be left blank
+                            </p>
                         </div>
-                        <div class="col">
-                            <label for="g1email">Parent Email</label>
-                            <input type="text" id="g1email" class="form-control" placeholder="Parent Email">
+                        <div class="col-sm">
+                            <label for="g1email" class="mt-4">Parent Email</label>
+                            <input type="text" id="g1email" class="form-control" placeholder="Parent Email" formControlName="parentEmail">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('parentEmail').touched && !studentForm.get('parentEmail').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                     </div>
 
 
-                    <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Update Security Information</h5>
+                    <!-- <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Update Security Information</h5>
                     <hr>
 
-                    <div class="form-row mb-4">
-                        <div class="col">
+                    <div class="form-row">
+                        <div class="col-sm">
                             <label for="npass">New Password</label>
                             <input type="password" id="npass" class="form-control" placeholder="New Password">
                         </div>
-                        <div class="col">
+                        <div class="col-sm">
                             <label for="rpass">Repeat Password</label>
                             <input type="password" id="rpass" class="form-control" placeholder="Repeat Password">
                         </div>
+                    </div> -->
+
+                    <button class="btn btn-sm mx-0 primary-color-dark text-white my-3" (click)="updateProfile()">Save Changes</button>
+                    <div class="alert alert-success alert-dismissible fade" [ngClass]="messageClass ? 'alert-success' : 'alert-danger'" role="alert" [class.show]="showMessage" *ngIf="showMessage">
+                        {{message}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-
-                    <button class="btn btn-sm mx-0 primary-color-dark text-white">Save Changes</button>
-
                 </form>
             </div> 
         </div>

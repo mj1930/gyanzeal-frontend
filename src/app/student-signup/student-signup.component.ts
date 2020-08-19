@@ -147,7 +147,7 @@ export class StudentSignupComponent implements OnInit {
         this.messageClass = true;
         this.showMessage = false;
         this.message = '';
-      }, 2000);
+      }, 10000);
     }
   }
 

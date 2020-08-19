@@ -1,13 +1,7 @@
 <div class="container-fluid cloudy-knoxville-gradient py-5 matop">
     <h1 class="fredoka text-center">Signup as Student</h1>
     <p class="text-center">Welcome to Gyanzeal User Area.</p>
-    <div class="toast right-0 position-fixed"
-        [ngClass]="messageClass ? 'success-color-dark text-white' : 'danger-color-dark text-white'"
-        data-autohide="false" [class.show]="showMessage" *ngIf="showMessage">
-        <div class="toast-body">
-            <h4>{{message}}</h4>
-        </div>
-    </div>
+    
     <div class="container my-5">
         <div class="card col-md-8 mx-auto">
             <form class="p-md-5 text-left" [formGroup]="studentForm">
@@ -21,64 +15,60 @@
                 <div class="or-seperator my-5"><span>OR</span></div>
                 <!-- Name -->
                 <label for="name">Your Name</label>
-                <input type="text" id="name" class="form-control mb-4" placeholder="Your Name" formControlName="name"
-                    name="name">
-                <p class="form-text text-danger mb-4 font-small"
-                    *ngIf="studentForm.get('name').touched && !studentForm.get('name').valid">
+                <input type="text" id="name" class="form-control" placeholder="Your Name" formControlName="name" name="name">
+                <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('name').touched && !studentForm.get('name').valid">
                     Can't be left blank
                 </p>
 
                 <!-- Father's Name -->
-                <label for="fatherName">Father's Name</label>
-                <input type="text" id="fatherName" class="form-control mb-4" placeholder="Father's Name"
-                    formControlName="fName" name="fName">
-                <p class="form-text text-danger mb-4 font-small"
-                    *ngIf="studentForm.get('fName').touched && !studentForm.get('fName').valid">
+                <label for="fatherName" class="mt-4">Father's Name</label>
+                <input type="text" id="fatherName" class="form-control" placeholder="Father's Name" formControlName="fName" name="fName">
+                <p class="form-text text-danger font-small mb-0" *ngIf="studentForm.get('fName').touched && !studentForm.get('fName').valid">
                     Can't be left blank
                 </p>
 
                 <!-- Gender -->
-                <label for="gender">Gender</label>
-                <select class="browser-default custom-select mb-4" id="gender" formControlName="gender" name="gender">
+                <label for="gender" class="mt-4">Gender</label>
+                <select class="browser-default custom-select" id="gender" formControlName="gender" name="gender">
                     <option value="" disabled="disabled" selected="selected">Choose your Gender</option>
                     <option value="1">Male</option>
                     <option value="2">Female</option>
                     <option value="3">Prefer not to say</option>
                 </select>
-                <p class="form-text text-danger mb-4 font-small"
+                <p class="form-text text-danger font-small mb-0"
                     *ngIf="studentForm.get('gender').touched && !studentForm.get('gender').valid">
                     Select At least One
                 </p>
 
                 <!-- Mobile Number -->
-                <label for="number">Mobile Number</label>
-                <input type="text" id="number" class="form-control mb-4" placeholder="Your mobile number"
+                <label for="number" class="mt-4">Mobile Number</label>
+                <input type="text" id="number" class="form-control" placeholder="Your mobile number"
                     oninput="this.value = this.value.replace(/[^\d]/,'')" maxlength="10" formControlName="mobile"
                     name="mobile">
-                <!-- <small class="form-text text-muted mb-4">10 digit mobile number only</small> -->
-                <p class="form-text text-danger mb-4 font-small"
+                <!-- <small class="form-text text-muted">10 digit mobile number only</small> -->
+                <p class="form-text text-danger font-small mb-0"
                     *ngIf="studentForm.get('mobile').touched && !studentForm.get('mobile').valid">
                     Can't be left blank
                 </p>
                 <!-- E-mail -->
-                <label for="email">Student Email</label>
-                <input type="email" id="email" class="form-control mb-4" placeholder="Your email"
+                <label for="email" class="mt-4">Student Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Your email"
                     formControlName="email" name="email">
-                <p class="form-text text-danger mb-4 font-small"
+                <p class="form-text text-danger font-small mb-0"
                     *ngIf="studentForm.get('email').touched && !studentForm.get('email').valid">
                     Can't be left blank
                 </p>
-                <p class="form-text text-danger mb-4 font-small"
+                <p class="form-text text-danger font-small mb-0"
                     *ngIf="studentForm.get('email').touched && studentForm.get('email').invalid">
                     Fill valid email
                 </p>
-                <!-- <p class="form-text text-danger mb-4 font-small"  *ngIf="studentForm.get('email').touched && !studentForm.get('email').email">
+                <!-- <p class="form-text text-danger font-small mb-0"  *ngIf="studentForm.get('email').touched && !studentForm.get('email').email">
                     Please fill correct email
                 </p> -->
 
                 <!-- State -->
-                <label for="state">State</label>
-                <select class="browser-default custom-select mb-4" id="state" formControlName="state" name="state" (ngModelChange)="onSelectState($event)">
+                <label for="state" class="mt-4">State</label>
+                <select class="browser-default custom-select" id="state" formControlName="state" name="state" (ngModelChange)="onSelectState($event)">
                     <option value="" disabled="disabled" selected="selected">Choose State</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
@@ -117,33 +107,33 @@
                     <option value="Uttarakhand">Uttarakhand</option>
                     <option value="West Bengal">West Bengal</option>
                 </select>
-                <p class="form-text text-danger mb-4 font-small"
+                <p class="form-text text-danger font-small mb-0"
                     *ngIf="studentForm.get('state').touched && !studentForm.get('state').valid">
                     Can't be left blank
                 </p>
 
                 <!-- City -->
-                <label for="city">City</label>
-                <select class="browser-default custom-select mb-4" id="city" formControlName="city" name="city">
+                <label for="city" class="mt-4">City</label>
+                <select class="browser-default custom-select" id="city" formControlName="city" name="city">
                     <option value="none" disabled="disabled" selected="selected">Choose City</option>
                     <ng-container *ngFor="let city of selectedCity">
                         <option [value]="city">{{city}}</option>
                     </ng-container>
                 </select>
-                <p class="form-text text-danger mb-4 font-small"
+                <p class="form-text text-danger font-small mb-0"
                     *ngIf="studentForm.get('city').touched && !studentForm.get('city').valid">
                     Can't be left blank
                 </p>
 
                 <!-- Board -->
-                <label for="board">Board of Education</label>
-                <select class="browser-default custom-select mb-4" id="board" formControlName="board" name="board">
+                <label for="board" class="mt-4">Board of Education</label>
+                <select class="browser-default custom-select" id="board" formControlName="board" name="board">
                     <option value="" disabled="disabled" selected="selected">Choose Board</option>
                     <option value="CBSE">CBSE</option>
                     <option value="ICSE">ICSE</option>
                     <option value="SB">State Board</option>
                 </select>
-                <p class="form-text text-danger mb-4 font-small"
+                <p class="form-text text-danger font-small mb-0"
                     *ngIf="studentForm.get('board').touched && !studentForm.get('board').valid">
                     Can't be left blank
                 </p>
@@ -155,14 +145,18 @@
                 </div> -->
 
                 <!-- Sign up button -->
-                <button class="btn-sm btn info-color-dark text-white my-4 mx-0" type="button"
-                    (click)="createAccount()">Create Account</button>
+                <button class="btn-sm btn info-color-dark text-white my-4 mx-0" type="button" (click)="createAccount()">Create Account</button>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert" [class.show]="showMessage" *ngIf="showMessage">
+                    {{message}}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
                 <hr>
                 <!-- Terms of service -->
                 <p class="text-justify my-0">By creating account you agree to our <a [routerLink]="['/tos']">Terms of
                         Service</a> and <a [routerLink]="['/privacy-policy']">Privacy Policy</a>.
                 <p class="text-justify">Already having account? <a [routerLink]="['/login/student']">Login Here</a>.
-
             </form>
             <!-- Default form register -->
 
