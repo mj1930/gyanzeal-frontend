@@ -33,7 +33,7 @@
                                 <select class="browser-default custom-select mb-4" [(ngModel)]="selectedBoard">
                                     <option value="0" disabled="disabled" selected="selected">(Select Board)</option>
                                     <ng-container *ngFor = "let board of boardList">
-                                        <option value="{{board}}">{{board}}</option>
+                                        <option value="{{board.id}}">{{board.name}}</option>
                                     </ng-container>
                                 </select>
 

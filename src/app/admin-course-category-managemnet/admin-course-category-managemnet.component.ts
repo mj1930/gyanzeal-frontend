@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { CoursesService } from '../services/courses.service';
+import { CoursesService } from "../services/courses.service";
 
 @Component({
   selector: "app-admin-course-category-managemnet",
@@ -29,42 +29,45 @@ export class AdminCourseCategoryManagemnetComponent implements OnInit {
   public boardList = [];
   public classList = [];
   public filterClassList = [];
-  constructor(
-    private courseService: CoursesService
-  ) {
-
-  }
+  constructor(private courseService: CoursesService) {}
   ngOnInit() {
-    this.courseService.fetchBoard().subscribe((fetchBoards:any) => {
-      if(fetchBoards.status === 200){
-        this.boardList.push(fetchBoards.data.name);
+    this.courseService.fetchBoard().subscribe((fetchBoards: any) => {
+      if (fetchBoards.status === 200) {
+        if (fetchBoards.data.length > 0) {
+          fetchBoards.data.forEach((board) => {
+            this.boardList.push({
+              id: board._id,
+              name: board.name
+            });
+          });
+        }
       }
-    })
+    });
   }
 
   // Add Board Function
   addBoard() {
-    let data = this.educationBoard ? this.educationBoard.trim() : '';
-
+    let data = this.educationBoard ? this.educationBoard.trim() : "";
     if (data) {
       this.showBoardError = false;
       // Empty The Box On Success
       this.educationBoard = "";
-      this.courseService.addBoard(data).subscribe((courseData:any) => {
-        if(courseData.status === 200){
-          this.boardList.push(data);
+      this.courseService.addBoard(data).subscribe((courseData: any) => {
+        if (courseData.status === 200) {
+          this.boardList.push({
+              id: courseData._id,
+              name: courseData.name
+            });
           this.showBoardError = true;
-          this.boardErrorMessage = 'Success';
-        }else{
+          this.boardErrorMessage = "Success";
+        } else {
           this.showBoardError = true;
           this.boardErrorMessage = courseData.message;
         }
-      })
-      
-
+      });
     } else {
       this.showBoardError = true;
-      this.boardErrorMessage = 'Cannot Be Blank';
+      this.boardErrorMessage = "Cannot Be Blank";
     }
   }
 
@@ -105,9 +108,8 @@ export class AdminCourseCategoryManagemnetComponent implements OnInit {
     }
   }
 
-
   // Add Subject
-  addSubject(){
+  addSubject() {
     let board = this.selectedBoard;
     let className = this.className;
     let subjectName = this.subjectName;
