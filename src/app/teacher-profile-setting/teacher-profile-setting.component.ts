@@ -14,6 +14,10 @@ import { TokenService } from '../services/token.service';
 export class TeacherProfileSettingComponent implements OnInit {
 
   public teacherForm: any;
+  public message: string;
+  public showMessage: boolean = false;
+  public messageClass: boolean = false;
+  
   constructor(
     private fb: FormBuilder,
     private registration: RegistrationService,
@@ -90,10 +94,25 @@ export class TeacherProfileSettingComponent implements OnInit {
       this.registration.updateTeacherProfile(data).subscribe((data:any) => {
         if (data.status === 200) {
           this.setFormValues(data.data);
+          this.messageClass = true;
+          this.showMessage = true;
+          this.message = 'Profile Updated Successfully.';
+          setTimeout(() => {
+            this.messageClass = false;
+            this.showMessage = false;
+            this.message = '';
+          }, 5000);
         }
       });
     } else {
-      alert('Please fill the form');
+      this.messageClass = false;
+      this.showMessage = true;
+      this.message = 'Please Complete The Form.';
+      setTimeout(() => {
+        this.messageClass = false;
+        this.showMessage = false;
+        this.message = '';
+      }, 5000);
     }
   }
 }

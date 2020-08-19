@@ -6,7 +6,7 @@
             <div class="col rounded-lg">
                 <div class="card">
                     <div class="card-body px-3">                         
-                        <form class="text-left pb-3 px-2" action="#!"> 
+                        <div class="text-left pb-3 px-2"> 
                             <h4>School Academics Management</h4>  
                             <hr>
                             
@@ -14,8 +14,11 @@
                             <div class="addnew">
                                 <h4>Add Board Of Education</h4>
                                 <label for="addboard">Add New Board of Education</label>
-                                <input type="text" placeholder="Board of Education" class="form-control">
-                                <button class="btn btn-sm success-color-dark text-white mx-0 my-3">Add Board</button>
+                                <input type="text" placeholder="Board of Education" class="form-control" [(ngModel)]="educationBoard">
+                                <p class="form-text text-danger font-small mb-0" *ngIf = "showBoardError">
+                                    {{boardErrorMessage}}
+                                </p>
+                                <button class="btn btn-sm success-color-dark text-white mx-0 my-3" (click)="addBoard()">Add Board</button>
                             </div>
 
 
@@ -27,16 +30,19 @@
                             <div class="addnew my-5">
                                 <h4>Add Class</h4>
                                 <label for="selectboard">Select Boards</label>
-                                <select class="browser-default custom-select mb-4" id="selectboard">
+                                <select class="browser-default custom-select mb-4" [(ngModel)]="selectedBoard">
                                     <option value="0" disabled="disabled" selected="selected">(Select Board)</option>
-                                    <option value="1">CBSE</option>
-                                    <option value="2">ICSC</option>
-                                    <option value="2">Haryana Borad</option>
+                                    <ng-container *ngFor = "let board of boardList">
+                                        <option value="{{board}}">{{board}}</option>
+                                    </ng-container>
                                 </select>
 
                                 <label for="addboard">Add Class</label>
-                                <input type="text" placeholder="Class Name" class="form-control">
-                                <button class="btn btn-sm success-color-dark text-white mx-0 my-3">Add Class</button>
+                                <input type="text" placeholder="Class Name" class="form-control" [(ngModel)]="className">
+                                <p class="form-text text-danger font-small mb-0" *ngIf = "showaddClassError">
+                                    {{errorMessage}}
+                                </p>
+                                <button class="btn btn-sm success-color-dark text-white mx-0 my-3" (click)="addClass()">Add Class</button>
                             </div>
 
 
@@ -48,30 +54,30 @@
                             <div class="addnew my-5">
                                 <h4>Add Subject</h4>
                                 <label for="selectboard">Select Boards</label>
-                                <select class="browser-default custom-select mb-4" id="selectboard">
+                                <select class="browser-default custom-select mb-4" [(ngModel)]="selectBoardAS" (change)="selectClass($event)">
                                     <option value="0" disabled="disabled" selected="selected">(Select Board)</option>
-                                    <option value="1">CBSE</option>
-                                    <option value="2">ICSC</option>
-                                    <option value="2">Haryana Borad</option>
+                                    <ng-container *ngFor = "let board of boardList">
+                                        <option value="{{board}}">{{board}}</option>
+                                    </ng-container>
                                 </select>
 
                                 <label for="selectclass">Select Class</label>
-                                <select class="browser-default custom-select mb-4" id="selectclass">
+                                <select class="browser-default custom-select mb-4" [(ngModel)]="selectClassAS">
                                     <option value="0" disabled="disabled" selected="selected">(Select Class)</option>
-                                    <option value="1">Class 1</option>
-                                    <option value="2">Class 2</option>
-                                    <option value="2">Class 3</option>
-                                    <option value="2">Class 4</option>
-                                    <option value="2">Class 5</option>
-                                    <option value="2">Class 6</option>
+                                    <ng-container *ngFor = "let data of filterClassList">
+                                        <option value="{{data.className}}">{{data.className}}</option>
+                                    </ng-container>
                                 </select>
 
                                 <label for="subjectName">Subject Name</label>
-                                <input type="text" placeholder="Subject Name" class="form-control">
-                                <button class="btn btn-sm success-color-dark text-white mx-0 my-3">Add Subject</button>
+                                <input type="text" placeholder="Subject Name" class="form-control" [(ngModel)]="classSubjectName">
+                                <p class="form-text text-danger font-small mb-0" *ngIf = "showSubjectError">
+                                    {{subjectErrorMessage}}
+                                </p>
+                                <button class="btn btn-sm success-color-dark text-white mx-0 my-3" (click)="addSubject()">Add Subject</button>
                             </div>
                             
-                        </form>
+                        </div>
                     </div>
                 </div>
 
@@ -180,7 +186,7 @@
 
 
                                 <label for="selectclass">Select Class</label>
-                                <select class="browser-default custom-select mb-4" id="selectclass">
+                                <select class="browser-default custom-select mb-4">
                                     <option value="0" disabled="disabled" selected="selected">(Select Class)</option>
                                     <option value="1">Class 1</option>
                                     <option value="2">Class 2</option>
@@ -207,7 +213,7 @@
                                 </select>
 
                                 <label for="selectclass">Select Class</label>
-                                <select class="browser-default custom-select mb-4" id="selectclass">
+                                <select class="browser-default custom-select mb-4">
                                     <option value="0" disabled="disabled" selected="selected">(Select Class)</option>
                                     <option value="1">Class 1</option>
                                     <option value="2">Class 2</option>

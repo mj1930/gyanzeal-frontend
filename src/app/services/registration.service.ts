@@ -31,7 +31,15 @@ export class RegistrationService {
     return this.http.get(`${environment.url}teacher/fetch-profile?email=${email}`);
   }
 
+  getStudentProfile(email) {
+    return this.http.get(`${environment.url}student/fetch-profile?email=${email}`);
+  }
+
   updateTeacherProfile(profileData) {
     return this.http.post(`${environment.url}teacher/update-profile`, {profileData});
+  }
+
+  updateStudentProfile(profileData) {
+    return this.http.post(`${environment.url}student/update-profile`, {profileData});
   }
 }

@@ -12,161 +12,192 @@
                     
                     <h5 class="text-primary"><i class="fas fa-ribbon"></i> Personal Information</h5>
                     <hr>
-                    <div class="form-row mb-4">
+                    <div class="form-row">
                         <div class="col">
-                            <label for="fname">First Name</label>
-                            <input type="text" id="fname" class="form-control" placeholder="First name" formControlName="name">
-                        </div>
-                        <div class="col">
-                            <label for="lname">Last Name</label>
-                            <input type="text" id="lname" class="form-control" placeholder="Last name">
+                            <label for="fname">Name</label>
+                            <input type="text" id="fname" class="form-control" placeholder="Name" formControlName="name">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('name').touched && !teacherForm.get('name').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                     </div>
 
-                    <label for="gender">Gender</label>
-                    <select class="browser-default custom-select mb-4" id="gender" formControlName="gender">
+                    <label for="gender" class="mt-4">Gender</label>
+                    <select class="browser-default custom-select" id="gender" formControlName="gender">
                         <option value="0" disabled="disabled" selected="selected">Choose your gender</option>
                         <option value="1">Male</option>
                         <option value="2">Female</option>
                         <option value="3">Prefer not to say</option>
                     </select>
+                    <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('gender').touched && !teacherForm.get('gender').valid">
+                        Can't be left blank
+                    </p>
 
-                    <label for="mobile">Contact Number</label>
-                    <input type="text" id="mobile" class="form-control mb-4" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10"  formControlName="mobile">
 
-                    <label for="semail">Email</label>
-                    <input type="email" id="semail" class="form-control mb-4" oninput="this.value=this.value.replace('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$','')" placeholder="Email" formControlName="email">
-                    
-                    
-                    <!-- <label for="school">School Name</label>
-                    <input type="text" id="school" class="form-control mb-4" placeholder="School Name">
 
-                    <label for="board">Board Of Education</label>
-                    <select class="browser-default custom-select mb-4" id="board">
-                        <option value="0" disabled="disabled" selected="selected">Education Board</option>
-                        <option value="1">C.B.S.E.</option>
-                        <option value="2">I.C.S.C.</option>
-                        <option value="3">State Board</option>
-                    </select>
+                    <label for="mobile" class="mt-4">Contact Number</label>
+                    <input type="text" id="mobile" class="form-control" placeholder="Mobile Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="10"  formControlName="mobile">
+                    <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('mobile').touched && !teacherForm.get('mobile').valid">
+                        Can't be left blank
+                    </p>
 
-                    <label for="classname">Pursuing Class</label>
-                    <select class="browser-default custom-select mb-4" id="classname">
-                        <option value="0" disabled="disabled" selected="selected">Choose Class</option>
-                        <option value="1">Grade 1</option>
-                        <option value="2">Grade 2</option>
-                        <option value="3">Grade 3</option>
-                        <option value="3">Grade 4</option>
-                        <option value="3">Grade 5</option>
-                        <option value="3">Grade 6</option>
-                        <option value="3">Grade 7</option>
-                        <option value="3">Grade 8</option>
-                        <option value="3">Grade 9</option>
-                        <option value="3">Grade 10</option>
-                        <option value="3">Grade 11</option>
-                        <option value="3">Grade 12</option>
-                    </select> -->
+
+                    <label for="semail" class="mt-4">Email</label>
+                    <input type="email" id="semail" class="form-control" oninput="this.value=this.value.replace('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$','')" placeholder="Email" formControlName="email">
+                    <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('email').touched && !teacherForm.get('email').valid">
+                        Can't be left blank
+                    </p>
+
 
 
                     <!-- Experience -->
-                    <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Experience Information</h5>
+                    <h5 class="text-primary mt-5"><i class="fas fa-ribbon"></i> Experience Information</h5>
                     <hr>
-                    <div class="form-row mb-4">
+                    <div class="form-row">
                         <div class="col">
-                            <label for="years">Years</label>
+                            <label for="years" class="mt-4">Years</label>
                             <input type="text" id="years" class="form-control" placeholder="Years of experience" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="2" formControlName="experienceYear">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('experienceYear').touched && !teacherForm.get('experienceYear').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                         <div class="col">
-                            <label for="months">Months</label>
+                            <label for="months" class="mt-4">Months</label>
                             <input type="text" id="months" class="form-control" placeholder="Months of experience" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="2" formControlName="experienceMonth">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('experienceMonth').touched && !teacherForm.get('experienceMonth').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                     </div>
-                    <label for="school">School Name (If any)</label>
-                    <input type="text" id="school" class="form-control mb-4" placeholder="School Name" formControlName="school">
+                    <label for="school" class="mt-4">School Name (If any)</label>
+                    <input type="text" id="school" class="form-control" placeholder="School Name" formControlName="school">
+                    <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('school').touched && !teacherForm.get('school').valid">
+                        Can't be left blank
+                    </p>
 
                     
 
                     <!-- Contact Info -->
-                    <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Contact Information</h5>
+                    <h5 class="text-primary mt-5"><i class="fas fa-ribbon"></i> Contact Information</h5>
                     <hr>
-                    <div class="form-row mb-4">
+                    <div class="form-row">
                         <div class="col">
-                            <label for="add1">Street Address Line 1</label>
+                            <label for="add1" class="mt-4">Street Address Line 1</label>
                             <input type="text" id="add1" class="form-control" placeholder="Street Address Line 1" formControlName="address1">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('address1').touched && !teacherForm.get('address1').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                         <div class="col">
-                            <label for="add2">Street Address Line 2</label>
+                            <label for="add2" class="mt-4">Street Address Line 2</label>
                             <input type="text" id="add2" class="form-control" placeholder="Street Address Line 2" formControlName="address2">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('address2').touched && !teacherForm.get('address2').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                     </div>
 
-                    <div class="form-row mb-4">
+                    <div class="form-row">
                         <div class="col">
-                            <label for="city">City</label>
+                            <label for="city" class="mt-4">City</label>
                             <input type="text" id="city" class="form-control" placeholder="City" formControlName="city">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('city').touched && !teacherForm.get('city').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                         <div class="col">
-                            <label for="state">State</label>
+                            <label for="state" class="mt-4">State</label>
                             <input type="text" id="state" class="form-control" placeholder="State" formControlName="state">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('state').touched && !teacherForm.get('state').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                     </div>
 
-                    <div class="form-row mb-4">
+                    <div class="form-row">
                         <div class="col">
-                            <label for="country">Country</label>
+                            <label for="country" class="mt-4">Country</label>
                             <input type="text" id="country" class="form-control" placeholder="Country" formControlName="country">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('country').touched && !teacherForm.get('country').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                         <div class="col">
-                            <label for="postal">Postal Code</label>
+                            <label for="postal" class="mt-4">Postal Code</label>
                             <input type="text" id="postal" class="form-control" placeholder="Postal Code" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="6" formControlName="pinCode">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('pinCode').touched && !teacherForm.get('pinCode').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                     </div>
 
                     <!-- Bank Info -->
-                    <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Payment Information</h5>
+                    <h5 class="text-primary mt-5"><i class="fas fa-ribbon"></i> Payment Information</h5>
                     <hr>
-                    <div class="form-row mb-4">
+                    <div class="form-row">
                         <div class="col">
-                            <label for="pan">PAN Number</label>
+                            <label for="pan" class="mt-4">PAN Number</label>
                             <input type="text" id="pan" class="form-control" placeholder="Pan Number" formControlName="pan" maxlength="11">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('pan').touched && !teacherForm.get('pan').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                         <div class="col">
-                            <label for="adhar">Aadhar Number</label>
+                            <label for="adhar" class="mt-4">Aadhar Number</label>
                             <input type="text" id="adhar" class="form-control" placeholder="Aadhar Number" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="12" formControlName="aadhar">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('aadhar').touched && !teacherForm.get('aadhar').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                     </div>
 
                     
-                    <div class="form-row mb-4">
+                    <div class="form-row">
                         <div class="col">
-                            <label for="fullname">Full Name (As registered with bank)</label>
+                            <label for="fullname" class="mt-4">Full Name (As registered with bank)</label>
                             <input type="text" id="fullname" class="form-control" placeholder="Full Name" formControlName="name">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('name').touched && !teacherForm.get('name').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                         <div class="col">
-                            <label for="bnkname">Bank Name</label>
+                            <label for="bnkname" class="mt-4">Bank Name</label>
                             <input type="text" id="bnkname" class="form-control" placeholder="Bank Name" formControlName="bankName">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('bankName').touched && !teacherForm.get('bankName').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                     </div>
 
-                    <div class="form-row mb-4">
+                    <div class="form-row">
                         <div class="col">
-                            <label for="acnum">Account Number</label>
+                            <label for="acnum" class="mt-4">Account Number</label>
                             <input type="text" id="acnum" class="form-control" placeholder="Account Number" formControlName="accountNumber" oninput="this.value=this.value.replace(/[^\d]/,'')" maxlength="16">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('accountNumber').touched && !teacherForm.get('accountNumber').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                         <div class="col">
-                            <label for="ifsc">IFSC Code</label>
+                            <label for="ifsc" class="mt-4">IFSC Code</label>
                             <input type="text" id="ifsc" class="form-control" placeholder="IFSC Code" formControlName="ifscCode" maxlength="11">
+                            <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('ifscCode').touched && !teacherForm.get('ifscCode').valid">
+                                Can't be left blank
+                            </p>
                         </div>
                     </div>
 
-                    <label for="upi">UPI ID (If any)</label>
-                    <input type="text" id="upi" class="form-control mb-4" placeholder="name@upi" formControlName="upi">
+                    <label for="upi" class="mt-4">UPI ID (If any)</label>
+                    <input type="text" id="upi" class="form-control" placeholder="name@upi" formControlName="upi">
+                    <p class="form-text text-danger font-small mb-0" *ngIf="teacherForm.get('upi').touched && !teacherForm.get('upi').valid">
+                        Can't be left blank
+                    </p>
                     
 
                     <!-- Password -->
-                    <h5 class="text-primary mt-4"><i class="fas fa-ribbon"></i> Update Security Information</h5>
+                    <!-- <h5 class="text-primary mt-5"><i class="fas fa-ribbon"></i> Update Security Information</h5>
                     <hr>
 
-                    <div class="form-row mb-4">
+                    <div class="form-row">
                         <div class="col">
                             <label for="npass">New Password</label>
                             <input type="password" id="npass" class="form-control" placeholder="New Password">
@@ -175,10 +206,15 @@
                             <label for="rpass">Repeat Password</label>
                             <input type="password" id="rpass" class="form-control" placeholder="Repeat Password">
                         </div>
+                    </div> -->
+
+                    <button class="btn btn-sm mx-0 primary-color-dark text-white my-3" (click)="updateProfile()">Save Changes</button>
+                    <div class="alert alert-dismissible fade" [ngClass]="messageClass ? 'alert-success' : 'alert-danger'" role="alert" [class.show]="showMessage" *ngIf="showMessage">
+                        {{message}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-
-                    <button class="btn btn-sm mx-0 primary-color-dark text-white" (click)="updateProfile()">Save Changes</button>
-
                 </form>
             </div> 
         </div>
